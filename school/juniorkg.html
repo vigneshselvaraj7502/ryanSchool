@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior KG (Three Year Old Program) - Ryans Pre-School</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#4C2882',
+                            'purple-dark': '#381C65',
+                            yellow: '#FFB800',
+                            'yellow-light': '#FFFDF5',
+                            orange: '#FF8A00',
+                            bg: '#FAF8F5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Nunito"', 'sans-serif'],
+                        display: ['"Poppins"', 'sans-serif'],
+                        script: ['"Caveat"', 'cursive'],
+                        poster: ['"Cormorant Garamond"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfbf7;
+        }
+        /* Custom floating animation */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+        @keyframes float-medium {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(-3deg); }
+        }
+        .animate-float-slow {
+            animation: float-slow 6s ease-in-out infinite;
+        }
+        .animate-float-medium {
+            animation: float-medium 4s ease-in-out infinite;
+        }
+        /* Three.js canvas container styling */
+        #three-canvas-container {
+            width: 100%;
+            height: 380px;
+            background: radial-gradient(circle, #faf5ff 0%, #f3e8ff 100%);
+            position: relative;
+            border-radius: 3rem;
+            overflow: hidden;
+            border: 4px border-purple-50;
+        }
+        /* Hide scrollbars for carousel tracks */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased text-gray-700 bg-brand-bg">
+
+    <!-- Top Announcement Bar -->
+<div class="bg-[#56299b] text-white text-[11px] font-semibold py-2.5 px-6 sm:px-16 flex flex-col md:flex-row justify-between items-center z-30 relative shadow-sm">
+<div class="flex items-center gap-6 mb-2 md:mb-0">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brand-yellow text-sm"></i> 123 Kids Avenue, Chennai, India</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-yellow text-sm"></i> +91 12345 67890</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-yellow text-sm"></i> info@ryanspreschool.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-purple-200">Follow Us:</span>
+<a class="bg-white/10 hover:bg-white text-white hover:text-[#56299b] rounded-full w-5.5 h-5.5 flex items-center justify-center transition shadow-sm" href="https://facebook.com/ryanspreschool" target="_blank"><i class="fa-brands fa-facebook-f text-[10px]"></i></a>
+<a class="bg-white/10 hover:bg-white text-white hover:text-[#56299b] rounded-full w-5.5 h-5.5 flex items-center justify-center transition shadow-sm" href="https://instagram.com/ryanspreschool" target="_blank"><i class="fa-brands fa-instagram text-[10px]"></i></a>
+<a class="bg-white/10 hover:bg-white text-white hover:text-[#56299b] rounded-full w-5.5 h-5.5 flex items-center justify-center transition shadow-sm" href="https://youtube.com/@ryanspreschool" target="_blank"><i class="fa-brands fa-youtube text-[10px]"></i></a>
+</div>
+</div>
+<!-- Navigation Header -->
+<header class="bg-white/95 backdrop-blur-md py-3 px-6 sm:px-16 lg:px-6 xl:px-16 flex justify-between items-center z-40 sticky top-0 shadow-sm border-b border-purple-50 transition-all duration-300" id="main-header">
+<!-- Logo Section -->
+<div class="flex items-center gap-3 sm:gap-4">
+<img alt="Ryans Pre-School Logo" class="relative z-50 h-16 sm:h-20 lg:h-[100px] xl:h-[115px] w-auto object-contain drop-shadow-md" src="assets/logo.png"/>
+<div class="flex flex-col justify-center">
+<h1 class="font-display text-[16px] sm:text-[20px] lg:text-[26px] xl:text-[30px] font-black tracking-tight uppercase leading-none">
+<span class="text-brand-purple">RYANS</span> <span class="text-brand-yellow">PRE-SCHOOL</span>
+</h1>
+<p class="text-brand-purple font-black text-[7px] sm:text-[9px] lg:text-[10px] xl:text-[11.5px] tracking-tight sm:tracking-[0.08em] xl:tracking-[0.1em] mt-1 whitespace-normal sm:whitespace-nowrap pr-2">DAY CARE | PLAY GROUP | NURSERY | JUNIOR KG | SENIOR KG</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-1.5 lg:gap-2 xl:gap-5 font-bold text-[10px] lg:text-[11.5px] xl:text-[13px] text-gray-700">
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="index.html">Home</a>
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="about.html"><span class="whitespace-nowrap inline-block">About Us</span></a>
+<div class="relative group">
+<button class="nav-link-item active-link bg-brand-purple text-white px-3.5 py-1.5 rounded-xl shadow-sm hover:bg-brand-purple-dark transition flex items-center gap-1 font-bold">
+                    Programs <i class="fa-solid fa-chevron-down text-[8px] mt-0.5"></i>
+</button>
+<!-- Dropdown menu -->
+<div class="absolute top-full -left-4 mt-2 bg-white/95 backdrop-blur-xl border border-purple-100 rounded-2xl shadow-[0_20px_40px_rgba(76,40,130,0.1)] p-3 w-[260px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-1 transform -translate-y-2 transition-all duration-300 z-50">
+    <div class="relative z-10">
+        <!-- Optional tiny arrow pointer -->
+        <div class="absolute -top-[19px] left-[52px] w-4 h-4 bg-white border-t border-l border-purple-100 transform rotate-45 -z-10"></div>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link" href="daycare.html">
+            <div class="w-10 h-10 rounded-lg bg-pink-100 text-pink-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-baby"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Day Care</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Infants</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="playgroup.html">
+            <div class="w-10 h-10 rounded-lg bg-orange-100 text-orange-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-shapes"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Play Group</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Toddlers</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="nursery.html">
+            <div class="w-10 h-10 rounded-lg bg-brand-purple/10 text-brand-purple flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-cubes"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Nursery</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">2-3 Years</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="juniorkg.html">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Junior KG</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">3-4 Years</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="seniorkg.html">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Senior KG</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">4-5 Years</p>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+
+
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="facilities.html">Facilities</a>
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="index.html#testimonials">Testimonials</a>
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="contact.html">Admission</a>
+<!-- Cute Kid Mascot Icon with Interactive Speech Bubble -->
+<div class="relative group ml-2 flex items-center">
+<img alt="Mascot Icon" class="h-10 w-10 rounded-full object-contain border border-purple-100 shadow-sm transition duration-300 hover:scale-110 cursor-pointer" src="assets/kid_mascot.jpg" style="mix-blend-mode: multiply;"/>
+<!-- Playful speech bubble tooltip -->
+<div class="absolute right-12 bg-brand-yellow text-brand-purple text-[10px] font-black py-1.5 px-3 rounded-xl shadow-md opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap z-50">
+                    Hi, Let's Play! 🎈
+                    <!-- Speech bubble tail pointing to mascot -->
+<div class="absolute right-[-4px] top-1/2 transform -translate-y-1/2 rotate-45 w-2 h-2 bg-brand-yellow"></div>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Toggle Button -->
+<button class="lg:hidden text-brand-purple hover:text-[#56299b] p-2 focus:outline-none rounded-full hover:bg-gray-100" id="mobile-menu-btn">
+<i class="fa-solid fa-bars text-2xl"></i>
+</button>
+</header>
+<!-- Mobile Drawer Container -->
+<div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6" id="mobile-drawer">
+<div class="flex justify-between items-center mb-8 border-b pb-4">
+<span class="font-display text-xl text-brand-purple font-bold">RYANS MENU</span>
+<button class="text-brand-purple p-2 hover:bg-gray-100 rounded-full" id="close-drawer-btn">
+<i class="fa-solid fa-xmark text-xl"></i>
+</button>
+</div>
+<nav class="flex flex-col gap-4 font-bold text-gray-700 text-[15px]">
+<a class="text-brand-purple" href="index.html">Home</a>
+<a class="hover:text-brand-purple" href="about.html"><span class="whitespace-nowrap inline-block">About Us</span></a>
+<div class="flex flex-col gap-2 py-1">
+<span class="text-brand-purple font-black uppercase text-[10px] tracking-wider">Programs</span>
+<a class="pl-3 hover:text-brand-purple" href="daycare.html">Day Care (Infants)</a>
+<a class="pl-3 hover:text-brand-purple" href="playgroup.html">Play Group (Toddlers)</a>
+<a class="pl-3 hover:text-brand-purple" href="nursery.html">Nursery (2-3 Years)</a>
+<a class="pl-3 hover:text-brand-purple" href="juniorkg.html">Junior KG (3-4 Years)</a>
+<a class="pl-3 hover:text-brand-purple" href="seniorkg.html">Senior KG (4-5 Years)</a>
+</div>
+
+
+<a class="hover:text-brand-purple" href="facilities.html">Facilities</a>
+<a class="hover:text-brand-purple" href="index.html#testimonials">Testimonials</a>
+<a class="hover:text-brand-purple" href="contact.html">Admission</a>
+</nav>
+</div>
+<!-- Drawer Dark Overlay -->
+<div class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden" id="mobile-overlay"></div>
+
+    <!-- Mobile Drawer Container -->
+    <div id="mobile-drawer" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6">
+        <div class="flex justify-between items-center mb-8 border-b pb-4">
+            <span class="font-display text-xl text-brand-purple font-bold">RYANS MENU</span>
+            <button id="close-drawer-btn" class="text-gray-500 hover:text-brand-purple p-1"><i class="fa-solid fa-xmark text-2xl"></i></button>
+        </div>
+        <nav class="flex flex-col gap-4 font-bold text-sm text-gray-700">
+            <a href="index.html" class="hover:text-brand-purple py-1 border-b border-gray-50">Home</a>
+            <a href="about.html" class="hover:text-brand-purple py-1 border-b border-gray-50"><span class="whitespace-nowrap inline-block">About Us</span></a>
+            <div class="flex flex-col gap-2 py-1">
+                <span class="text-brand-purple font-black uppercase text-[10px] tracking-wider">Programs</span>
+                <a href="daycare.html" class="pl-3 hover:text-brand-purple">Day Care (Infants)</a>
+                <a href="playgroup.html" class="pl-3 hover:text-brand-purple">Play Group (Toddlers)</a>
+                <a href="nursery.html" class="pl-3 hover:text-brand-purple">Nursery (2-3 Years)</a>
+                <a href="juniorkg.html" class="pl-3 text-brand-purple font-black">Junior KG (3-4 Years)</a>
+                <a href="seniorkg.html" class="pl-3 hover:text-brand-purple">Senior KG (4-5 Years)</a>
+            </div>
+            <a href="facilities.html" class="hover:text-brand-purple py-1 border-b border-gray-50">Facilities</a>
+            <a href="index.html#testimonials" class="hover:text-brand-purple py-1 border-b border-gray-50">Testimonials</a>
+            <a href="contact.html" class="hover:text-brand-purple py-1">Admission</a>
+        </nav>
+    </div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/30 z-40 hidden transition-opacity lg:hidden"></div>
+
+    <!-- Junior KG Page Hero (Dynamic Video Background) -->
+    <section class="reveal-on-scroll relative py-24 px-6 sm:px-16 overflow-hidden border-b-8 border-brand-yellow">
+        <!-- Widescreen Video/GIF Background Layer -->
+        <div class="absolute inset-0 z-0 select-none pointer-events-none">
+            <img src="assets/gif/hero.gif" alt="Junior KG Classroom Loop" class="w-full h-full object-cover scale-105 filter blur-[1px]">
+        </div>
+        <!-- Premium Dark Purple Backdrop Overlay for High Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#381c65]/90 via-[#4c2882]/85 to-[#381c65]/90 z-10"></div>
+
+        <!-- Floating playful particles -->
+        <div class="absolute top-[15%] left-[8%] text-brand-yellow opacity-40 text-3xl animate-float-slow z-20"><i class="fa-solid fa-shapes"></i></div>
+        <div class="absolute bottom-[15%] right-[8%] text-[#fa8295] opacity-40 text-4xl animate-float-medium z-20"><i class="fa-solid fa-face-smile"></i></div>
+
+        <div class="max-w-[1000px] w-full mx-auto text-center relative z-20">
+            <span class="font-script text-brand-yellow text-[3.2rem] leading-none mb-3 inline-block transform -rotate-1">Learning & Growing</span>
+            <h2 class="font-display text-4xl sm:text-6xl text-white font-black uppercase tracking-tight leading-none mb-6">
+                Junior KG
+            </h2>
+            <!-- Playful divider -->
+            <svg class="w-36 h-3 text-brand-yellow fill-none stroke-current my-6 mx-auto" stroke-width="3.5" stroke-linecap="round" viewBox="0 0 100 10">
+                <path d="M5 5 Q20 1 35 5 T65 5 T95 5" />
+            </svg>
+            <p class="text-purple-100 font-semibold text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+                Our Three-Year-Old Program is designed to meet the needs of inquisitive three-year-olds. They watch and listen to everything that goes on around them, asking questions about the things they see and do not understand.
+            </p>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Junior KG Focus -->
+    <section class="reveal-on-scroll max-w-[1340px] w-full mx-auto px-6 sm:px-16 py-20 relative z-10">
+        <div class="text-center mb-16">
+            <span class="font-script text-[#4facfe] text-3xl sm:text-4xl inline-block mb-2">Our Approach</span>
+            <h3 class="font-display text-4xl sm:text-5xl text-brand-purple font-black uppercase tracking-tight">Junior KG Focus</h3>
+            <!-- Playful divider -->
+            <svg class="w-28 h-3 mx-auto mt-4 text-[#4facfe] fill-none stroke-current" stroke-width="3" stroke-linecap="round" viewBox="0 0 100 10">
+                <path d="M5 5 Q20 1 35 5 T65 5 T95 5" />
+            </svg>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Advantage 1 -->
+            <div class="bg-gradient-to-br from-white to-blue-50/50 border border-blue-100 rounded-[2.5rem] p-8 shadow-[0_15px_30px_rgba(79,172,254,0.04)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(79,172,254,0.08)] transition-all duration-300 text-center group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-blue-500/5 rounded-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div class="w-16 h-16 mx-auto bg-[#4facfe] rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-md transform group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h4 class="font-display text-xl text-brand-purple font-black mb-3">Phonics & Reading</h4>
+                <p class="text-gray-500 font-semibold text-[13px] leading-relaxed">Introducing letters, phonics, and early reading skills through engaging stories.</p>
+            </div>
+
+            <!-- Advantage 2 -->
+            <div class="bg-gradient-to-br from-white to-teal-50/50 border border-teal-100 rounded-[2.5rem] p-8 shadow-[0_15px_30px_rgba(20,184,166,0.04)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(20,184,166,0.08)] transition-all duration-300 text-center group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-teal-500/5 rounded-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div class="w-16 h-16 mx-auto bg-teal-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-md transform group-hover:-rotate-6 transition-transform">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h4 class="font-display text-xl text-brand-purple font-black mb-3">Math & Logic</h4>
+                <p class="text-gray-500 font-semibold text-[13px] leading-relaxed">Understanding numbers, counting, and basic math concepts through hands-on play.</p>
+            </div>
+
+            <!-- Advantage 3 -->
+            <div class="bg-gradient-to-br from-white to-purple-50/50 border border-purple-100 rounded-[2.5rem] p-8 shadow-[0_15px_30px_rgba(168,85,247,0.04)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(168,85,247,0.08)] transition-all duration-300 text-center group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-purple-500/5 rounded-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div class="w-16 h-16 mx-auto bg-purple-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-md transform group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h4 class="font-display text-xl text-brand-purple font-black mb-3">Creative Arts</h4>
+                <p class="text-gray-500 font-semibold text-[13px] leading-relaxed">Encouraging limitless imagination through art, music, and interactive role-playing.</p>
+            </div>
+
+            <!-- Advantage 4 -->
+            <div class="bg-gradient-to-br from-white to-yellow-50/50 border border-yellow-100 rounded-[2.5rem] p-8 shadow-[0_15px_30px_rgba(234,179,8,0.04)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)] transition-all duration-300 text-center group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-yellow-500/5 rounded-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div class="w-16 h-16 mx-auto bg-yellow-400 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-md transform group-hover:-rotate-6 transition-transform">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h4 class="font-display text-xl text-brand-purple font-black mb-3">Social Independence</h4>
+                <p class="text-gray-500 font-semibold text-[13px] leading-relaxed">Building self-confidence, sharing habits, and teamwork in a structured environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Daily Routine (Timeline Theme) -->
+    <section class="reveal-on-scroll bg-gradient-to-b from-blue-50/50 to-white py-20 relative z-10 overflow-hidden">
+        <div class="max-w-[1000px] w-full mx-auto px-6 sm:px-16">
+            <div class="text-center mb-16">
+                <span class="font-script text-blue-500 text-3xl sm:text-4xl inline-block mb-2">Step by Step</span>
+                <h3 class="font-display text-4xl sm:text-5xl text-brand-purple font-black uppercase tracking-tight mb-4">Junior KG Routine</h3>
+            </div>
+            
+            <div class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-blue-200 before:to-transparent">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <!-- Icon -->
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-sm z-10">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <!-- Card -->
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-[2rem] shadow-sm border border-blue-50 group-hover:-translate-y-1 transition-transform duration-300 card-interactive-lift">
+                        <div class="flex flex-col mb-1">
+                            <span class="text-blue-500 font-bold text-xs uppercase tracking-wider mb-1">9:00 AM</span>
+                            <h4 class="font-display text-lg text-brand-purple font-black">Arrival & Phonics</h4>
+                        </div>
+                        <p class="text-gray-500 font-semibold text-sm leading-relaxed">Morning welcome, alphabet songs, and introducing fun phonic sounds.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <!-- Icon -->
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-teal-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-sm z-10">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <!-- Card -->
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-[2rem] shadow-sm border border-teal-50 group-hover:-translate-y-1 transition-transform duration-300 card-interactive-lift">
+                        <div class="flex flex-col mb-1">
+                            <span class="text-teal-500 font-bold text-xs uppercase tracking-wider mb-1">10:00 AM</span>
+                            <h4 class="font-display text-lg text-brand-purple font-black">Math & Logic Play</h4>
+                        </div>
+                        <p class="text-gray-500 font-semibold text-sm leading-relaxed">Counting games, sorting objects, and shape recognition activities.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <!-- Icon -->
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-orange-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-sm z-10">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <!-- Card -->
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-[2rem] shadow-sm border border-orange-50 group-hover:-translate-y-1 transition-transform duration-300 card-interactive-lift">
+                        <div class="flex flex-col mb-1">
+                            <span class="text-orange-400 font-bold text-xs uppercase tracking-wider mb-1">11:30 AM</span>
+                            <h4 class="font-display text-lg text-brand-purple font-black">Lunch & Quiet Time</h4>
+                        </div>
+                        <p class="text-gray-500 font-semibold text-sm leading-relaxed">Nutritious meals followed by relaxing storytime and rest.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <!-- Icon -->
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-purple-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-sm z-10">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <!-- Card -->
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-[2rem] shadow-sm border border-purple-50 group-hover:-translate-y-1 transition-transform duration-300 card-interactive-lift">
+                        <div class="flex flex-col mb-1">
+                            <span class="text-purple-500 font-bold text-xs uppercase tracking-wider mb-1">1:00 PM</span>
+                            <h4 class="font-display text-lg text-brand-purple font-black">Creative Arts & Dismissal</h4>
+                        </div>
+                        <p class="text-gray-500 font-semibold text-sm leading-relaxed">Painting, crafting, and a fun goodbye circle before heading home.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Interactive Fun - Alphabet Hunt (New UI) -->
+    <section class="reveal-on-scroll max-w-[1240px] w-full mx-auto px-6 sm:px-16 py-16 relative z-10">
+        <!-- Title Area -->
+        <div class="text-center mb-10">
+            <span class="font-script text-[#fa8295] text-3xl">Interactive Fun</span>
+            <h3 class="font-display text-4xl sm:text-5xl text-brand-purple font-black uppercase mt-1 mb-3">Alphabet Hunt Adventure</h3>
+            <p class="text-gray-500 text-sm sm:text-base font-medium">Help find all the matching letters! Tap them before they float away.</p>
+        </div>
+
+        <style>
+            @keyframes float-bubble { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-8px) rotate(5deg); } }
+            .animate-float-bubble { animation: float-bubble 3s ease-in-out infinite; }
+            @keyframes pop-in { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+            .animate-pop-in { animation: pop-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+            @keyframes shake-bubble { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+            .animate-shake-bubble { animation: shake-bubble 0.4s ease-in-out; }
+        </style>
+
+        <!-- Two Column Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-[1100px] mx-auto">
+            <!-- Left Side: Game Canvas (7 cols) -->
+            <div class="lg:col-span-7 xl:col-span-8">
+                <div class="bg-gradient-to-br from-purple-100 via-pink-50 to-blue-50 p-2 sm:p-3 rounded-[2.5rem] shadow-sm">
+                    <div class="bg-[#fcfaf7] rounded-[2rem] border border-purple-100/50 h-[400px] relative overflow-hidden flex flex-col p-6">
+                        
+                        <!-- Top Bar inside Canvas -->
+                        <div class="absolute top-6 left-1/2 -translate-x-1/2 flex justify-between items-center gap-4 w-full px-6 max-w-sm z-20">
+                            <div class="flex-1 bg-blue-100 text-blue-600 font-bold py-2.5 px-6 rounded-full text-center border-2 border-blue-400 shadow-sm whitespace-nowrap text-sm sm:text-base" id="game-target-pill">
+                                Find the Letter!
+                            </div>
+                            <div class="bg-purple-100 text-purple-600 font-bold py-2.5 px-4 rounded-full border-2 border-purple-200 flex items-center justify-center gap-1 shadow-sm w-20 shrink-0">
+                                ⭐ <span id="game-stars">0</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Game Board -->
+                        <div id="game-board" class="w-full h-full relative mt-12 z-10">
+                            <!-- Bubbles injected here -->
+                        </div>
+
+                        <!-- Reward Screen inside Canvas -->
+                        <div id="game-reward" class="hidden absolute inset-0 z-30 flex-col items-center justify-center bg-brand-bg/95 backdrop-blur-sm animate-pop-in rounded-[2rem]">
+                            <!-- Dynamic content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Learn & Play Info Box (5 cols) -->
+            <div class="lg:col-span-5 xl:col-span-4">
+                <div class="bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgb(0,0,0,0.05)] border border-purple-50 h-full flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center font-black text-[10px] tracking-widest shadow-md">
+                            abc
+                        </div>
+                        <h4 class="font-display text-brand-purple text-xl font-black">Play & Learn Letters</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm font-medium leading-relaxed mb-4">
+                        Alphabet Hunt is a playful sensory game built specifically for our Junior KG kids to learn the alphabet in an engaging way.
+                    </p>
+                    <p class="text-gray-500 text-sm font-medium leading-relaxed mb-8">
+                        Tapping the correct letters helps children build <strong class="text-brand-purple">visual association</strong>, <strong class="text-orange-500">hand-eye coordination</strong>, and early vocabulary.
+                    </p>
+                    
+                    <!-- Badges -->
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-[10px] font-bold px-3 py-1.5 rounded-full bg-purple-50 text-purple-600 uppercase tracking-wider flex items-center gap-1"><span class="opacity-50">🔤</span> LETTER MATCH</span>
+                        <span class="text-[10px] font-bold px-3 py-1.5 rounded-full bg-rose-50 text-rose-600 uppercase tracking-wider flex items-center gap-1"><span class="opacity-50">👆</span> ACTIVE TAPS</span>
+                        <span class="text-[10px] font-bold px-3 py-1.5 rounded-full bg-orange-50 text-orange-600 uppercase tracking-wider flex items-center gap-1"><span class="opacity-50">🎯</span> VOCABULARY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Developmental Phases (Cloud Cards Carousel) -->
+    <!-- SECTION 3: Developmental Phases (Milestones) -->
+    <section class="reveal-on-scroll max-w-[1340px] w-full mx-auto px-6 sm:px-16 py-24 relative overflow-hidden bg-brand-bg">
+        
+        <!-- Decorative colored waves at the bottom background -->
+        <div class="absolute bottom-0 inset-x-0 h-24 w-full opacity-60 z-0 pointer-events-none flex items-end">
+            <svg viewBox="0 0 1440 120" class="w-full h-full" preserveAspectRatio="none">
+                <path d="M0,60 C360,110 720,20 1080,70 C1260,95 1350,75 1440,60 L1440,120 L0,120 Z" fill="#FAF5FF" />
+                <path d="M0,75 C360,125 720,35 1080,85 C1260,110 1350,90 1440,75 L1440,120 L0,120 Z" fill="#FFFBEB" opacity="0.75" />
+                <path d="M0,90 C360,140 720,50 1080,100 C1260,125 1350,105 1440,90 L1440,120 L0,120 Z" fill="#F0FDF4" opacity="0.6" />
+                <path d="M0,105 C360,155 720,65 1080,115 C1260,140 1350,120 1440,105 L1440,120 L0,120 Z" fill="#FFF5F5" opacity="0.4" />
+            </svg>
+        </div>
+
+        <!-- Upper Grid: Title and Widescreen Photo -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10 mb-16">
+            <!-- Left Side: Title -->
+            <div class="lg:col-span-5 text-center lg:text-left">
+                <span class="font-script text-[#fa8295] text-[2.4rem] block mb-1">Milestones &amp; Growth</span>
+                <h3 class="font-display text-3xl sm:text-4xl text-brand-purple font-black uppercase leading-tight">
+                    Development &amp; Milestones
+                </h3>
+                <svg class="w-24 h-3 text-[#fa8295] fill-none stroke-current my-4 mx-auto lg:mx-0" stroke-width="3" stroke-linecap="round" viewBox="0 0 100 10">
+                    <path d="M5 5 Q20 1 35 5 T65 5 T95 5" />
+                </svg>
+                <p class="text-gray-500 text-sm font-semibold leading-relaxed max-w-md mx-auto lg:mx-0">
+                    Nurturing cooperative play, expanding vocabularies, and sparking vivid imaginations.
+                </p>
+            </div>
+            
+            <!-- Right Side: Big, Widescreen Junior KG Image -->
+            <div class="lg:col-span-7 flex justify-center">
+                <div class="rounded-[45%_55%_45%_55%_/_50%_50%_40%_40%] overflow-hidden border-8 border-white shadow-2xl w-full max-w-xl h-64 md:h-72 bg-white relative">
+                    <img src="assets/juniorkg_play.jpg" alt="Junior KG Children Playing" class="w-full h-full object-cover hover:scale-[1.02] transition duration-500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Row with Scrapbook Cards -->
+        <div class="relative z-10 max-w-6xl mx-auto mt-12 pb-8">
+            
+             <!-- Cards Grid / Carousel Track -->
+            <div id="curriculum-carousel-track" class="flex lg:grid lg:grid-cols-4 gap-8 w-full overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-none scroll-smooth relative z-10 py-6 px-4 items-stretch justify-items-center">
+                
+                <!-- Card 1: Cooperative Play (Purple Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-purple-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-purple-100 text-purple-700 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[-3deg] uppercase rounded shadow-sm border border-purple-200/50">
+                        Milestone 01
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-purple-50 border-2 border-purple-200 flex items-center justify-center text-brand-purple text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-brand-purple text-lg font-black mb-3">Cooperative Play</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Begin to develop cooperative social skills, sharing toys, taking turns, and learning to tolerate minor delays in gratification.
+                    </p>
+                </div>
+
+                <!-- Card 2: Imagination (Yellow Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-amber-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:-translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-amber-100 text-amber-850 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[3deg] uppercase rounded shadow-sm border border-amber-200/50">
+                        Milestone 02
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-amber-50 border-2 border-amber-200 flex items-center justify-center text-amber-600 text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-amber-700 text-lg font-black mb-3">Imagination</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Extremely creative. Enjoy making up fun stories, pretending, role-playing, and acting out books or television characters.
+                    </p>
+                </div>
+
+                <!-- Card 3: Adventurous (Green Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-green-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-green-100 text-green-800 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[-2deg] uppercase rounded shadow-sm border border-green-200/50">
+                        Milestone 03
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-green-50 border-2 border-green-200 flex items-center justify-center text-green-600 text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-green-700 text-lg font-black mb-3">Adventurous</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Highly curious about objects, asking questions about everything they see, and trying out exciting activities.
+                    </p>
+                </div>
+
+                <!-- Card 4: Cooperative (Pink Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-rose-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:-translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-rose-100 text-rose-800 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[2deg] uppercase rounded shadow-sm border border-rose-200/50">
+                        Milestone 04
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-rose-50 border-2 border-rose-200 flex items-center justify-center text-rose-600 text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-face-smile-beam"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-rose-700 text-lg font-black mb-3">Cooperative</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Feel a strong need to please adults, cooperatively following routines and imitating daily behavior/vocabulary patterns.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Modern Bento Box Curriculum Showcase -->
+    <section class="reveal-on-scroll py-24 relative z-10 overflow-hidden" style="background-image: url('assets/juniorkg_bento_bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Glassmorphism overlay reduced for better image visibility -->
+        <div class="absolute inset-0 bg-white/20 backdrop-blur-[2px] z-0"></div>
+        
+        <!-- Background decorative elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300/30 rounded-full blur-[80px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-300/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-300/20 rounded-full blur-[120px] pointer-events-none skew-y-12 z-0"></div>
+        
+        <div class="max-w-[1240px] w-full mx-auto px-6 sm:px-16 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16 relative">
+                <span class="inline-block px-4 py-1.5 bg-white shadow-sm border border-gray-100 rounded-full text-[#fa8295] font-bold text-sm tracking-widest uppercase mb-4">
+                    <i class="fa-solid fa-sparkles mr-1"></i> Our Curriculum
+                </span>
+                <h3 class="font-display text-4xl sm:text-5xl text-slate-800 font-black tracking-tight mb-4">
+                    Junior KG <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">Adventures</span>
+                </h3>
+                <p class="text-slate-500 text-base sm:text-lg font-medium max-w-2xl mx-auto">
+                    A modern, structured, and playful learning ecosystem designed to nurture every milestone of your child's developing mind.
+                </p>
+            </div>
+
+            <!-- Bento Box Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                
+                <!-- Tile 1: KG Readiness (Wide Card) -->
+                <div class="md:col-span-2 bg-gradient-to-br from-purple-100 to-white backdrop-blur-xl border-4 border-white/60 rounded-[2.5rem] p-8 shadow-[0_10px_30px_rgb(168,85,247,0.15)] hover:shadow-[0_20px_40px_rgb(168,85,247,0.25)] transition-all duration-500 group relative overflow-hidden flex flex-col sm:flex-row items-center gap-8 cursor-pointer hover:-translate-y-2">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-purple-300/30 rounded-full blur-2xl group-hover:bg-purple-400/40 transition duration-500 pointer-events-none"></div>
+                    <div class="absolute bottom-4 right-4 opacity-10 text-8xl rotate-12 pointer-events-none">🎒</div>
+                    
+                    <div class="flex-shrink-0 w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white flex items-center justify-center shadow-[0_8px_20px_rgb(168,85,247,0.2)] group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500 border-4 border-purple-200 overflow-hidden">
+                        <img src="assets/jkg_readiness.jpg" alt="KG Readiness" class="w-full h-full object-cover mix-blend-multiply">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left relative z-10">
+                        <span class="inline-block px-4 py-1.5 bg-purple-500 text-white text-xs font-black uppercase tracking-widest rounded-full mb-3 shadow-md">Adventure 01</span>
+                        <h4 class="font-display text-purple-900 text-3xl font-black mb-3">KG Readiness &amp; Transition</h4>
+                        <p class="text-purple-700/80 text-sm sm:text-base font-semibold leading-relaxed">
+                            Preparing little ones for a smooth transition from playgroups to formal schooling with fun daily routines, emotional guidance, and confidence building.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tile 2: Language & Phonics (Tall Card) -->
+                <div class="md:col-span-1 md:row-span-2 bg-gradient-to-b from-amber-300 to-orange-400 border-4 border-white/60 rounded-[2.5rem] p-8 shadow-[0_10px_30px_rgb(245,158,11,0.2)] hover:shadow-[0_20px_40px_rgb(245,158,11,0.3)] transition-all duration-500 group relative overflow-hidden flex flex-col justify-between text-white cursor-pointer hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.4),transparent_70%)] pointer-events-none"></div>
+                    <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 text-9xl -rotate-12 pointer-events-none font-bold">A B C</div>
+                    
+                    <div>
+                        <div class="flex justify-between items-start mb-8 relative z-10">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-[0_8px_20px_rgb(0,0,0,0.1)] border-2 border-white/50 group-hover:scale-110 group-hover:-rotate-[10deg] transition-all duration-500 overflow-hidden">
+                                <img src="assets/jkg_language.jpg" alt="Language" class="w-full h-full object-cover mix-blend-multiply p-1">
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-black/10 backdrop-blur-sm text-white text-xs font-black uppercase tracking-wider rounded-full shadow-inner">Adv 02</span>
+                        </div>
+                        <h4 class="font-display text-3xl font-black mb-4 relative z-10 leading-tight drop-shadow-sm">Language &amp;<br>Phonics</h4>
+                    </div>
+                    <p class="text-amber-50 text-sm sm:text-base font-semibold leading-relaxed relative z-10">
+                        Discovering alphabets, funny sounds, phonics blends, and early writing skills. We build robust reading habits through magical story times!
+                    </p>
+                </div>
+
+                <!-- Tile 3: Mathematics (Square Card) -->
+                <div class="md:col-span-1 bg-gradient-to-br from-emerald-100 to-white backdrop-blur-xl border-4 border-white/60 rounded-[2.5rem] p-8 shadow-[0_10px_30px_rgb(16,185,129,0.15)] hover:shadow-[0_20px_40px_rgb(16,185,129,0.25)] transition-all duration-500 group relative overflow-hidden flex flex-col cursor-pointer hover:-translate-y-2">
+                    <div class="absolute bottom-4 right-4 opacity-10 text-7xl -rotate-12 pointer-events-none">🎲</div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-[0_8px_20px_rgb(16,185,129,0.2)] border-2 border-emerald-200 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-[15deg] overflow-hidden">
+                            <img src="assets/jkg_math.jpg" alt="Math" class="w-full h-full object-cover mix-blend-multiply p-1">
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-emerald-500 text-white text-[10px] font-black uppercase tracking-wider rounded-full">Adv 03</span>
+                    </div>
+                    <h4 class="font-display text-emerald-900 text-2xl font-black mb-3">Early Math</h4>
+                    <p class="text-emerald-700/80 text-sm font-semibold leading-relaxed">
+                        Introducing number systems, spatial understanding, fun patterns, and geometric shapes using physical building blocks.
+                    </p>
+                </div>
+
+                <!-- Tile 4: Science & Environment (Square Card) -->
+                <div class="md:col-span-1 bg-gradient-to-br from-rose-100 to-white backdrop-blur-xl border-4 border-white/60 rounded-[2.5rem] p-8 shadow-[0_10px_30px_rgb(244,63,94,0.15)] hover:shadow-[0_20px_40px_rgb(244,63,94,0.25)] transition-all duration-500 group relative overflow-hidden flex flex-col cursor-pointer hover:-translate-y-2">
+                    <div class="absolute bottom-4 right-4 opacity-10 text-7xl rotate-12 pointer-events-none">🌱</div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-[0_8px_20px_rgb(244,63,94,0.2)] border-2 border-rose-200 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-[15deg] overflow-hidden">
+                            <img src="assets/jkg_science.jpg" alt="Science" class="w-full h-full object-cover mix-blend-multiply p-1">
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-rose-500 text-white text-[10px] font-black uppercase tracking-wider rounded-full">Adv 04</span>
+                    </div>
+                    <h4 class="font-display text-rose-900 text-2xl font-black mb-3">Science &amp; Env</h4>
+                    <p class="text-rose-700/80 text-sm font-semibold leading-relaxed">
+                        Exploring fuzzy animals, sunny weather systems, and simple kitchen science to nurture natural inquisitiveness.
+                    </p>
+                </div>
+
+                <!-- Tile 5: Creative Explorations (Full Width Card) -->
+                <div class="md:col-span-3 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 border-4 border-white/60 rounded-[2.5rem] p-8 sm:p-10 shadow-[0_15px_40px_rgb(192,132,252,0.3)] hover:shadow-[0_25px_50px_rgb(192,132,252,0.4)] transition-all duration-500 group relative overflow-hidden flex flex-col sm:flex-row items-center gap-8 text-white mt-2 cursor-pointer hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4yKSIvPjwvc3ZnPg==')] pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-[80px] pointer-events-none"></div>
+                    <div class="absolute top-1/2 left-[10%] opacity-20 text-6xl pointer-events-none -translate-y-1/2 -rotate-12">🎵</div>
+                    <div class="absolute top-1/2 right-[10%] opacity-20 text-6xl pointer-events-none -translate-y-1/2 rotate-12">🖍️</div>
+                    
+                    <div class="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-white flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.15)] border-4 border-white/50 group-hover:scale-110 group-hover:rotate-[20deg] transition-all duration-500 z-10 overflow-hidden">
+                        <img src="assets/jkg_arts.jpg" alt="Creative Arts" class="w-full h-full object-cover mix-blend-multiply p-2">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left relative z-10">
+                        <div class="flex items-center justify-center sm:justify-start gap-3 mb-3">
+                            <span class="inline-block px-4 py-1.5 bg-white/20 text-white text-xs font-black uppercase tracking-wider rounded-full backdrop-blur-md shadow-sm border border-white/30">Adventure 05</span>
+                            <span class="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-black uppercase shadow-sm animate-pulse">The Grand Finale!</span>
+                        </div>
+                        <h4 class="font-display text-3xl sm:text-4xl font-black mb-3 drop-shadow-md">Creative Arts &amp; Collaboration</h4>
+                        <p class="text-white/90 text-sm sm:text-base font-semibold leading-relaxed max-w-3xl drop-shadow-sm">
+                            Encouraging messy artistic play, musical fun, classroom theater, and cooperative group projects. Children build solid social ties, learn to express themselves playfully, and unlock their inner creativity!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRUST PHRASE BANNER -->
+    <section class="reveal-on-scroll max-w-[1240px] w-full mx-auto my-12 rounded-[3.5rem] overflow-hidden bg-brand-purple text-white p-8 sm:p-12 text-center shadow-lg relative z-10">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-purple-dark to-brand-purple opacity-90 z-0"></div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h4 class="font-poster text-[18px] sm:text-2xl tracking-wide font-bold italic text-brand-yellow leading-tight mb-4">
+                "By Word ! By Faith ! Through Love !"
+            </h4>
+            <p class="text-purple-100 text-sm sm:text-base font-semibold leading-relaxed">
+                To Pronounce and Proclaim the truth of knowledge and wisdom and facilitate to deliver and renew the strength of the Young Ones to " Arise and Shine ".
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-brand-purple-dark text-white py-12 border-t-[8px] border-brand-yellow">
+        <div class="max-w-[1340px] w-full mx-auto px-6 sm:px-16 pr-6 sm:pr-32 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h5 class="font-display text-lg font-bold text-white mb-2">&copy; Copyrights - Ryans Academy</h5>
+            <div class="flex items-center justify-center gap-2 mt-3 pt-3 border-t border-white/10">
+                <span class="text-gray-300 text-xs font-medium">Developed by</span>
+                <a href="https://yaaletech.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white px-3 py-1.5 rounded-xl shadow-sm hover:shadow-md transition-all group" title="Yaale Technologies">
+                    <img src="assets/yaale_logo.png" alt="Yaale Technologies Logo" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform">
+                    <span class="text-xs font-extrabold tracking-tight text-[#006766] group-hover:text-[#004d4c] uppercase">YAALE TECHNOLOGIES</span>
+                </a>
+            </div>
+                
+            </div>
+            
+            <!-- Social handles -->
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com/ryanspreschool" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-brand-purple flex items-center justify-center transition"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                <a href="https://twitter.com/ryanspreschool" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-brand-purple flex items-center justify-center transition"><i class="fa-brands fa-twitter text-lg"></i></a>
+                <a href="https://linkedin.com/school/ryanspreschool" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-brand-purple flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HTML5 2D Canvas "Interactive Drawing Table" Game Script -->
+    <script>
+        function initDrawingTable() {
+            const container = document.getElementById('three-canvas-container');
+            if (!container) return;
+
+            // Clear previous canvas or elements
+            container.innerHTML = '';
+
+            // Active coloring template state
+            let activeTemplate = 'butterfly';
+
+            // Add UI text instruction
+            const infoText = document.createElement('div');
+            infoText.className = "absolute top-4 left-4 bg-white/95 backdrop-blur-sm border border-purple-100 rounded-full px-3.5 py-1.5 text-[11px] sm:text-xs font-black text-brand-purple shadow-sm pointer-events-none z-30 flex items-center gap-1.5";
+            infoText.innerHTML = "🎨 Select a color & paint on the drawing table!";
+            container.appendChild(infoText);
+
+            // Add Template Selector Toolbar (Bottom-Left)
+            const toolbar = document.createElement('div');
+            toolbar.className = "absolute bottom-4 left-4 z-30 flex items-center gap-1 sm:gap-2 bg-white/95 backdrop-blur-sm border border-purple-100 rounded-2xl p-1.5 shadow-md";
+            
+            const templates = [
+                { id: 'butterfly', emoji: '🦋', name: 'Butterfly' },
+                { id: 'teddy', emoji: '🧸', name: 'Teddy' },
+                { id: 'flower', emoji: '🌸', name: 'Flower' },
+                { id: 'sun', emoji: '☀️', name: 'Sun' }
+            ];
+
+            const buttons = [];
+            templates.forEach(t => {
+                const btn = document.createElement('button');
+                btn.className = `px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-black rounded-xl cursor-pointer transition-all duration-100 flex items-center gap-1 border-b-2 ${
+                    t.id === activeTemplate 
+                    ? 'bg-brand-purple text-white border-brand-purple-dark' 
+                    : 'bg-purple-50 text-brand-purple border-purple-200 hover:bg-purple-100'
+                }`;
+                btn.innerHTML = `<span>${t.emoji}</span> <span class="hidden sm:inline">${t.name}</span>`;
+                btn.addEventListener('click', () => {
+                    activeTemplate = t.id;
+                    strokes = []; // Clear canvas for new coloring page
+                    buttons.forEach(b => {
+                        b.btn.className = `px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-black rounded-xl cursor-pointer transition-all duration-100 flex items-center gap-1 border-b-2 ${
+                            b.id === activeTemplate 
+                            ? 'bg-brand-purple text-white border-brand-purple-dark' 
+                            : 'bg-purple-50 text-brand-purple border-purple-200 hover:bg-purple-100'
+                        }`;
+                    });
+                });
+                toolbar.appendChild(btn);
+                buttons.push({ id: t.id, btn: btn });
+            });
+            container.appendChild(toolbar);
+
+            // Add chunky 3D plastic Clear button
+            const clearBtn = document.createElement('button');
+            clearBtn.className = "absolute bottom-4 right-4 bg-[#ffb800] text-brand-purple font-black text-[10px] sm:text-xs uppercase tracking-wider px-5 py-2.5 rounded-2xl border-b-4 border-[#d97706] active:border-b-0 active:translate-y-[4px] transition-all duration-100 z-30 shadow-md hover:shadow-lg cursor-pointer";
+            clearBtn.innerText = "Clear Table";
+            container.appendChild(clearBtn);
+
+            const canvas = document.createElement('canvas');
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.display = 'block';
+            container.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+
+            // Polyfill roundRect for older browsers/devices
+            if (ctx && !CanvasRenderingContext2D.prototype.roundRect) {
+                CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+                    if (typeof r === 'undefined') r = 0;
+                    if (typeof r === 'number') {
+                        r = { tl: r, tr: r, br: r, bl: r };
+                    } else {
+                        const defaultRadius = { tl: 0, tr: 0, br: 0, bl: 0 };
+                        for (const side in defaultRadius) {
+                            r[side] = r[side] || defaultRadius[side];
+                        }
+                    }
+                    this.beginPath();
+                    this.moveTo(x + r.tl, y);
+                    this.lineTo(x + w - r.tr, y);
+                    this.quadraticCurveTo(x + w, y, x + w, y + r.tr);
+                    this.lineTo(x + w, y + h - r.br);
+                    this.quadraticCurveTo(x + w, y + h, x + w - r.br, y + h);
+                    this.lineTo(x + r.bl, y + h);
+                    this.quadraticCurveTo(x, y + h, x, y + h - r.bl);
+                    this.lineTo(x, y + r.tl);
+                    this.quadraticCurveTo(x, y, x + r.tl, y);
+                    this.closePath();
+                    return this;
+                };
+            }
+
+            let width = container.clientWidth || 400;
+            let height = container.clientHeight || 380;
+
+            canvas.width = width;
+            canvas.height = height;
+
+            // Coordinates
+            let centerX = width / 2;
+            let centerY = height / 2 + 10;
+
+            // Paint Game States
+            let currentColor = '#ef4444'; // default red
+            let currentBrushSize = 8;
+            let isEraserActive = false;
+            let strokes = []; // Array of { color, size, points: [{x, y}] }
+            let isDrawing = false;
+            let currentStroke = null;
+
+            // Color options mapping
+            const colors = [
+                { id: 'red', code: '#ef4444', x: 60, y: 75, r: 16 },
+                { id: 'orange', code: '#f97316', x: 60, y: 115, r: 16 },
+                { id: 'yellow', code: '#eab308', x: 60, y: 155, r: 16 },
+                { id: 'green', code: '#22c55e', x: 60, y: 195, r: 16 },
+                { id: 'blue', code: '#3b82f6', x: 60, y: 235, r: 16 },
+                { id: 'purple', code: '#a855f7', x: 60, y: 275, r: 16 }
+            ];
+
+            // Brush sizes & Tools mapping
+            const brushes = [
+                { id: 'small', size: 4, label: 'Thin', x: width - 60, y: 75, r: 14 },
+                { id: 'medium', size: 8, label: 'Mid', x: width - 60, y: 125, r: 16 },
+                { id: 'large', size: 16, label: 'Thick', x: width - 60, y: 180, r: 19 }
+            ];
+
+            const eraserTool = { id: 'eraser', x: width - 60, y: 245, w: 42, h: 28 };
+
+            clearBtn.addEventListener('click', () => {
+                strokes = [];
+            });
+
+            // Draw Premium Room/Drawing-Table Scene
+            function drawBg() {
+                // 1. Base floor planks color
+                ctx.fillStyle = '#faf6ed';
+                ctx.fillRect(0, 0, width, height);
+
+                // Draw wooden floor boards
+                ctx.strokeStyle = '#efe7da';
+                ctx.lineWidth = 4;
+                const plankHeight = 35;
+                for (let y = 0; y < height; y += plankHeight) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, y);
+                    ctx.lineTo(width, y);
+                    ctx.stroke();
+                }
+
+                // 2. Wooden Closets on the sides
+                const drawCupboard = (leftX) => {
+                    const cbW = 92;
+                    const cbH = 250;
+                    const cbY = 35;
+
+                    // Wood outer closet shadow/depth
+                    ctx.fillStyle = '#7c2d12'; // deep mahogany wood border
+                    ctx.beginPath();
+                    ctx.roundRect(leftX - 3, cbY - 3, cbW + 6, cbH + 6, 24);
+                    ctx.fill();
+
+                    // Closet inside base
+                    ctx.fillStyle = '#ffedd5'; // soft pine shelf inside
+                    ctx.beginPath();
+                    ctx.roundRect(leftX, cbY, cbW, cbH, 20);
+                    ctx.fill();
+
+                    // Inner compartment shadow
+                    const innerShadow = ctx.createLinearGradient(leftX, cbY, leftX + 15, cbY + 15);
+                    innerShadow.addColorStop(0, 'rgba(124,45,18,0.12)');
+                    innerShadow.addColorStop(1, 'rgba(255,237,213,0)');
+                    ctx.fillStyle = innerShadow;
+                    ctx.beginPath();
+                    ctx.roundRect(leftX, cbY, cbW, cbH, 20);
+                    ctx.fill();
+                };
+
+                drawCupboard(15); // Left closet (Colors cupboard)
+                drawCupboard(width - 107); // Right closet (Brushes cupboard)
+
+                // 3. Draw white sheet of paper in the center (Drawing board)
+                const boardX = 120;
+                const boardY = 48;
+                const boardW = width - 240;
+                const boardH = height - 96;
+
+                // Frame board mahogany border
+                ctx.fillStyle = '#5c1f0e';
+                ctx.beginPath();
+                ctx.roundRect(boardX - 4, boardY - 4, boardW + 8, boardH + 8, 20);
+                ctx.fill();
+
+                // Paper board sheet
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.roundRect(boardX, boardY, boardW, boardH, 16);
+                ctx.fill();
+
+                ctx.strokeStyle = '#e2e8f0';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+            }
+
+            // Draw light gray coloring shape outline templates
+            function drawColoringTemplate() {
+                ctx.strokeStyle = '#cbd5e1';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([6, 6]);
+
+                if (activeTemplate === 'butterfly') {
+                    // Left wings
+                    ctx.beginPath();
+                    ctx.ellipse(centerX - 28, centerY - 15, 34, 20, -Math.PI/6, 0, Math.PI*2);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.ellipse(centerX - 24, centerY + 18, 24, 15, Math.PI/6, 0, Math.PI*2);
+                    ctx.stroke();
+
+                    // Right wings
+                    ctx.beginPath();
+                    ctx.ellipse(centerX + 28, centerY - 15, 34, 20, Math.PI/6, 0, Math.PI*2);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.ellipse(centerX + 24, centerY + 18, 24, 15, -Math.PI/6, 0, Math.PI*2);
+                    ctx.stroke();
+
+                    // Body
+                    ctx.fillStyle = '#f8fafc';
+                    ctx.beginPath();
+                    ctx.ellipse(centerX, centerY, 8, 44, 0, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Antennae
+                    ctx.beginPath();
+                    ctx.moveTo(centerX - 3, centerY - 44);
+                    ctx.quadraticCurveTo(centerX - 10, centerY - 56, centerX - 13, centerY - 53);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(centerX + 3, centerY - 44);
+                    ctx.quadraticCurveTo(centerX + 10, centerY - 56, centerX + 13, centerY - 53);
+                    ctx.stroke();
+
+                } else if (activeTemplate === 'teddy') {
+                    // Teddy Ears
+                    ctx.beginPath();
+                    ctx.arc(centerX - 24, centerY - 32, 12, 0, Math.PI*2);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.arc(centerX + 24, centerY - 32, 12, 0, Math.PI*2);
+                    ctx.stroke();
+
+                    // Teddy Body
+                    ctx.beginPath();
+                    ctx.ellipse(centerX, centerY + 30, 36, 28, 0, 0, Math.PI*2);
+                    ctx.stroke();
+
+                    // Teddy Head
+                    ctx.fillStyle = '#f8fafc';
+                    ctx.beginPath();
+                    ctx.ellipse(centerX, centerY - 10, 32, 28, 0, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Teddy Snout
+                    ctx.beginPath();
+                    ctx.ellipse(centerX, centerY - 4, 10, 8, 0, 0, Math.PI*2);
+                    ctx.stroke();
+
+                    // Teddy Nose
+                    ctx.fillStyle = '#cbd5e1';
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY - 6, 3, 0, Math.PI*2);
+                    ctx.fill();
+
+                } else if (activeTemplate === 'flower') {
+                    // Stem & Leaf
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY + 20);
+                    ctx.lineTo(centerX, centerY + 58);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.ellipse(centerX + 10, centerY + 45, 12, 6, -Math.PI/6, 0, Math.PI*2);
+                    ctx.stroke();
+
+                    // Petals
+                    const numPetals = 8;
+                    for (let i = 0; i < numPetals; i++) {
+                        const angle = (i * 2 * Math.PI) / numPetals;
+                        const petalX = centerX + Math.cos(angle) * 24;
+                        const petalY = centerY + Math.sin(angle) * 24;
+                        ctx.beginPath();
+                        ctx.arc(petalX, petalY, 13, 0, Math.PI*2);
+                        ctx.stroke();
+                    }
+
+                    // Center Circle
+                    ctx.fillStyle = '#f8fafc';
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, 14, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                } else if (activeTemplate === 'sun') {
+                    // Sun center
+                    const sx = centerX - 25;
+                    const sy = centerY - 15;
+                    const sr = 22;
+
+                    ctx.fillStyle = '#f8fafc';
+                    ctx.beginPath();
+                    ctx.arc(sx, sy, sr, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Sun rays
+                    const numRays = 8;
+                    for (let i = 0; i < numRays; i++) {
+                        const angle = (i * 2 * Math.PI) / numRays;
+                        const startX = sx + Math.cos(angle) * (sr + 3);
+                        const startY = sy + Math.sin(angle) * (sr + 3);
+                        const endX = sx + Math.cos(angle) * (sr + 10);
+                        const endY = sy + Math.sin(angle) * (sr + 10);
+                        ctx.beginPath();
+                        ctx.moveTo(startX, startY);
+                        ctx.lineTo(endX, endY);
+                        ctx.stroke();
+                    }
+
+                    // Cloud overlay
+                    const cx = centerX + 18;
+                    const cy = centerY + 18;
+                    ctx.fillStyle = '#ffffff';
+
+                    ctx.beginPath();
+                    ctx.ellipse(cx, cy, 32, 16, 0, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(cx - 15, cy - 8, 14, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(cx + 8, cy - 10, 16, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.stroke();
+                }
+
+                ctx.setLineDash([]);
+            }
+
+            // Draw paint stroke lines
+            function drawStrokes() {
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+
+                strokes.forEach(stroke => {
+                    if (stroke.points.length < 1) return;
+                    ctx.strokeStyle = stroke.color;
+                    ctx.lineWidth = stroke.size;
+                    ctx.beginPath();
+                    ctx.moveTo(stroke.points[0].x, stroke.points[0].y);
+                    
+                    if (stroke.points.length === 1) {
+                        ctx.lineTo(stroke.points[0].x, stroke.points[0].y);
+                    } else {
+                        for (let i = 1; i < stroke.points.length; i++) {
+                            ctx.lineTo(stroke.points[i].x, stroke.points[i].y);
+                        }
+                    }
+                    ctx.stroke();
+                });
+            }
+
+            // Draw color paint pots
+            function drawColorPots() {
+                colors.forEach(pot => {
+                    // Paint Pot base shadow
+                    ctx.fillStyle = '#ea580c';
+                    ctx.beginPath();
+                    ctx.arc(pot.x, pot.y + 2, pot.r, 0, Math.PI*2);
+                    ctx.fill();
+
+                    // Pot frame
+                    ctx.fillStyle = '#fff7ed';
+                    ctx.beginPath();
+                    ctx.arc(pot.x, pot.y, pot.r, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.strokeStyle = '#c2410c';
+                    ctx.lineWidth = 2.5;
+                    ctx.stroke();
+
+                    // Colored Paint center
+                    ctx.fillStyle = pot.code;
+                    ctx.beginPath();
+                    ctx.arc(pot.x, pot.y, pot.r - 5, 0, Math.PI*2);
+                    ctx.fill();
+
+                    // If selected, draw highlight ring
+                    if (currentColor === pot.code && !isEraserActive) {
+                        ctx.strokeStyle = '#ca8a04';
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.arc(pot.x, pot.y, pot.r + 3, 0, Math.PI*2);
+                        ctx.stroke();
+                    }
+                });
+            }
+
+            // Draw Brush Selectors
+            function drawBrushes() {
+                brushes.forEach(brush => {
+                    // Base Circle
+                    ctx.fillStyle = '#fff7ed';
+                    ctx.beginPath();
+                    ctx.arc(brush.x, brush.y, brush.r, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.strokeStyle = '#c2410c';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+
+                    // Draw inner circle representing size
+                    ctx.fillStyle = isEraserActive ? '#cbd5e1' : currentColor;
+                    ctx.beginPath();
+                    ctx.arc(brush.x, brush.y, brush.size / 2 + 1, 0, Math.PI*2);
+                    ctx.fill();
+
+                    // If selected, highlight
+                    if (currentBrushSize === brush.size && !isEraserActive) {
+                        ctx.strokeStyle = '#ca8a04';
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.arc(brush.x, brush.y, brush.r + 3.5, 0, Math.PI*2);
+                        ctx.stroke();
+                    }
+                });
+            }
+
+            // Draw Eraser Tool
+            function drawEraser() {
+                const ex = eraserTool.x;
+                const ey = eraserTool.y;
+                const ew = eraserTool.w;
+                const eh = eraserTool.h;
+
+                // Base block
+                ctx.fillStyle = '#fda4af'; // Pink eraser color
+                ctx.beginPath();
+                ctx.roundRect(ex - ew/2, ey - eh/2, ew, eh, 6);
+                ctx.fill();
+                ctx.strokeStyle = '#e11d48';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Eraser blue grip label
+                ctx.fillStyle = '#3b82f6';
+                ctx.fillRect(ex - ew/4, ey - eh/2, ew/2, eh);
+
+                // Highlight if active
+                if (isEraserActive) {
+                    ctx.strokeStyle = '#ca8a04';
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.roundRect(ex - ew/2 - 3, ey - eh/2 - 3, ew + 6, eh + 6, 9);
+                    ctx.stroke();
+                }
+            }
+
+            // Position helper
+            function getEventPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                return {
+                    x: clientX - rect.left,
+                    y: clientY - rect.top
+                };
+            }
+
+            function handleStart(e) {
+                const pos = getEventPos(e);
+
+                // 1. Check if clicked Left Paint Pots
+                for (let i = 0; i < colors.length; i++) {
+                    const pot = colors[i];
+                    const dx = pos.x - pot.x;
+                    const dy = pos.y - pot.y;
+                    if (Math.sqrt(dx*dx + dy*dy) < pot.r) {
+                        currentColor = pot.code;
+                        isEraserActive = false;
+                        return;
+                    }
+                }
+
+                // 2. Check if clicked Right Brushes
+                for (let i = 0; i < brushes.length; i++) {
+                    const brush = brushes[i];
+                    const dx = pos.x - brush.x;
+                    const dy = pos.y - brush.y;
+                    if (Math.sqrt(dx*dx + dy*dy) < brush.r) {
+                        currentBrushSize = brush.size;
+                        isEraserActive = false;
+                        return;
+                    }
+                }
+
+                // 3. Check if clicked Eraser
+                const ex = eraserTool.x;
+                const ey = eraserTool.y;
+                const ew = eraserTool.w;
+                const eh = eraserTool.h;
+                if (pos.x >= ex - ew/2 && pos.x <= ex + ew/2 &&
+                    pos.y >= ey - eh/2 && pos.y <= ey + eh/2) {
+                    isEraserActive = true;
+                    return;
+                }
+
+                // 4. Start painting if clicked inside the board (paper sheet limits)
+                if (pos.x >= 124 && pos.x <= width - 124 &&
+                    pos.y >= 52 && pos.y <= height - 52) {
+                    isDrawing = true;
+                    currentStroke = {
+                        color: isEraserActive ? '#ffffff' : currentColor,
+                        size: isEraserActive ? 22 : currentBrushSize,
+                        points: [{ x: pos.x, y: pos.y }]
+                    };
+                    strokes.push(currentStroke);
+                }
+            }
+
+            function handleMove(e) {
+                if (!isDrawing || !currentStroke) return;
+                const pos = getEventPos(e);
+
+                // Clamp painting points inside board bounds to keep paper clean
+                const clampedX = Math.max(124, Math.min(width - 124, pos.x));
+                const clampedY = Math.max(52, Math.min(height - 52, pos.y));
+
+                currentStroke.points.push({ x: clampedX, y: clampedY });
+            }
+
+            function handleEnd() {
+                isDrawing = false;
+                currentStroke = null;
+            }
+
+            canvas.addEventListener('mousedown', handleStart);
+            canvas.addEventListener('mousemove', handleMove);
+            window.addEventListener('mouseup', handleEnd);
+
+            canvas.addEventListener('touchstart', (e) => { e.preventDefault(); handleStart(e); }, { passive: false });
+            canvas.addEventListener('touchmove', (e) => { handleMove(e); }, { passive: true });
+            canvas.addEventListener('touchend', handleEnd);
+
+            window.addEventListener('resize', () => {
+                width = container.clientWidth || 400;
+                height = container.clientHeight || 380;
+                canvas.width = width;
+                canvas.height = height;
+                centerX = width / 2;
+                centerY = height / 2 + 10;
+                
+                // Readjust tool coordinates
+                colors.forEach((pot, idx) => {
+                    pot.x = 60;
+                });
+                brushes.forEach(brush => {
+                    brush.x = width - 60;
+                });
+                eraserTool.x = width - 60;
+            });
+
+            // Render loop
+            function loop() {
+                drawBg();
+
+                // Apply clipping mask so paint strokes are strictly confined to the paper
+                ctx.save();
+                ctx.beginPath();
+                ctx.roundRect(120, 48, width - 240, height - 96, 16);
+                ctx.clip();
+
+                drawColoringTemplate();
+                drawStrokes();
+
+                ctx.restore();
+
+                // Draw tools on top (outside the paper clipping mask)
+                drawColorPots();
+                drawBrushes();
+                drawEraser();
+
+                requestAnimationFrame(loop);
+            }
+
+            loop();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDrawingTable);
+        } else {
+            initDrawingTable();
+        }
+    </script>
+
+    <!-- Navigation Menu Toggle & Carousel Scrolling Script -->
+    <script>
+
+        // Curriculum carousel track scrolling
+        const track = document.getElementById('curriculum-carousel-track');
+        const prevBtn = document.getElementById('curriculum-prev-btn');
+        const nextBtn = document.getElementById('curriculum-next-btn');
+        const dots = document.querySelectorAll('.curriculum-dot');
+
+        if (track && prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                const cardWidth = track.firstElementChild ? track.firstElementChild.clientWidth + 24 : 320;
+                track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                const cardWidth = track.firstElementChild ? track.firstElementChild.clientWidth + 24 : 320;
+                track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            });
+
+            // Sync indicators on scroll
+            track.addEventListener('scroll', () => {
+                const cardWidth = track.firstElementChild ? track.firstElementChild.clientWidth + 24 : 320;
+                const index = Math.round(track.scrollLeft / cardWidth);
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('bg-brand-purple', 'w-5');
+                        dot.classList.remove('bg-purple-200', 'w-2.5');
+                    } else {
+                        dot.classList.remove('bg-brand-purple', 'w-5');
+                        dot.classList.add('bg-purple-200', 'w-2.5');
+                    }
+                });
+            });
+        }
+
+        // --- ALPHABET HUNT GAME LOGIC ---
+        const alphabetData = [
+            { letter: 'A', word: 'Apple', emoji: '🍎' },
+            { letter: 'B', word: 'Ball', emoji: '⚽' },
+            { letter: 'C', word: 'Cat', emoji: '🐱' },
+            { letter: 'D', word: 'Dog', emoji: '🐶' },
+            { letter: 'E', word: 'Elephant', emoji: '🐘' },
+            { letter: 'F', word: 'Fish', emoji: '🐟' },
+            { letter: 'G', word: 'Grapes', emoji: '🍇' },
+            { letter: 'H', word: 'Hat', emoji: '🎩' },
+            { letter: 'I', word: 'Ice Cream', emoji: '🍦' },
+            { letter: 'J', word: 'Juice', emoji: '🧃' },
+            { letter: 'K', word: 'Kite', emoji: '🪁' },
+            { letter: 'L', word: 'Lion', emoji: '🦁' },
+            { letter: 'M', word: 'Monkey', emoji: '🐒' },
+            { letter: 'N', word: 'Nest', emoji: '🪹' },
+            { letter: 'O', word: 'Orange', emoji: '🍊' },
+            { letter: 'P', word: 'Penguin', emoji: '🐧' },
+            { letter: 'Q', word: 'Queen', emoji: '👑' },
+            { letter: 'R', word: 'Rabbit', emoji: '🐰' },
+            { letter: 'S', word: 'Sun', emoji: '☀️' },
+            { letter: 'T', word: 'Tree', emoji: '🌳' },
+            { letter: 'U', word: 'Umbrella', emoji: '☂️' },
+            { letter: 'V', word: 'Violin', emoji: '🎻' },
+            { letter: 'W', word: 'Watermelon', emoji: '🍉' },
+            { letter: 'X', word: 'Xylophone', emoji: '🎹' },
+            { letter: 'Y', word: 'Yoyo', emoji: '🪀' },
+            { letter: 'Z', word: 'Zebra', emoji: '🦓' }
+        ];
+        
+        let currentLevel = 0;
+        let starsCollected = 0;
+        
+        const gameBoard = document.getElementById('game-board');
+        const gameReward = document.getElementById('game-reward');
+        const gameTargetPill = document.getElementById('game-target-pill');
+        const gameStarsText = document.getElementById('game-stars');
+
+        function initAlphabetGame() {
+            if(!gameBoard) return;
+            
+            const targetData = alphabetData[currentLevel];
+            
+            gameBoard.innerHTML = '';
+            gameBoard.classList.remove('hidden');
+            gameReward.classList.add('hidden');
+            gameReward.classList.remove('flex');
+            
+            gameTargetPill.innerHTML = `Find the <span class='text-brand-purple font-black ml-1'>${targetData.letter}</span>!`;
+            gameStarsText.innerText = starsCollected;
+
+            let currentLetters = [targetData.letter];
+            let allLetters = alphabetData.map(d => d.letter).filter(l => l !== targetData.letter);
+            let shuffledPool = allLetters.sort(() => 0.5 - Math.random());
+            for(let i=0; i<5; i++){
+                currentLetters.push(shuffledPool[i]);
+            }
+            currentLetters.sort(() => 0.5 - Math.random());
+
+            // Pre-defined scattered safe zones to prevent overlap
+            const positions = [
+                { top: 35, left: 20 },
+                { top: 25, left: 50 },
+                { top: 35, left: 80 },
+                { top: 75, left: 25 },
+                { top: 70, left: 55 },
+                { top: 75, left: 80 }
+            ].sort(() => 0.5 - Math.random());
+
+            currentLetters.forEach((letter, index) => {
+                const bubble = document.createElement('div');
+                bubble.className = "w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white shadow-[0_10px_30px_rgb(0,0,0,0.08)] flex items-center justify-center text-3xl sm:text-4xl font-black text-indigo-950 cursor-pointer hover:scale-110 transition-all duration-300 transform active:scale-95 select-none animate-float-bubble absolute -translate-x-1/2 -translate-y-1/2";
+                bubble.innerText = letter;
+                
+                // Add minor jitter so it still feels organic
+                const jitterTop = Math.random() * 4 - 2;
+                const jitterLeft = Math.random() * 4 - 2;
+                
+                bubble.style.top = `${positions[index].top + jitterTop}%`;
+                bubble.style.left = `${positions[index].left + jitterLeft}%`;
+                bubble.style.animationDelay = `${Math.random() * 2}s`;
+                
+                bubble.onclick = () => handleLetterClick(bubble, letter, targetData);
+                gameBoard.appendChild(bubble);
+            });
+        }
+
+        function handleLetterClick(el, letter, targetData) {
+            if(letter === targetData.letter) {
+                starsCollected++;
+                gameStarsText.innerText = starsCollected;
+                el.classList.add('bg-green-100', 'border-green-400', 'text-green-600', 'scale-125');
+                el.innerText = '⭐';
+                
+                setTimeout(() => {
+                    gameBoard.classList.add('hidden');
+                    gameReward.classList.remove('hidden');
+                    gameReward.classList.add('flex');
+                    
+                    gameReward.innerHTML = `
+                        <div class="text-8xl mb-4 animate-bounce">${targetData.emoji}</div>
+                        <h2 class="text-4xl font-black text-rose-500 font-display mb-4">${targetData.letter} is for ${targetData.word}!</h2>
+                        <div class="flex gap-2 text-3xl mb-8">
+                            <span class="animate-spin" style="animation-duration: 3s">⭐</span>
+                            <span class="animate-spin" style="animation-duration: 3s; animation-delay: 0.2s">⭐</span>
+                        </div>
+                        <button onclick="nextAlphabetLevel()" class="px-6 py-2 bg-brand-purple text-white rounded-full font-bold shadow-lg hover:bg-purple-600 hover:-translate-y-1 transition-all">
+                            ${currentLevel < 25 ? 'Next Letter! ➔' : 'Play Again! 🔄'}
+                        </button>
+                    `;
+                }, 600);
+            } else {
+                el.classList.add('bg-red-50', 'border-red-300', 'text-red-400', 'animate-shake-bubble');
+                setTimeout(() => {
+                    el.classList.remove('animate-shake-bubble', 'bg-red-50', 'border-red-300', 'text-red-400');
+                }, 400);
+            }
+        }
+
+        function nextAlphabetLevel() {
+            currentLevel++;
+            if(currentLevel >= alphabetData.length) {
+                currentLevel = 0;
+            }
+            initAlphabetGame();
+        }
+
+        document.addEventListener('DOMContentLoaded', initAlphabetGame);
+    </script>
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Sports | Ryans Academy</title>
+    <meta name="description" content="Explore vibrant life at Ryans Academy: Athletics, Abacus, Western and Classical Dance, Fine Arts, Yoga, Karate, and educational field trips.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-purple': '#4B1F6F',
+                        'deep-purple': '#6B3A8D',
+                        'purple-light': '#834aa7',
+                        'elegant-gold': '#D4A72C',
+                        'soft-gold': '#F3D98B',
+                        'warm-white': '#FAF8F4',
+                        'soft-lavender': '#F1EAF7',
+                        'dark-charcoal': '#29252B'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF8F4] text-[#29252B] antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-[#4B1F6F] text-white text-xs py-2 px-4 sm:px-8 border-b border-purple-900/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[13px]">
+            <span class="flex items-center gap-1.5 text-purple-200">
+                <i class="fa-solid fa-graduation-cap text-[#D4A72C]"></i>
+                <strong class="text-white">Admissions Open 2026-27:</strong> Play Group to Graders
+            </span>
+            <a href="tel:+919840012345" class="hover:text-[#F3D98B] transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-[#D4A72C]"></i> +91 98400 12345</a>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-purple-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between min-h-[82px] lg:min-h-[92px] py-1.5 sm:py-2">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 group mr-2">
+                <img src="assets/logo.png" alt="Ryans Academy Logo" class="brand-logo-img w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col justify-center">
+                    <span class="font-heading font-black text-lg sm:text-xl lg:text-2xl xl:text-[28px] tracking-tight text-[#4B1F6F] leading-none whitespace-nowrap">RYANS ACADEMY</span>
+                    <span class="text-[8px] sm:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] font-extrabold text-[#D4A72C] tracking-[0.14em] uppercase mt-1 whitespace-nowrap">PREMIUM LEARNING • JOYFUL CHILDHOOD</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-4 2xl:gap-5 font-semibold text-[11px] lg:text-xs xl:text-[13px] 2xl:text-sm text-[#29252B] whitespace-nowrap px-1">
+                <a href="index.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Home</span></a>
+                <a href="about.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">About Us</span></a>
+                <a href="academics.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Academics</span></a>
+                <a href="programs.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Programs</span></a>
+                <a href="facilities.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Facilities</span></a>
+                <a href="activities.html" class="text-[#4B1F6F] font-bold border-b-2 border-[#D4A72C] pb-0.5"><span class="whitespace-nowrap inline-block">Activities</span></a>
+                <a href="events.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Events</span></a>
+                <a href="gallery.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Gallery</span></a>
+                <a href="admissions.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Admissions</span></a>
+                <a href="contact.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Contact</span></a>
+            </nav>
+
+            <!-- Prominent Gold 'Enquire Now' button -->
+            <div class="hidden sm:flex items-center gap-2 flex-shrink-0 ml-2">
+                <button class="open-enquiry-modal btn-gold text-xs xl:text-sm py-2 sm:py-2.5 px-3.5 sm:px-5 shadow-sm whitespace-nowrap flex-shrink-0" data-type="enquiry">
+                    <i class="fa-solid fa-paper-plane text-[11px]"></i> Enquire Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="lg:hidden text-[#4B1F6F] p-2 rounded-lg hover:bg-purple-50 focus:outline-none flex-shrink-0 ml-1" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6" id="mobile-drawer">
+        <div class="flex justify-between items-center pb-4 border-b border-purple-100">
+            <span class="font-heading font-extrabold text-base text-[#4B1F6F]">RYANS ACADEMY</span>
+            <button class="text-gray-500 hover:text-[#4B1F6F] p-2 rounded-full" id="close-drawer-btn"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <nav class="flex flex-col gap-3 py-6 font-semibold text-gray-700 text-sm">
+            <a href="index.html" class="hover:text-[#4B1F6F] py-1.5">Home</a>
+            <a href="about.html" class="hover:text-[#4B1F6F] py-1.5"><span class="whitespace-nowrap inline-block">About Us</span></a>
+            <a href="academics.html" class="hover:text-[#4B1F6F] py-1.5">Academics</a>
+            <a href="programs.html" class="hover:text-[#4B1F6F] py-1.5">Our Programs</a>
+            <a href="facilities.html" class="hover:text-[#4B1F6F] py-1.5">Facilities</a>
+            <a href="activities.html" class="text-[#4B1F6F] font-bold py-1.5">Activities & Sports</a>
+            <a href="events.html" class="hover:text-[#4B1F6F] py-1.5">Events</a>
+            <a href="gallery.html" class="hover:text-[#4B1F6F] py-1.5">Gallery</a>
+            <a href="admissions.html" class="hover:text-[#4B1F6F] py-1.5">Admissions</a>
+            <a href="contact.html" class="hover:text-[#4B1F6F] py-1.5">Contact Us</a>
+        </nav>
+        <div class="mt-auto pt-4 border-t border-purple-100">
+            <button class="open-enquiry-modal btn-gold w-full py-3 text-sm justify-center" data-type="enquiry">Enquire Now</button>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden" id="mobile-overlay"></div>
+
+    <!-- Banner -->
+    <section class="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Beyond The Classroom</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Activities & Sports</h1>
+                <p class="text-purple-200 text-sm mt-2">Nurturing creative talents, athletic vigor, and social camaraderie.</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-purple-200">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <span>/</span>
+                <span class="text-[#D4A72C]">Activities</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity Cards Grid -->
+    <section class="reveal-on-scroll py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Activity 1: Physical Education & Sports -->
+                <div class="premium-card overflow-hidden card-interactive-lift">
+                    <div class="h-52 overflow-hidden">
+                        <img src="assets/sports (1).jpg" alt="Physical Education at Ryans" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="purple-badge text-[10px] mb-2">Athletics & Stamina</span>
+                        <h3 class="text-xl font-bold text-[#4B1F6F] mb-2">Physical Education & Sports</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Coaching in track & field sprints, relay racing, football agility drills, obstacle courses, and teamwork sportsmanship culminating in the grand annual Velocity Fest.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 2: Dance & Rhythm -->
+                <div class="premium-card overflow-hidden card-interactive-lift">
+                    <div class="h-52 overflow-hidden">
+                        <img src="assets/anual2.png" alt="Dance & Rhythm at Ryans" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="gold-badge text-[10px] mb-2">Artistic Movement</span>
+                        <h3 class="text-xl font-bold text-[#4B1F6F] mb-2">Dance, Rhythm & Music</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Students learn classical Indian mudras, western contemporary grooves, stage synchronization, and vocal choir melodies under certified cultural instructors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 3: Creative Arts & Crafts -->
+                <div class="premium-card overflow-hidden card-interactive-lift">
+                    <div class="h-52 overflow-hidden">
+                        <img src="assets/jkg_arts.jpg" alt="Art & Craft at Ryans" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="purple-badge text-[10px] mb-2">Fine Motor & Imagination</span>
+                        <h3 class="text-xl font-bold text-[#4B1F6F] mb-2">Visual Arts, Drawing & Clay</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Finger painting, canvas oil-pastel techniques, pottery clay modeling, origami, and collage design helping children express visual stories freely.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 4: Abacus & Mental Math -->
+                <div class="premium-card overflow-hidden card-interactive-lift" id="abacus">
+                    <div class="h-52 overflow-hidden bg-purple-50 flex items-center justify-center">
+                        <img src="assets/abacus.jpg" alt="Abacus Program" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="gold-badge text-[10px] mb-2">Brain Gym</span>
+                        <h3 class="text-xl font-bold text-[#4B1F6F] mb-2">Abacus & Mental Arithmetic</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Specialized soroban bead training unlocking both left and right brain coordination, concentration endurance, spatial visualization, and lightning mental calculation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 5: Yoga & Karate -->
+                <div class="premium-card overflow-hidden card-interactive-lift">
+                    <div class="h-52 overflow-hidden">
+                        <img src="assets/karate.jpg" alt="Karate & Yoga at Ryans" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="purple-badge text-[10px] mb-2">Discipline & Core Balance</span>
+                        <h3 class="text-xl font-bold text-[#4B1F6F] mb-2">Yoga, Martial Arts & Karate</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Gentle breathing yoga asanas develop internal calmness and posture, while basic self-defense kata routines instill respect, focus, and physical discipline.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 6: Field Trips & Nature Walks -->
+                <div class="premium-card overflow-hidden card-interactive-lift">
+                    <div class="h-52 overflow-hidden">
+                        <img src="assets/field (1).jpg" alt="Field Trips at Ryans" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="gold-badge text-[10px] mb-2">Experiential Learning</span>
+                        <h3 class="text-xl font-bold text-[#4B1F6F] mb-2">Field Trips & Environmental Tours</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                            Supervised excursions to botanical gardens, science planetariums, zoological parks, and post offices connecting classroom concepts with real world discovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Photo Showcase -->
+    <section class="reveal-on-scroll py-16 bg-[#FAF8F4] border-t border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="gold-badge mb-2">Hands-on Discovery</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F]">Activities in Action</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mt-2">Glimpses of daily joy, artistic expression, and athletic discovery at Ryans Academy.</p>
+                </div>
+                <a href="gallery.html" class="btn-outline-purple text-xs font-bold mt-4 md:mt-0 self-start md:self-auto">
+                    View Full Gallery <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/kids_art_painting.jpg" alt="Art painting workshop" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/teacher_kids_blocks.jpg" alt="Montessori block building" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/kids_sand_play.jpg" alt="Sensory sand play" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/kids_slide_play.jpg" alt="Playground agility" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/sports (5).jpg" alt="Obstacle challenge" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/DSC_0151.jpg" alt="Science wonder lab" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/DSC_0208.jpg" alt="Collaborative craft" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
+                    <img src="assets/kids_chairs_game.jpg" alt="Musical movement" class="w-full h-full object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#29252B] text-gray-300 py-10 border-t border-gray-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 pr-4 sm:pr-32 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p>&copy; 2026 Ryans Academy. All Rights Reserved.</p>
+            <div class="flex items-center gap-2">
+                    <span class="text-gray-400 text-[11px] font-medium">Developed by</span>
+                    <a href="https://yaaletech.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white px-3 py-1.5 rounded-xl shadow-sm hover:shadow-md transition-all group" title="Yaale Technologies">
+                        <img src="assets/yaale_logo.png" alt="Yaale Technologies Logo" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform">
+                        <span class="text-[11px] font-extrabold tracking-tight text-[#006766] group-hover:text-[#004d4c] uppercase">YAALE TECHNOLOGIES</span>
+                    </a>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Mobile Bar & WhatsApp -->
+    <div class="mobile-action-bar">
+        <a href="tel:+919840012345" class="mobile-action-btn call-btn"><i class="fa-solid fa-phone text-base"></i><span>Call Us</span></a>
+        <a href="https://wa.me/919840012345" target="_blank" class="mobile-action-btn whatsapp-btn"><i class="fa-brands fa-whatsapp text-lg"></i><span>WhatsApp</span></a>
+        <button class="open-enquiry-modal mobile-action-btn enquire-btn" data-type="enquiry"><i class="fa-solid fa-paper-plane text-sm"></i><span>Enquire Now</span></button>
+    </div>
+    <a href="https://wa.me/919840012345" target="_blank" class="whatsapp-float shadow-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiry-modal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-[#4B1F6F]"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div id="modal-form-container">
+                <h3 class="text-xl font-bold text-[#4B1F6F] mb-4 text-center">Activities & Admission Enquiry</h3>
+                <form id="enquiry-form" class="space-y-3">
+                    <input type="text" id="parent-name" required placeholder="Parent Name" class="w-full text-xs p-3 rounded-xl border">
+                    <input type="tel" id="parent-phone" required placeholder="Phone Number" class="w-full text-xs p-3 rounded-xl border">
+                    <select id="form-program" class="w-full text-xs p-3 rounded-xl border bg-white">
+                        <option value="Play Group">Play Group</option>
+                        <option value="Pre-KG">Pre-KG</option>
+                        <option value="LKG">LKG</option>
+                        <option value="UKG">UKG</option>
+                        <option value="Graders">Graders</option>
+                    </select>
+                    <button type="submit" class="btn-gold w-full text-xs py-3 justify-center">Submit Enquiry</button>
+                </form>
+            </div>
+            <div id="modal-thank-you" class="hidden text-center py-4 space-y-3">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-4xl"></i>
+                <h4 class="font-bold text-[#4B1F6F]">Thank You!</h4>
+                <p class="text-xs text-gray-500">We will connect with you promptly.</p>
+                <a id="thank-you-wa-btn" href="#" target="_blank" class="btn-gold text-xs block py-2 text-center">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

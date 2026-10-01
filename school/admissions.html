@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions 2026-27 | Ryans Academy</title>
+    <meta name="description" content="Apply for admission at Ryans Academy for academic year 2026-27. Age criteria, admission steps, document guidelines, and online enquiry form.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-purple': '#4B1F6F',
+                        'deep-purple': '#6B3A8D',
+                        'purple-light': '#834aa7',
+                        'elegant-gold': '#D4A72C',
+                        'soft-gold': '#F3D98B',
+                        'warm-white': '#FAF8F4',
+                        'soft-lavender': '#F1EAF7',
+                        'dark-charcoal': '#29252B'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF8F4] text-[#29252B] antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-[#4B1F6F] text-white text-xs py-2 px-4 sm:px-8 border-b border-purple-900/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[13px]">
+            <span class="flex items-center gap-1.5 text-purple-200">
+                <i class="fa-solid fa-graduation-cap text-[#D4A72C]"></i>
+                <strong class="text-white">Admissions Open 2026-27:</strong> Play Group to Graders
+            </span>
+            <a href="tel:+919840012345" class="hover:text-[#F3D98B] transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-[#D4A72C]"></i> +91 98400 12345</a>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-purple-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between min-h-[82px] lg:min-h-[92px] py-1.5 sm:py-2">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 group mr-2">
+                <img src="assets/logo.png" alt="Ryans Academy Logo" class="brand-logo-img w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col justify-center">
+                    <span class="font-heading font-black text-lg sm:text-xl lg:text-2xl xl:text-[28px] tracking-tight text-[#4B1F6F] leading-none whitespace-nowrap">RYANS ACADEMY</span>
+                    <span class="text-[8px] sm:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] font-extrabold text-[#D4A72C] tracking-[0.14em] uppercase mt-1 whitespace-nowrap">PREMIUM LEARNING • JOYFUL CHILDHOOD</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-4 2xl:gap-5 font-semibold text-[11px] lg:text-xs xl:text-[13px] 2xl:text-sm text-[#29252B] whitespace-nowrap px-1">
+                <a href="index.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Home</span></a>
+                <a href="about.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">About Us</span></a>
+                <a href="academics.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Academics</span></a>
+                <a href="programs.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Programs</span></a>
+                <a href="facilities.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Facilities</span></a>
+                <a href="activities.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Activities</span></a>
+                <a href="events.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Events</span></a>
+                <a href="gallery.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Gallery</span></a>
+                <a href="admissions.html" class="text-[#4B1F6F] font-bold border-b-2 border-[#D4A72C] pb-0.5"><span class="whitespace-nowrap inline-block">Admissions</span></a>
+                <a href="contact.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Contact</span></a>
+            </nav>
+
+            <!-- Prominent Gold 'Enquire Now' button -->
+            <div class="hidden sm:flex items-center gap-2 flex-shrink-0 ml-2">
+                <button class="open-enquiry-modal btn-gold text-xs xl:text-sm py-2 sm:py-2.5 px-3.5 sm:px-5 shadow-sm whitespace-nowrap flex-shrink-0" data-type="enquiry">
+                    <i class="fa-solid fa-paper-plane text-[11px]"></i> Enquire Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="lg:hidden text-[#4B1F6F] p-2 rounded-lg hover:bg-purple-50 focus:outline-none flex-shrink-0 ml-1" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6" id="mobile-drawer">
+        <div class="flex justify-between items-center pb-4 border-b border-purple-100">
+            <span class="font-heading font-extrabold text-base text-[#4B1F6F]">RYANS ACADEMY</span>
+            <button class="text-gray-500 hover:text-[#4B1F6F] p-2 rounded-full" id="close-drawer-btn"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <nav class="flex flex-col gap-3 py-6 font-semibold text-gray-700 text-sm">
+            <a href="index.html" class="hover:text-[#4B1F6F] py-1.5">Home</a>
+            <a href="about.html" class="hover:text-[#4B1F6F] py-1.5"><span class="whitespace-nowrap inline-block">About Us</span></a>
+            <a href="academics.html" class="hover:text-[#4B1F6F] py-1.5">Academics</a>
+            <a href="programs.html" class="hover:text-[#4B1F6F] py-1.5">Our Programs</a>
+            <a href="facilities.html" class="hover:text-[#4B1F6F] py-1.5">Facilities</a>
+            <a href="activities.html" class="hover:text-[#4B1F6F] py-1.5">Activities & Sports</a>
+            <a href="events.html" class="hover:text-[#4B1F6F] py-1.5">Events</a>
+            <a href="gallery.html" class="hover:text-[#4B1F6F] py-1.5">Gallery</a>
+            <a href="admissions.html" class="text-[#4B1F6F] font-bold py-1.5">Admissions</a>
+            <a href="contact.html" class="hover:text-[#4B1F6F] py-1.5">Contact Us</a>
+        </nav>
+        <div class="mt-auto pt-4 border-t border-purple-100">
+            <button class="open-enquiry-modal btn-gold w-full py-3 text-sm justify-center" data-type="enquiry">Enquire Now</button>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden" id="mobile-overlay"></div>
+
+    <!-- Banner -->
+    <section class="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Academic Year 2026-27</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Begin Your Child's Journey With Us</h1>
+                <p class="text-purple-200 text-sm mt-2">Transparent admission process, age criteria, and quick online enquiry.</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-purple-200">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <span>/</span>
+                <span class="text-[#D4A72C]">Admissions</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-Step Admission Process -->
+    <!-- 4-Step Admission Process (Luxury Interactive Timeline) -->
+    <section class="reveal-on-scroll py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="purple-badge mb-3">Simple & Transparent</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F]">Our 4-Step Admission Process</h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">We ensure a pleasant, welcoming enrollment experience for parents and children alike.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="admission-step-card reveal-on-scroll stagger-1 group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#834aa7]"></div>
+                    <div class="admission-step-number bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-[#F3D98B] shadow-lg shadow-purple-900/25">
+                        1
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#4B1F6F] bg-[#F1EAF7] px-2.5 py-0.5 rounded-full border border-purple-200/50 mb-2">
+                        First Contact
+                    </span>
+                    <h4 class="font-extrabold text-base sm:text-lg text-[#4B1F6F] mb-1.5 group-hover:text-[#6B3A8D] transition-colors">Submit Enquiry</h4>
+                    <p class="text-xs text-gray-500 font-medium leading-relaxed mb-4 flex-grow">Fill in our online admission form or connect with our admissions desk via phone or WhatsApp.</p>
+                    <div class="pt-2.5 border-t border-purple-50 w-full text-center">
+                        <span class="text-[11px] font-bold text-[#4B1F6F] inline-flex items-center gap-1">
+                            <i class="fa-solid fa-bolt text-[#D4A72C]"></i> Instant Callback
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="admission-step-card reveal-on-scroll stagger-2 group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#D4A72C] via-[#F3D98B] to-[#E67E22]"></div>
+                    <div class="admission-step-number bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white shadow-lg shadow-amber-500/25">
+                        2
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-2.5 py-0.5 rounded-full border border-amber-200/50 mb-2">
+                        Campus Discovery
+                    </span>
+                    <h4 class="font-extrabold text-base sm:text-lg text-[#4B1F6F] mb-1.5 group-hover:text-[#D4A72C] transition-colors">Campus Walk & Visit</h4>
+                    <p class="text-xs text-gray-500 font-medium leading-relaxed mb-4 flex-grow">Tour Montessori labs, smart classrooms, sports zones, and meet our principal and teachers.</p>
+                    <div class="pt-2.5 border-t border-amber-50 w-full text-center">
+                        <span class="text-[11px] font-bold text-[#D4A72C] inline-flex items-center gap-1">
+                            <i class="fa-solid fa-map-location-dot text-[#4B1F6F]"></i> Guided Tour
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="admission-step-card reveal-on-scroll stagger-3 group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#059669] via-[#10B981] to-[#34D399]"></div>
+                    <div class="admission-step-number bg-gradient-to-br from-[#059669] to-[#10B981] text-white shadow-lg shadow-emerald-500/25">
+                        3
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#059669] bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/50 mb-2">
+                        Child-Centric
+                    </span>
+                    <h4 class="font-extrabold text-base sm:text-lg text-[#4B1F6F] mb-1.5 group-hover:text-[#059669] transition-colors">Friendly Interaction</h4>
+                    <p class="text-xs text-gray-500 font-medium leading-relaxed mb-4 flex-grow">A joyful, stress-free child readiness interaction to observe their innate curiosity and social comfort.</p>
+                    <div class="pt-2.5 border-t border-emerald-50 w-full text-center">
+                        <span class="text-[11px] font-bold text-[#059669] inline-flex items-center gap-1">
+                            <i class="fa-solid fa-face-smile text-[#D4A72C]"></i> Zero Stress
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="admission-step-card reveal-on-scroll stagger-4 group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#E11D48] via-[#F43F5E] to-[#FB7185]"></div>
+                    <div class="admission-step-number bg-gradient-to-br from-[#E11D48] to-[#F43F5E] text-white shadow-lg shadow-rose-500/25">
+                        4
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#E11D48] bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-200/50 mb-2">
+                        Welcome Home
+                    </span>
+                    <h4 class="font-extrabold text-base sm:text-lg text-[#4B1F6F] mb-1.5 group-hover:text-[#E11D48] transition-colors">Enrollment & Kit</h4>
+                    <p class="text-xs text-gray-500 font-medium leading-relaxed mb-4 flex-grow">Submit basic verification documents, receive the personalized welcome kit, and join Ryans.</p>
+                    <div class="pt-2.5 border-t border-rose-50 w-full text-center">
+                        <span class="text-[11px] font-bold text-[#E11D48] inline-flex items-center gap-1">
+                            <i class="fa-solid fa-gift text-[#D4A72C]"></i> Student Starter Kit
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Criteria & Document Guidelines -->
+    <section class="reveal-on-scroll py-16 bg-[#FAF8F4] border-y border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Age Criteria Table -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-md card-interactive-lift">
+                    <span class="gold-badge mb-3">Eligibility Guidelines</span>
+                    <h3 class="text-2xl font-bold text-[#4B1F6F] mb-6">Age Criteria (As on June 1st)</h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs text-left">
+                            <thead>
+                                <tr class="bg-[#F1EAF7] text-[#4B1F6F] font-bold">
+                                    <th class="p-3 rounded-l-xl">Program</th>
+                                    <th class="p-3">Eligible Age Bracket</th>
+                                    <th class="p-3 rounded-r-xl">Curriculum Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-purple-50 text-gray-700 font-medium">
+                                <tr>
+                                    <td class="p-3 font-bold text-[#4B1F6F]">Play Group</td>
+                                    <td class="p-3">1.5 to 2.5 Years</td>
+                                    <td class="p-3">Sensory exploration & socialization</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-[#4B1F6F]">Pre-KG</td>
+                                    <td class="p-3">2.5 to 3.5 Years</td>
+                                    <td class="p-3">Montessori sensory & vocabulary</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-[#4B1F6F]">Junior KG (LKG)</td>
+                                    <td class="p-3">3.5 to 4.5 Years</td>
+                                    <td class="p-3">Jolly Phonics & numbers</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-[#4B1F6F]">Senior KG (UKG)</td>
+                                    <td class="p-3">4.5 to 5.5 Years</td>
+                                    <td class="p-3">Sentence reading & math logic</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-[#4B1F6F]">Graders (CBSE)</td>
+                                    <td class="p-3">5.5+ Years onwards</td>
+                                    <td class="p-3">CBSE Primary academic syllabus</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Right: Required Documents Checklist -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-md flex flex-col justify-between card-interactive-lift">
+                    <div>
+                        <span class="purple-badge mb-3">Checklist</span>
+                        <h3 class="text-2xl font-bold text-[#4B1F6F] mb-4">Required Documents</h3>
+                        <p class="text-xs text-gray-500 mb-6 font-medium">Please carry self-attested photocopies along with original documents for verification:</p>
+                        
+                        <ul class="space-y-3 text-xs font-semibold text-gray-700">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#D4A72C] text-sm"></i> Child's Municipal Birth Certificate</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#D4A72C] text-sm"></i> 4 Recent Passport Size Photographs of the Child</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#D4A72C] text-sm"></i> Passport Size Photographs of Parents / Guardians</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#D4A72C] text-sm"></i> Proof of Residence (Aadhar / Electricity / Passport)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#D4A72C] text-sm"></i> Copy of Child's Immunization / Health Record</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#D4A72C] text-sm"></i> Transfer Certificate (TC) for Graders (if applicable)</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-purple-50 mt-6">
+                        <button class="open-enquiry-modal btn-gold w-full text-xs py-3 justify-center" data-type="visit">
+                            <i class="fa-solid fa-calendar-check"></i> Book Campus Verification Slot
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Enquiry Form Section on Page -->
+    <section class="reveal-on-scroll py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#FAF8F4] p-8 sm:p-12 rounded-3xl border border-purple-100 shadow-xl">
+                <div class="text-center mb-8">
+                    <span class="gold-badge mb-2">Fast-Track Application</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#4B1F6F]">Online Admission Enquiry Form</h2>
+                    <p class="text-xs text-gray-500 mt-2">Submit your details below and our academic admissions officer will assist you immediately.</p>
+                </div>
+
+                <form class="space-y-4" onsubmit="event.preventDefault(); document.querySelector('.open-enquiry-modal').click();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Parent's Full Name *</label>
+                            <input type="text" required placeholder="e.g. Priya Sundaram" class="w-full text-xs px-4 py-3 rounded-xl border border-gray-200 bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Primary Phone Number *</label>
+                            <input type="tel" required placeholder="e.g. 98400 12345" class="w-full text-xs px-4 py-3 rounded-xl border border-gray-200 bg-white">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" placeholder="e.g. parent@gmail.com" class="w-full text-xs px-4 py-3 rounded-xl border border-gray-200 bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Program Seeking Admission *</label>
+                            <select class="w-full text-xs px-4 py-3 rounded-xl border border-gray-200 bg-white">
+                                <option>Play Group (1.5 - 2.5 yrs)</option>
+                                <option>Pre-KG (2.5 - 3.5 yrs)</option>
+                                <option>Junior KG (LKG)</option>
+                                <option>Senior KG (UKG)</option>
+                                <option>Graders (Primary CBSE)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Comments or Campus Visit Preference</label>
+                        <textarea rows="2" placeholder="Preferred date to visit or special learning considerations..." class="w-full text-xs px-4 py-2.5 rounded-xl border border-gray-200 bg-white"></textarea>
+                    </div>
+
+                    <button type="submit" class="open-enquiry-modal btn-gold w-full py-3.5 text-sm font-bold justify-center shadow-lg" data-type="enquiry">
+                        Submit Admission Form <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#29252B] text-gray-300 py-10 border-t border-gray-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 pr-4 sm:pr-32 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p>&copy; 2026 Ryans Academy. All Rights Reserved.</p>
+            <div class="flex items-center gap-2">
+                    <span class="text-gray-400 text-[11px] font-medium">Developed by</span>
+                    <a href="https://yaaletech.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white px-3 py-1.5 rounded-xl shadow-sm hover:shadow-md transition-all group" title="Yaale Technologies">
+                        <img src="assets/yaale_logo.png" alt="Yaale Technologies Logo" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform">
+                        <span class="text-[11px] font-extrabold tracking-tight text-[#006766] group-hover:text-[#004d4c] uppercase">YAALE TECHNOLOGIES</span>
+                    </a>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Mobile Bar & WhatsApp -->
+    <div class="mobile-action-bar">
+        <a href="tel:+919840012345" class="mobile-action-btn call-btn"><i class="fa-solid fa-phone text-base"></i><span>Call Us</span></a>
+        <a href="https://wa.me/919840012345" target="_blank" class="mobile-action-btn whatsapp-btn"><i class="fa-brands fa-whatsapp text-lg"></i><span>WhatsApp</span></a>
+        <button class="open-enquiry-modal mobile-action-btn enquire-btn" data-type="enquiry"><i class="fa-solid fa-paper-plane text-sm"></i><span>Enquire Now</span></button>
+    </div>
+    <a href="https://wa.me/919840012345" target="_blank" class="whatsapp-float shadow-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiry-modal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-[#4B1F6F]"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div id="modal-form-container">
+                <h3 class="text-xl font-bold text-[#4B1F6F] mb-4 text-center">Admission Application</h3>
+                <form id="enquiry-form" class="space-y-3">
+                    <input type="text" id="parent-name" required placeholder="Parent Name" class="w-full text-xs p-3 rounded-xl border">
+                    <input type="tel" id="parent-phone" required placeholder="Phone Number" class="w-full text-xs p-3 rounded-xl border">
+                    <select id="form-program" class="w-full text-xs p-3 rounded-xl border bg-white">
+                        <option value="Play Group">Play Group</option>
+                        <option value="Pre-KG">Pre-KG</option>
+                        <option value="LKG">LKG</option>
+                        <option value="UKG">UKG</option>
+                        <option value="Graders">Graders</option>
+                    </select>
+                    <button type="submit" class="btn-gold w-full text-xs py-3 justify-center">Submit Application</button>
+                </form>
+            </div>
+            <div id="modal-thank-you" class="hidden text-center py-4 space-y-3">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-4xl"></i>
+                <h4 class="font-bold text-[#4B1F6F]">Application Received!</h4>
+                <p class="text-xs text-gray-500">We have recorded your enquiry. Reference code:</p>
+                <p class="text-sm font-extrabold text-[#D4A72C]" id="enquiry-ref-code"></p>
+                <a id="thank-you-wa-btn" href="#" target="_blank" class="btn-gold text-xs block py-2 text-center">Confirm on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

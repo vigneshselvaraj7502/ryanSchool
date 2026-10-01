@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus & Facilities | Ryans Academy</title>
+    <meta name="description" content="Tour Ryans Academy's state-of-the-art campus: Smart classrooms, computer lab, enriched library, indoor play spaces, and safe outdoor playground.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-purple': '#4B1F6F',
+                        'deep-purple': '#6B3A8D',
+                        'purple-light': '#834aa7',
+                        'elegant-gold': '#D4A72C',
+                        'soft-gold': '#F3D98B',
+                        'warm-white': '#FAF8F4',
+                        'soft-lavender': '#F1EAF7',
+                        'dark-charcoal': '#29252B'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF8F4] text-[#29252B] antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-[#4B1F6F] text-white text-xs py-2 px-4 sm:px-8 border-b border-purple-900/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[13px]">
+            <span class="flex items-center gap-1.5 text-purple-200">
+                <i class="fa-solid fa-graduation-cap text-[#D4A72C]"></i>
+                <strong class="text-white">Admissions Open 2026-27:</strong> Play Group to Graders
+            </span>
+            <a href="tel:+919840012345" class="hover:text-[#F3D98B] transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-[#D4A72C]"></i> +91 98400 12345</a>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-purple-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between min-h-[82px] lg:min-h-[92px] py-1.5 sm:py-2">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 group mr-2">
+                <img src="assets/logo.png" alt="Ryans Academy Logo" class="brand-logo-img w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col justify-center">
+                    <span class="font-heading font-black text-lg sm:text-xl lg:text-2xl xl:text-[28px] tracking-tight text-[#4B1F6F] leading-none whitespace-nowrap">RYANS ACADEMY</span>
+                    <span class="text-[8px] sm:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] font-extrabold text-[#D4A72C] tracking-[0.14em] uppercase mt-1 whitespace-nowrap">PREMIUM LEARNING • JOYFUL CHILDHOOD</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-4 2xl:gap-5 font-semibold text-[11px] lg:text-xs xl:text-[13px] 2xl:text-sm text-[#29252B] whitespace-nowrap px-1">
+                <a href="index.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Home</span></a>
+                <a href="about.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">About Us</span></a>
+                <a href="academics.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Academics</span></a>
+                <a href="programs.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Programs</span></a>
+                <a href="facilities.html" class="text-[#4B1F6F] font-bold border-b-2 border-[#D4A72C] pb-0.5"><span class="whitespace-nowrap inline-block">Facilities</span></a>
+                <a href="activities.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Activities</span></a>
+                <a href="events.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Events</span></a>
+                <a href="gallery.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Gallery</span></a>
+                <a href="admissions.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Admissions</span></a>
+                <a href="contact.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Contact</span></a>
+            </nav>
+
+            <!-- Prominent Gold 'Enquire Now' button -->
+            <div class="hidden sm:flex items-center gap-2 flex-shrink-0 ml-2">
+                <button class="open-enquiry-modal btn-gold text-xs xl:text-sm py-2 sm:py-2.5 px-3.5 sm:px-5 shadow-sm whitespace-nowrap flex-shrink-0" data-type="enquiry">
+                    <i class="fa-solid fa-paper-plane text-[11px]"></i> Enquire Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="lg:hidden text-[#4B1F6F] p-2 rounded-lg hover:bg-purple-50 focus:outline-none flex-shrink-0 ml-1" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6" id="mobile-drawer">
+        <div class="flex justify-between items-center pb-4 border-b border-purple-100">
+            <span class="font-heading font-extrabold text-base text-[#4B1F6F]">RYANS ACADEMY</span>
+            <button class="text-gray-500 hover:text-[#4B1F6F] p-2 rounded-full" id="close-drawer-btn"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <nav class="flex flex-col gap-3 py-6 font-semibold text-gray-700 text-sm">
+            <a href="index.html" class="hover:text-[#4B1F6F] py-1.5">Home</a>
+            <a href="about.html" class="hover:text-[#4B1F6F] py-1.5"><span class="whitespace-nowrap inline-block">About Us</span></a>
+            <a href="academics.html" class="hover:text-[#4B1F6F] py-1.5">Academics</a>
+            <a href="programs.html" class="hover:text-[#4B1F6F] py-1.5">Our Programs</a>
+            <a href="facilities.html" class="text-[#4B1F6F] font-bold py-1.5">Campus & Facilities</a>
+            <a href="activities.html" class="hover:text-[#4B1F6F] py-1.5">Activities & Sports</a>
+            <a href="events.html" class="hover:text-[#4B1F6F] py-1.5">Events</a>
+            <a href="gallery.html" class="hover:text-[#4B1F6F] py-1.5">Gallery</a>
+            <a href="admissions.html" class="hover:text-[#4B1F6F] py-1.5">Admissions</a>
+            <a href="contact.html" class="hover:text-[#4B1F6F] py-1.5">Contact Us</a>
+        </nav>
+        <div class="mt-auto pt-4 border-t border-purple-100">
+            <button class="open-enquiry-modal btn-gold w-full py-3 text-sm justify-center" data-type="enquiry">Enquire Now</button>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden" id="mobile-overlay"></div>
+
+    <!-- Banner -->
+    <section class="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">World-Class Infrastructure</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Campus & Facilities</h1>
+                <p class="text-purple-200 text-sm mt-2">A safe, child-friendly campus engineered for curiosity and comfort.</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-purple-200">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <span>/</span>
+                <span class="text-[#D4A72C]">Facilities</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Detailed Grid (PDF Section 5.7) -->
+    <!-- Facilities Detailed Grid (Luxury Modern Showcase) -->
+    <section class="reveal-on-scroll py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <!-- Facility 1: Classrooms -->
+            <div class="facility-showcase-card group">
+                <div class="academic-domain-accent bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#834aa7]"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-6 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white flex items-center justify-center text-xl shadow-md shadow-purple-900/20">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-[#4B1F6F] bg-[#F1EAF7] px-3.5 py-1 rounded-full border border-purple-200/50 shadow-sm">
+                                Primary Learning Environments
+                            </span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#4B1F6F] leading-tight group-hover:text-[#6B3A8D] transition-colors">
+                            Child-Centric Modern Classrooms
+                        </h2>
+                        <p class="text-sm sm:text-[15px] text-gray-600 leading-relaxed font-medium">
+                            Our classrooms are thoughtfully configured with natural lighting, rounded child-friendly furnishings, anti-skid flooring, and interactive audiovisual boards. Each room features dedicated reading pockets and Montessori manipulative corners.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-purple-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Non-Toxic Ergonomic Furniture
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-purple-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Interactive Smart Boards
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-purple-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Natural Sunlight & Cross Air
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-purple-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Free Collaborative Layout
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="facility-photo-frame h-80 sm:h-96">
+                            <img src="assets/DSC_0534.jpg" alt="Ryans Academy Classrooms">
+                            <div class="facility-tag-floating">
+                                <i class="fa-solid fa-camera text-[#F3D98B]"></i>
+                                <span>Spacious CBSE & Montessori Suites</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 2: Computer Lab -->
+            <div class="facility-showcase-card group">
+                <div class="academic-domain-accent bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#60A5FA]"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-6 order-2 lg:order-1">
+                        <div class="facility-photo-frame h-80 sm:h-96">
+                            <img src="assets/screen.jpg" alt="Smart Computer Lab">
+                            <div class="facility-tag-floating">
+                                <i class="fa-solid fa-desktop text-[#60A5FA]"></i>
+                                <span>1:1 High-Tech Computing Lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 order-1 lg:order-2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#3B82F6] text-white flex items-center justify-center text-xl shadow-md shadow-blue-500/20">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-[#2563EB] bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200/50 shadow-sm">
+                                Digital Readiness
+                            </span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#4B1F6F] leading-tight group-hover:text-[#2563EB] transition-colors">
+                            Smart Computer Lab & Tech Suite
+                        </h2>
+                        <p class="text-sm sm:text-[15px] text-gray-600 leading-relaxed font-medium">
+                            Equipped with individual workstations and filtered educational software, our computer lab teaches children early computational thinking, keyboard fluency, and digital citizenship in an entirely safe setting.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-blue-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> 1:1 Individual Workstation Ratio
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-blue-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Visual Block Coding & Logic
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-blue-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Child-Safe Filtered Browsing
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-blue-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Ergonomic Mice & Headsets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 3: Library -->
+            <div class="facility-showcase-card group">
+                <div class="academic-domain-accent bg-gradient-to-r from-[#D4A72C] via-[#F3D98B] to-[#E67E22]"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-6 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white flex items-center justify-center text-xl shadow-md shadow-amber-500/20">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-[#D4A72C] bg-[#FDF8E7] px-3.5 py-1 rounded-full border border-amber-200/50 shadow-sm">
+                                Literary Discovery
+                            </span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#4B1F6F] leading-tight group-hover:text-[#D4A72C] transition-colors">
+                            Enriched Children's Reading Pavilion
+                        </h2>
+                        <p class="text-sm sm:text-[15px] text-gray-600 leading-relaxed font-medium">
+                            Our peaceful reading pavilion holds over 3,000 carefully curated books—from touch-and-feel infant volumes and Jolly Phonics decodable books to junior encyclopedias and moral storybooks from around the globe.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-amber-50">
+                                <i class="fa-solid fa-circle-check text-[#4B1F6F]"></i> 3,000+ Curated Child Volumes
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-amber-50">
+                                <i class="fa-solid fa-circle-check text-[#4B1F6F]"></i> Weekly Book Borrowing Club
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-amber-50">
+                                <i class="fa-solid fa-circle-check text-[#4B1F6F]"></i> Cozy Storytelling Beanbags
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-amber-50">
+                                <i class="fa-solid fa-circle-check text-[#4B1F6F]"></i> Guided Audio Story Sessions
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="facility-photo-frame h-80 sm:h-96">
+                            <img src="assets/book1.jpg" alt="Ryans Academy Library">
+                            <div class="facility-tag-floating">
+                                <i class="fa-solid fa-bookmark text-[#F3D98B]"></i>
+                                <span>3,000+ Illustrated Storybooks & Lore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 4: Activity Areas & Playground -->
+            <div class="facility-showcase-card group">
+                <div class="academic-domain-accent bg-gradient-to-r from-[#059669] via-[#10B981] to-[#34D399]"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-6 order-2 lg:order-1">
+                        <div class="facility-photo-frame h-80 sm:h-96">
+                            <img src="assets/kids_park_play.jpg" alt="Outdoor Playground & Soft Gym">
+                            <div class="facility-tag-floating">
+                                <i class="fa-solid fa-shield-heart text-emerald-400"></i>
+                                <span>Shock-Absorbing Safe Play Turf</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 order-1 lg:order-2 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#059669] to-[#10B981] text-white flex items-center justify-center text-xl shadow-md shadow-emerald-500/20">
+                                <i class="fa-solid fa-volleyball"></i>
+                            </div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-[#059669] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200/50 shadow-sm">
+                                Recreation & Agility
+                            </span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#4B1F6F] leading-tight group-hover:text-[#059669] transition-colors">
+                            Soft Play Gym & Outdoor Athletic Lawns
+                        </h2>
+                        <p class="text-sm sm:text-[15px] text-gray-600 leading-relaxed font-medium">
+                            From indoor soft play gyms and dance studios to safe outdoor lawns featuring slides, sandpits, and athletic tracks, children stay energized, developing motor agility and social bonds daily.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-emerald-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Shock-Absorbing Rubberized Turf
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-emerald-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Certified International Safety Gear
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-emerald-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Full-Time Attendant Supervision
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs font-bold text-gray-700 bg-[#FAF8F4] p-2.5 rounded-xl border border-emerald-50">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Dedicated Early Years Sandpit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Safety, Transport & Health (Luxury 4-Card Grid) -->
+    <section class="reveal-on-scroll py-16 lg:py-20 bg-[#FAF8F4] border-t border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="purple-badge mb-3">Parent Peace of Mind</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F]">Safety & Well-being Standards</h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">Uncompromising protocols ensuring your child is always safe, secure, and cared for.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Safety 1 -->
+                <div class="safety-feature-card group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#4B1F6F] to-[#6B3A8D]"></div>
+                    <div class="safety-feature-icon bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white shadow-md shadow-purple-900/25">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#4B1F6F] bg-[#F1EAF7] px-2 py-0.5 rounded-full mb-2 border border-purple-200/50">
+                        Surveillance
+                    </span>
+                    <h4 class="font-extrabold text-base text-[#4B1F6F] mb-1.5 group-hover:text-[#6B3A8D] transition-colors">24/7 CCTV Coverage</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-medium mb-3 flex-grow">High-definition cameras monitoring all corridors, gates, playgrounds, and entry lobbies.</p>
+                    <div class="pt-2.5 border-t border-purple-50 w-full">
+                        <span class="text-[11px] font-bold text-[#4B1F6F] inline-flex items-center gap-1 justify-center">
+                            <i class="fa-solid fa-shield-check text-[#D4A72C]"></i> Zero Blindspots
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Safety 2 -->
+                <div class="safety-feature-card group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#D4A72C] to-[#E67E22]"></div>
+                    <div class="safety-feature-icon bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white shadow-md shadow-amber-500/25">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-2 py-0.5 rounded-full mb-2 border border-amber-200/50">
+                        Commute Fleet
+                    </span>
+                    <h4 class="font-extrabold text-base text-[#4B1F6F] mb-1.5 group-hover:text-[#D4A72C] transition-colors">Safe GPS Transport</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-medium mb-3 flex-grow">School vans with seat belts, GPS tracking, speed governors, and trained female attendants.</p>
+                    <div class="pt-2.5 border-t border-amber-50 w-full">
+                        <span class="text-[11px] font-bold text-[#D4A72C] inline-flex items-center gap-1 justify-center">
+                            <i class="fa-solid fa-shield-check text-[#4B1F6F]"></i> Real-Time Tracking
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Safety 3 -->
+                <div class="safety-feature-card group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#2563EB] to-[#3B82F6]"></div>
+                    <div class="safety-feature-icon bg-gradient-to-br from-[#2563EB] to-[#3B82F6] text-white shadow-md shadow-blue-500/25">
+                        <i class="fa-solid fa-bottle-water"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-full mb-2 border border-blue-200/50">
+                        Pure Hydration
+                    </span>
+                    <h4 class="font-extrabold text-base text-[#4B1F6F] mb-1.5 group-hover:text-[#2563EB] transition-colors">RO Pure Water</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-medium mb-3 flex-grow">Multi-stage reverse osmosis filtration tested periodically for pure, mineral-balanced drinking water.</p>
+                    <div class="pt-2.5 border-t border-blue-50 w-full">
+                        <span class="text-[11px] font-bold text-[#2563EB] inline-flex items-center gap-1 justify-center">
+                            <i class="fa-solid fa-shield-check text-[#D4A72C]"></i> Periodically Tested
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Safety 4 -->
+                <div class="safety-feature-card group">
+                    <div class="academic-domain-accent bg-gradient-to-r from-[#E11D48] to-[#F43F5E]"></div>
+                    <div class="safety-feature-icon bg-gradient-to-br from-[#E11D48] to-[#F43F5E] text-white shadow-md shadow-rose-500/25">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-wider text-[#E11D48] bg-rose-50 px-2 py-0.5 rounded-full mb-2 border border-rose-200/50">
+                        Health Care
+                    </span>
+                    <h4 class="font-extrabold text-base text-[#4B1F6F] mb-1.5 group-hover:text-[#E11D48] transition-colors">First Aid & Infirmary</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed font-medium mb-3 flex-grow">Well-stocked campus first aid infirmary with first-aid certified staff and on-call pediatric doctor support.</p>
+                    <div class="pt-2.5 border-t border-rose-50 w-full">
+                        <span class="text-[11px] font-bold text-[#E11D48] inline-flex items-center gap-1 justify-center">
+                            <i class="fa-solid fa-shield-check text-[#4B1F6F]"></i> Doctor On-Call
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-14">
+                <button class="open-enquiry-modal btn-gold text-sm py-3.5 px-9 shadow-lg hover:shadow-xl transition-all" data-type="visit">
+                    <i class="fa-regular fa-calendar-check text-base"></i> Schedule a Campus Visit to See Our Facilities
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#29252B] text-gray-300 py-10 border-t border-gray-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 pr-4 sm:pr-32 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p>&copy; 2026 Ryans Academy. All Rights Reserved.</p>
+            <div class="flex items-center gap-2">
+                    <span class="text-gray-400 text-[11px] font-medium">Developed by</span>
+                    <a href="https://yaaletech.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white px-3 py-1.5 rounded-xl shadow-sm hover:shadow-md transition-all group" title="Yaale Technologies">
+                        <img src="assets/yaale_logo.png" alt="Yaale Technologies Logo" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform">
+                        <span class="text-[11px] font-extrabold tracking-tight text-[#006766] group-hover:text-[#004d4c] uppercase">YAALE TECHNOLOGIES</span>
+                    </a>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Mobile Bar & WhatsApp -->
+    <div class="mobile-action-bar">
+        <a href="tel:+919840012345" class="mobile-action-btn call-btn"><i class="fa-solid fa-phone text-base"></i><span>Call Us</span></a>
+        <a href="https://wa.me/919840012345" target="_blank" class="mobile-action-btn whatsapp-btn"><i class="fa-brands fa-whatsapp text-lg"></i><span>WhatsApp</span></a>
+        <button class="open-enquiry-modal mobile-action-btn enquire-btn" data-type="enquiry"><i class="fa-solid fa-paper-plane text-sm"></i><span>Enquire Now</span></button>
+    </div>
+    <a href="https://wa.me/919840012345" target="_blank" class="whatsapp-float shadow-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Modal -->
+    <div id="enquiry-modal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-[#4B1F6F]"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div id="modal-form-container">
+                <h3 class="text-xl font-bold text-[#4B1F6F] mb-4 text-center">Book a School Visit</h3>
+                <form id="enquiry-form" class="space-y-3">
+                    <input type="text" id="parent-name" required placeholder="Parent Name" class="w-full text-xs p-3 rounded-xl border">
+                    <input type="tel" id="parent-phone" required placeholder="Phone Number" class="w-full text-xs p-3 rounded-xl border">
+                    <select id="form-program" class="w-full text-xs p-3 rounded-xl border bg-white">
+                        <option value="General Campus Tour">General Campus Tour</option>
+                        <option value="Play Group">Play Group</option>
+                        <option value="Pre-KG">Pre-KG</option>
+                        <option value="LKG">LKG</option>
+                        <option value="UKG">UKG</option>
+                        <option value="Graders">Graders</option>
+                    </select>
+                    <button type="submit" class="btn-gold w-full text-xs py-3 justify-center">Confirm Visit Request</button>
+                </form>
+            </div>
+            <div id="modal-thank-you" class="hidden text-center py-4 space-y-3">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-4xl"></i>
+                <h4 class="font-bold text-[#4B1F6F]">Thank You!</h4>
+                <p class="text-xs text-gray-500">Our team will contact you to confirm your visit slot.</p>
+                <a id="thank-you-wa-btn" href="#" target="_blank" class="btn-gold text-xs block py-2 text-center">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

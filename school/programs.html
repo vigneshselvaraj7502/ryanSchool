@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs | Ryans Academy</title>
+    <meta name="description" content="Explore Ryans Academy's age-specific programs: Play Group, Pre-KG, LKG, UKG, and Graders CBSE. Balanced Montessori and Activity-based curriculum.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-purple': '#4B1F6F',
+                        'deep-purple': '#6B3A8D',
+                        'purple-light': '#834aa7',
+                        'elegant-gold': '#D4A72C',
+                        'soft-gold': '#F3D98B',
+                        'warm-white': '#FAF8F4',
+                        'soft-lavender': '#F1EAF7',
+                        'dark-charcoal': '#29252B'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF8F4] text-[#29252B] antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-[#4B1F6F] text-white text-xs py-2 px-4 sm:px-8 border-b border-purple-900/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[13px]">
+            <span class="flex items-center gap-1.5 text-purple-200">
+                <i class="fa-solid fa-graduation-cap text-[#D4A72C]"></i>
+                <strong class="text-white">Admissions Open 2026-27:</strong> Play Group to Graders
+            </span>
+            <a href="tel:+919840012345" class="hover:text-[#F3D98B] transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-[#D4A72C]"></i> +91 98400 12345</a>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-purple-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 xl:px-8 flex items-center justify-between min-h-[82px] lg:min-h-[92px] py-1.5 sm:py-2">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 group mr-2">
+                <img src="assets/logo.png" alt="Ryans Academy Logo" class="brand-logo-img w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col justify-center">
+                    <span class="font-heading font-black text-lg sm:text-xl lg:text-2xl xl:text-[28px] tracking-tight text-[#4B1F6F] leading-none whitespace-nowrap">RYANS ACADEMY</span>
+                    <span class="text-[8px] sm:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] font-extrabold text-[#D4A72C] tracking-[0.14em] uppercase mt-1 whitespace-nowrap">PREMIUM LEARNING • JOYFUL CHILDHOOD</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-4 2xl:gap-5 font-semibold text-[11px] lg:text-xs xl:text-[13px] 2xl:text-sm text-[#29252B] whitespace-nowrap px-1">
+                <a href="index.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Home</span></a>
+                <a href="about.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">About Us</span></a>
+                <a href="academics.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Academics</span></a>
+                <a href="programs.html" class="text-[#4B1F6F] font-bold border-b-2 border-[#D4A72C] pb-0.5"><span class="whitespace-nowrap inline-block">Programs</span></a>
+                <a href="facilities.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Facilities</span></a>
+                <a href="activities.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Activities</span></a>
+                <a href="events.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Events</span></a>
+                <a href="gallery.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Gallery</span></a>
+                <a href="admissions.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Admissions</span></a>
+                <a href="contact.html" class="hover:text-[#4B1F6F] transition"><span class="whitespace-nowrap inline-block">Contact</span></a>
+            </nav>
+
+            <!-- Prominent Gold 'Enquire Now' button -->
+            <div class="hidden sm:flex items-center gap-2 flex-shrink-0 ml-2">
+                <button class="open-enquiry-modal btn-gold text-xs xl:text-sm py-2 sm:py-2.5 px-3.5 sm:px-5 shadow-sm whitespace-nowrap flex-shrink-0" data-type="enquiry">
+                    <i class="fa-solid fa-paper-plane text-[11px]"></i> Enquire Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="lg:hidden text-[#4B1F6F] p-2 rounded-lg hover:bg-purple-50 focus:outline-none flex-shrink-0 ml-1" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6" id="mobile-drawer">
+        <div class="flex justify-between items-center pb-4 border-b border-purple-100">
+            <span class="font-heading font-extrabold text-base text-[#4B1F6F]">RYANS ACADEMY</span>
+            <button class="text-gray-500 hover:text-[#4B1F6F] p-2 rounded-full" id="close-drawer-btn"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <nav class="flex flex-col gap-3 py-6 font-semibold text-gray-700 text-sm">
+            <a href="index.html" class="hover:text-[#4B1F6F] py-1.5">Home</a>
+            <a href="about.html" class="hover:text-[#4B1F6F] py-1.5"><span class="whitespace-nowrap inline-block">About Us</span></a>
+            <a href="academics.html" class="hover:text-[#4B1F6F] py-1.5">Academics</a>
+            <a href="programs.html" class="text-[#4B1F6F] font-bold py-1.5">Our Programs</a>
+            <a href="facilities.html" class="hover:text-[#4B1F6F] py-1.5">Facilities</a>
+            <a href="activities.html" class="hover:text-[#4B1F6F] py-1.5">Activities & Sports</a>
+            <a href="events.html" class="hover:text-[#4B1F6F] py-1.5">Events</a>
+            <a href="gallery.html" class="hover:text-[#4B1F6F] py-1.5">Gallery</a>
+            <a href="admissions.html" class="hover:text-[#4B1F6F] py-1.5">Admissions</a>
+            <a href="contact.html" class="hover:text-[#4B1F6F] py-1.5">Contact Us</a>
+        </nav>
+        <div class="mt-auto pt-4 border-t border-purple-100">
+            <button class="open-enquiry-modal btn-gold w-full py-3 text-sm justify-center" data-type="enquiry">Enquire Now</button>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden" id="mobile-overlay"></div>
+
+    <!-- Banner -->
+    <section class="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 mb-2">
+                    <img src="assets/book1.gif" alt="Animated Book" class="w-4 h-4 object-contain">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Structured Learning Pathways</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Our Academic Programs</h1>
+                <p class="text-purple-200 text-sm mt-2">Comprehensive curriculum from Play Group to Graders CBSE.</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-purple-200">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <span>/</span>
+                <span class="text-[#D4A72C]">Programs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Program Pathway Navigator -->
+    <section class="bg-white/95 backdrop-blur-md border-b border-purple-100/80 sticky top-[68px] z-30 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar py-1">
+                <a href="#playgroup" class="program-nav-pill">
+                    <span class="program-nav-step">1</span>
+                    <span class="program-nav-title">Play Group</span>
+                    <span class="program-nav-age">1.5 - 2.5 Yrs</span>
+                </a>
+                <div class="hidden sm:block text-purple-300 text-xs"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="#prekg" class="program-nav-pill">
+                    <span class="program-nav-step">2</span>
+                    <span class="program-nav-title">Pre-KG</span>
+                    <span class="program-nav-age">2.5 - 3.5 Yrs</span>
+                </a>
+                <div class="hidden sm:block text-purple-300 text-xs"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="#lkg" class="program-nav-pill">
+                    <span class="program-nav-step">3</span>
+                    <span class="program-nav-title">LKG</span>
+                    <span class="program-nav-age">3.5 - 4.5 Yrs</span>
+                </a>
+                <div class="hidden sm:block text-purple-300 text-xs"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="#ukg" class="program-nav-pill">
+                    <span class="program-nav-step">4</span>
+                    <span class="program-nav-title">UKG</span>
+                    <span class="program-nav-age">4.5 - 5.5 Yrs</span>
+                </a>
+                <div class="hidden sm:block text-purple-300 text-xs"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="#graders" class="program-nav-pill">
+                    <span class="program-nav-step">5</span>
+                    <span class="program-nav-title">Graders</span>
+                    <span class="program-nav-age">Primary CBSE</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 1: Play Group -->
+    <section class="reveal-on-scroll py-16 bg-white border-b border-purple-50 scroll-mt-24" id="playgroup">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 order-2 lg:order-1 space-y-5">
+                    <div class="inline-flex items-center gap-2">
+                        <span class="purple-badge pulse-badge"><i class="fa-solid fa-baby mr-1.5 text-[#D4A72C]"></i> Age: 1.5 – 2.5 Years</span>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-[#4B1F6F] bg-[#F1EAF7] px-2.5 py-1 rounded-full border border-purple-200/50">Stage 01 • Foundation</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F] leading-tight">Play Group Program</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        The Play Group program at Ryans Academy marks a gentle, joyful bridge between home and the broader world. In a bright, cushioned space, toddlers discover sensory textures, rhythm, gross motor balance, and gentle socialization under the loving care of trained early childhood facilitators.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Sensory Texture Play</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Rhymes & Story Circles</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Fine Motor Sorting</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>1:6 Facilitator Ratio</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <button class="open-enquiry-modal btn-gold text-xs inline-flex items-center gap-2" data-program="Play Group" data-type="enquiry">
+                            <span>Enquire for Play Group</span>
+                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                        </button>
+                        <button class="open-enquiry-modal btn-outline-purple text-xs" data-program="Play Group" data-type="visit">
+                            <i class="fa-solid fa-calendar-check text-[11px]"></i>
+                            <span>Visit Classroom</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 order-1 lg:order-2">
+                    <div class="program-photo-frame program-float-1 h-[360px] sm:h-[400px]">
+                        <img src="assets/playgroup.jpg" alt="Play Group at Ryans Academy">
+                        <div class="program-floating-tag">
+                            <i class="fa-solid fa-shapes text-[#F3D98B]"></i>
+                            <span>Sensory & Motor Discovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 2: Pre-KG -->
+    <section class="reveal-on-scroll py-16 bg-[#FAF8F4] border-b border-purple-50 scroll-mt-24" id="prekg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <div class="program-photo-frame program-float-2 h-[360px] sm:h-[400px]">
+                        <img src="assets/nursery.jpg" alt="Pre-KG at Ryans Academy">
+                        <div class="program-floating-tag">
+                            <i class="fa-solid fa-palette text-[#F3D98B]"></i>
+                            <span>Montessori Pre-Literacy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-5">
+                    <div class="inline-flex items-center gap-2">
+                        <span class="gold-badge pulse-badge"><i class="fa-solid fa-child-reaching mr-1.5 text-[#4B1F6F]"></i> Age: 2.5 – 3.5 Years</span>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-2.5 py-1 rounded-full border border-amber-200/50">Stage 02 • Readiness</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F] leading-tight">Pre-KG Program</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Pre-KG builds expressive language, associative understanding, and self-confidence. Children engage with Montessori materials to understand dimensions, colors, sounds, and social routines while developing early pre-literacy readiness.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Phonetic Sound Association</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Montessori Cylinders & Rods</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Creative Color Wheel Art</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Daily Circle-Time Sharing</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <button class="open-enquiry-modal btn-gold text-xs inline-flex items-center gap-2" data-program="Pre-KG" data-type="enquiry">
+                            <span>Enquire for Pre-KG</span>
+                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                        </button>
+                        <button class="open-enquiry-modal btn-outline-purple text-xs" data-program="Pre-KG" data-type="visit">
+                            <i class="fa-solid fa-calendar-check text-[11px]"></i>
+                            <span>Visit Classroom</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 3: LKG -->
+    <section class="reveal-on-scroll py-16 bg-white border-b border-purple-50 scroll-mt-24" id="lkg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 order-2 lg:order-1 space-y-5">
+                    <div class="inline-flex items-center gap-2">
+                        <span class="purple-badge pulse-badge"><i class="fa-solid fa-shapes mr-1.5 text-[#D4A72C]"></i> Age: 3.5 – 4.5 Years</span>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-[#4B1F6F] bg-[#F1EAF7] px-2.5 py-1 rounded-full border border-purple-200/50">Stage 03 • Discovery</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F] leading-tight">Junior Kindergarten (LKG)</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        In LKG, children transition into structured pre-writing patterns, letter-sound blends, mathematical counting logic, and environmental exploration. The focus is on independent confidence and cognitive curiosity.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Jolly Phonics Letter Blends</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Math Number Quantities</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Science Nature Modules</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Recitation & Show-and-Tell</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <button class="open-enquiry-modal btn-gold text-xs inline-flex items-center gap-2" data-program="LKG" data-type="enquiry">
+                            <span>Enquire for LKG</span>
+                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                        </button>
+                        <button class="open-enquiry-modal btn-outline-purple text-xs" data-program="LKG" data-type="visit">
+                            <i class="fa-solid fa-calendar-check text-[11px]"></i>
+                            <span>Visit Classroom</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 order-1 lg:order-2">
+                    <div class="program-photo-frame program-float-1 h-[360px] sm:h-[400px]">
+                        <img src="assets/juniorkg.jpg" alt="LKG at Ryans Academy">
+                        <div class="program-floating-tag">
+                            <i class="fa-solid fa-spell-check text-[#F3D98B]"></i>
+                            <span>Jolly Phonics & Numbers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 4: UKG -->
+    <section class="reveal-on-scroll py-16 bg-[#FAF8F4] border-b border-purple-50 scroll-mt-24" id="ukg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <div class="program-photo-frame program-float-2 h-[360px] sm:h-[400px]">
+                        <img src="assets/seniorkg.jpg" alt="UKG at Ryans Academy">
+                        <div class="program-floating-tag">
+                            <i class="fa-solid fa-book-open-reader text-[#F3D98B]"></i>
+                            <span>Primary CBSE Readiness</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-5">
+                    <div class="inline-flex items-center gap-2">
+                        <span class="gold-badge pulse-badge"><i class="fa-solid fa-book-open mr-1.5 text-[#4B1F6F]"></i> Age: 4.5 – 5.5 Years</span>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-2.5 py-1 rounded-full border border-amber-200/50">Stage 04 • Mastery</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F] leading-tight">Senior Kindergarten (UKG)</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        UKG prepares young learners for primary CBSE grade school. Students build fluency in sentence reading, creative story writing, mental addition/subtraction, beginner Hindi/Tamil languages, and logical deduction.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Fluent Early Reader Books</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Mathematical Word Logic</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Environmental Studies (EVS)</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Primary Readiness Habits</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <button class="open-enquiry-modal btn-gold text-xs inline-flex items-center gap-2" data-program="UKG" data-type="enquiry">
+                            <span>Enquire for UKG</span>
+                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                        </button>
+                        <button class="open-enquiry-modal btn-outline-purple text-xs" data-program="UKG" data-type="visit">
+                            <i class="fa-solid fa-calendar-check text-[11px]"></i>
+                            <span>Visit Classroom</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 5: Graders -->
+    <section class="reveal-on-scroll py-16 bg-white scroll-mt-24" id="graders">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 order-2 lg:order-1 space-y-5">
+                    <div class="inline-flex items-center gap-2">
+                        <span class="purple-badge pulse-badge"><i class="fa-solid fa-graduation-cap mr-1.5 text-[#D4A72C]"></i> Primary CBSE Curriculum</span>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-[#4B1F6F] bg-[#F1EAF7] px-2.5 py-1 rounded-full border border-purple-200/50">Stage 05 • Leadership</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F] leading-tight">Graders (Primary School)</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium">
+                        Our Primary Graders program combines CBSE academic syllabus with computer science literacy, Abacus mental arithmetic, sports competition, and leadership initiatives. Students develop deep discipline and high academic aptitude.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>CBSE Core Subjects (Eng, Math, Sci)</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Abacus Mental Calculation</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Computer Lab Coding Basics</span>
+                        </div>
+                        <div class="program-milestone-pill">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Velocity Fest Sports Athletics</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <button class="open-enquiry-modal btn-gold text-xs inline-flex items-center gap-2" data-program="Graders" data-type="enquiry">
+                            <span>Enquire for Graders</span>
+                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                        </button>
+                        <button class="open-enquiry-modal btn-outline-purple text-xs" data-program="Graders" data-type="visit">
+                            <i class="fa-solid fa-calendar-check text-[11px]"></i>
+                            <span>Visit Classroom</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 order-1 lg:order-2">
+                    <div class="program-photo-frame program-float-1 h-[360px] sm:h-[400px]">
+                        <img src="assets/DSC_0001.jpg" alt="Graders at Ryans Academy">
+                        <div class="program-floating-tag">
+                            <i class="fa-solid fa-graduation-cap text-[#F3D98B]"></i>
+                            <span>CBSE Academic Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pathway Synergy Feature Bar -->
+    <section class="reveal-on-scroll py-14 bg-gradient-to-r from-[#4B1F6F] via-[#5e268c] to-[#4B1F6F] text-white border-t border-purple-800/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Holistic Pedagogical Continuum</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Why Ryans Structured Pathway Works</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/15 transition-all hover:-translate-y-1.5 duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-amber-500/20">
+                        <i class="fa-solid fa-stairs"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Zero-Stress Continuity</h4>
+                    <p class="text-xs text-purple-200 leading-relaxed font-medium">Each level builds effortlessly on prior milestones, preventing early academic fatigue and instilling joyful curiosity.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/15 transition-all hover:-translate-y-1.5 duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#4B1F6F] to-[#7C3AED] text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-purple-900/30">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Dual Brain Stimulation</h4>
+                    <p class="text-xs text-purple-200 leading-relaxed font-medium">Bead math calculations, phonics phonetics, and motor sensory apparatus harmonize logical and creative intelligence.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/15 transition-all hover:-translate-y-1.5 duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#059669] to-[#10B981] text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-emerald-500/20">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Whole-Child Wellbeing</h4>
+                    <p class="text-xs text-purple-200 leading-relaxed font-medium">Physical athletics, stage articulation, emotional kindness, and healthy dining habits form our everyday campus life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#29252B] text-gray-300 py-10 border-t border-gray-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 pr-4 sm:pr-32 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <p>&copy; 2026 Ryans Academy. All Rights Reserved.</p>
+            <div class="flex items-center gap-2">
+                    <span class="text-gray-400 text-[11px] font-medium">Developed by</span>
+                    <a href="https://yaaletech.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white px-3 py-1.5 rounded-xl shadow-sm hover:shadow-md transition-all group" title="Yaale Technologies">
+                        <img src="assets/yaale_logo.png" alt="Yaale Technologies Logo" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform">
+                        <span class="text-[11px] font-extrabold tracking-tight text-[#006766] group-hover:text-[#004d4c] uppercase">YAALE TECHNOLOGIES</span>
+                    </a>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Mobile Bar & WhatsApp -->
+    <div class="mobile-action-bar">
+        <a href="tel:+919840012345" class="mobile-action-btn call-btn"><i class="fa-solid fa-phone text-base"></i><span>Call Us</span></a>
+        <a href="https://wa.me/919840012345" target="_blank" class="mobile-action-btn whatsapp-btn"><i class="fa-brands fa-whatsapp text-lg"></i><span>WhatsApp</span></a>
+        <button class="open-enquiry-modal mobile-action-btn enquire-btn" data-type="enquiry"><i class="fa-solid fa-paper-plane text-sm"></i><span>Enquire Now</span></button>
+    </div>
+    <a href="https://wa.me/919840012345" target="_blank" class="whatsapp-float shadow-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiry-modal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-gray-400 hover:text-[#4B1F6F]"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div id="modal-form-container">
+                <h3 class="text-xl font-bold text-[#4B1F6F] mb-4 text-center">Program Enquiry</h3>
+                <form id="enquiry-form" class="space-y-3">
+                    <input type="text" id="parent-name" required placeholder="Parent Name" class="w-full text-xs p-3 rounded-xl border">
+                    <input type="tel" id="parent-phone" required placeholder="Phone Number" class="w-full text-xs p-3 rounded-xl border">
+                    <select id="form-program" class="w-full text-xs p-3 rounded-xl border bg-white">
+                        <option value="Play Group">Play Group</option>
+                        <option value="Pre-KG">Pre-KG</option>
+                        <option value="LKG">LKG</option>
+                        <option value="UKG">UKG</option>
+                        <option value="Graders">Graders</option>
+                    </select>
+                    <button type="submit" class="btn-gold w-full text-xs py-3 justify-center">Submit Enquiry</button>
+                </form>
+            </div>
+            <div id="modal-thank-you" class="hidden text-center py-4 space-y-3">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-4xl"></i>
+                <h4 class="font-bold text-[#4B1F6F]">Thank You!</h4>
+                <p class="text-xs text-gray-500">We will connect with you promptly.</p>
+                <a id="thank-you-wa-btn" href="#" target="_blank" class="btn-gold text-xs block py-2 text-center">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

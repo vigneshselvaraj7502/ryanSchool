@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Group Program - Ryans Pre-School</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Caveat:wght@700&family=Nunito:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js for 3D Interactive Playground -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Custom Premium Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#4c2882',
+                            'purple-dark': '#381c65',
+                            'purple-light': '#5c339c',
+                            yellow: '#ffb800',
+                            'yellow-light': '#fff9eb',
+                            orange: '#ff8a00',
+                            bg: '#fdfbf7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Nunito"', 'sans-serif'],
+                        display: ['"Poppins"', 'sans-serif'],
+                        script: ['"Caveat"', 'cursive'],
+                        poster: ['"Cormorant Garamond"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfbf7;
+        }
+        /* Custom floating animation */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+        @keyframes float-medium {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(-3deg); }
+        }
+        .animate-float-slow {
+            animation: float-slow 6s ease-in-out infinite;
+        }
+        .animate-float-medium {
+            animation: float-medium 4s ease-in-out infinite;
+        }
+        /* Color Hunt canvas container styling */
+        #color-hunt-container {
+            width: 100%;
+            height: 380px;
+            background: radial-gradient(circle, #faf5ff 0%, #f3e8ff 100%);
+            position: relative;
+            border-radius: 3rem;
+            overflow: hidden;
+            border: 4px border-purple-50;
+        }
+        /* Hide scrollbars for carousel tracks */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-700 bg-brand-bg">
+
+    <!-- Top Announcement Bar -->
+<div class="bg-[#56299b] text-white text-[11px] font-semibold py-2.5 px-6 sm:px-16 flex flex-col md:flex-row justify-between items-center z-30 relative shadow-sm">
+<div class="flex items-center gap-6 mb-2 md:mb-0">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brand-yellow text-sm"></i> 123 Kids Avenue, Chennai, India</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-yellow text-sm"></i> +91 12345 67890</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-yellow text-sm"></i> info@ryanspreschool.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-purple-200">Follow Us:</span>
+<a class="bg-white/10 hover:bg-white text-white hover:text-[#56299b] rounded-full w-5.5 h-5.5 flex items-center justify-center transition shadow-sm" href="https://facebook.com/ryanspreschool" target="_blank"><i class="fa-brands fa-facebook-f text-[10px]"></i></a>
+<a class="bg-white/10 hover:bg-white text-white hover:text-[#56299b] rounded-full w-5.5 h-5.5 flex items-center justify-center transition shadow-sm" href="https://instagram.com/ryanspreschool" target="_blank"><i class="fa-brands fa-instagram text-[10px]"></i></a>
+<a class="bg-white/10 hover:bg-white text-white hover:text-[#56299b] rounded-full w-5.5 h-5.5 flex items-center justify-center transition shadow-sm" href="https://youtube.com/@ryanspreschool" target="_blank"><i class="fa-brands fa-youtube text-[10px]"></i></a>
+</div>
+</div>
+<!-- Navigation Header -->
+<header class="bg-white/95 backdrop-blur-md py-3 px-6 sm:px-16 lg:px-6 xl:px-16 flex justify-between items-center z-40 sticky top-0 shadow-sm border-b border-purple-50 transition-all duration-300" id="main-header">
+<!-- Logo Section -->
+<div class="flex items-center gap-3 sm:gap-4">
+<img alt="Ryans Pre-School Logo" class="relative z-50 h-16 sm:h-20 lg:h-[100px] xl:h-[115px] w-auto object-contain drop-shadow-md" src="assets/logo.png"/>
+<div class="flex flex-col justify-center">
+<h1 class="font-display text-[16px] sm:text-[20px] lg:text-[26px] xl:text-[30px] font-black tracking-tight uppercase leading-none">
+<span class="text-brand-purple">RYANS</span> <span class="text-brand-yellow">PRE-SCHOOL</span>
+</h1>
+<p class="text-brand-purple font-black text-[7px] sm:text-[9px] lg:text-[10px] xl:text-[11.5px] tracking-tight sm:tracking-[0.08em] xl:tracking-[0.1em] mt-1 whitespace-normal sm:whitespace-nowrap pr-2">DAY CARE | PLAY GROUP | NURSERY | JUNIOR KG | SENIOR KG</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-1.5 lg:gap-2 xl:gap-5 font-bold text-[10px] lg:text-[11.5px] xl:text-[13px] text-gray-700">
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="index.html">Home</a>
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="about.html"><span class="whitespace-nowrap inline-block">About Us</span></a>
+<div class="relative group">
+<button class="nav-link-item active-link bg-brand-purple text-white px-3.5 py-1.5 rounded-xl shadow-sm hover:bg-brand-purple-dark transition flex items-center gap-1 font-bold">
+                    Programs <i class="fa-solid fa-chevron-down text-[8px] mt-0.5"></i>
+</button>
+<!-- Dropdown menu -->
+<div class="absolute top-full -left-4 mt-2 bg-white/95 backdrop-blur-xl border border-purple-100 rounded-2xl shadow-[0_20px_40px_rgba(76,40,130,0.1)] p-3 w-[260px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-1 transform -translate-y-2 transition-all duration-300 z-50">
+    <div class="relative z-10">
+        <!-- Optional tiny arrow pointer -->
+        <div class="absolute -top-[19px] left-[52px] w-4 h-4 bg-white border-t border-l border-purple-100 transform rotate-45 -z-10"></div>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link" href="daycare.html">
+            <div class="w-10 h-10 rounded-lg bg-pink-100 text-pink-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-baby"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Day Care</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Infants</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="playgroup.html">
+            <div class="w-10 h-10 rounded-lg bg-orange-100 text-orange-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-shapes"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Play Group</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Toddlers</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="nursery.html">
+            <div class="w-10 h-10 rounded-lg bg-brand-purple/10 text-brand-purple flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-cubes"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Nursery</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">2-3 Years</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="juniorkg.html">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Junior KG</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">3-4 Years</p>
+            </div>
+        </a>
+        
+        <a class="flex items-center gap-3 p-2.5 rounded-xl text-gray-600 hover:bg-purple-50 hover:text-brand-purple transition group/link mt-1" href="seniorkg.html">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-500 flex items-center justify-center text-lg group-hover/link:scale-110 group-hover/link:bg-brand-purple group-hover/link:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+                <p class="font-bold text-[13px] leading-tight text-gray-800 group-hover/link:text-brand-purple">Senior KG</p>
+                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">4-5 Years</p>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+
+
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="facilities.html">Facilities</a>
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="index.html#testimonials">Testimonials</a>
+<a class="nav-link-item py-2 px-0.5 hover:text-brand-purple transition" href="contact.html">Admission</a>
+<!-- Cute Kid Mascot Icon with Interactive Speech Bubble -->
+<div class="relative group ml-2 flex items-center">
+<img alt="Mascot Icon" class="h-10 w-10 rounded-full object-contain border border-purple-100 shadow-sm transition duration-300 hover:scale-110 cursor-pointer" src="assets/kid_mascot.jpg" style="mix-blend-mode: multiply;"/>
+<!-- Playful speech bubble tooltip -->
+<div class="absolute right-12 bg-brand-yellow text-brand-purple text-[10px] font-black py-1.5 px-3 rounded-xl shadow-md opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap z-50">
+                    Hi, Let's Play! 🎈
+                    <!-- Speech bubble tail pointing to mascot -->
+<div class="absolute right-[-4px] top-1/2 transform -translate-y-1/2 rotate-45 w-2 h-2 bg-brand-yellow"></div>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Toggle Button -->
+<button class="lg:hidden text-brand-purple hover:text-[#56299b] p-2 focus:outline-none rounded-full hover:bg-gray-100" id="mobile-menu-btn">
+<i class="fa-solid fa-bars text-2xl"></i>
+</button>
+</header>
+<!-- Mobile Drawer Container -->
+<div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6" id="mobile-drawer">
+<div class="flex justify-between items-center mb-8 border-b pb-4">
+<span class="font-display text-xl text-brand-purple font-bold">RYANS MENU</span>
+<button class="text-brand-purple p-2 hover:bg-gray-100 rounded-full" id="close-drawer-btn">
+<i class="fa-solid fa-xmark text-xl"></i>
+</button>
+</div>
+<nav class="flex flex-col gap-4 font-bold text-gray-700 text-[15px]">
+<a class="text-brand-purple" href="index.html">Home</a>
+<a class="hover:text-brand-purple" href="about.html"><span class="whitespace-nowrap inline-block">About Us</span></a>
+<div class="flex flex-col gap-2 py-1">
+<span class="text-brand-purple font-black uppercase text-[10px] tracking-wider">Programs</span>
+<a class="pl-3 hover:text-brand-purple" href="daycare.html">Day Care (Infants)</a>
+<a class="pl-3 hover:text-brand-purple" href="playgroup.html">Play Group (Toddlers)</a>
+<a class="pl-3 hover:text-brand-purple" href="nursery.html">Nursery (2-3 Years)</a>
+<a class="pl-3 hover:text-brand-purple" href="juniorkg.html">Junior KG (3-4 Years)</a>
+<a class="pl-3 hover:text-brand-purple" href="seniorkg.html">Senior KG (4-5 Years)</a>
+</div>
+
+
+<a class="hover:text-brand-purple" href="facilities.html">Facilities</a>
+<a class="hover:text-brand-purple" href="index.html#testimonials">Testimonials</a>
+<a class="hover:text-brand-purple" href="contact.html">Admission</a>
+</nav>
+</div>
+<!-- Drawer Dark Overlay -->
+<div class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden" id="mobile-overlay"></div>
+
+    <!-- Mobile Drawer Container -->
+    <div id="mobile-drawer" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6">
+        <div class="flex justify-between items-center mb-8 border-b pb-4">
+            <span class="font-display text-xl text-brand-purple font-bold">RYANS MENU</span>
+            <button id="close-drawer-btn" class="text-brand-purple p-2 hover:bg-gray-100 rounded-full">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-bold text-gray-700 text-[15px]">
+            <a href="index.html">Home</a>
+            <a href="about.html"><span class="whitespace-nowrap inline-block">About Us</span></a>
+            <div class="flex flex-col gap-2 py-1">
+                <span class="text-brand-purple font-black uppercase text-[10px] tracking-wider">Programs</span>
+                <a href="daycare.html" class="pl-3 hover:text-brand-purple">Day Care (Infants)</a>
+                <a href="playgroup.html" class="pl-3 hover:text-brand-purple">Play Group (Toddlers)</a>
+                <a href="nursery.html" class="pl-3 hover:text-brand-purple">Nursery (2-3 Years)</a>
+                <a href="juniorkg.html" class="pl-3 hover:text-brand-purple">Junior KG (3-4 Years)</a>
+                <a href="seniorkg.html" class="pl-3 hover:text-brand-purple">Senior KG (4-5 Years)</a>
+            </div>
+            <a href="facilities.html">Facilities</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="contact.html">Admission</a>
+        </nav>
+    </div>
+    <!-- Drawer Dark Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden"></div>
+
+    <!-- Play Group Page Hero (Dynamic Video Background) -->
+    <section class="reveal-on-scroll relative py-24 px-6 sm:px-16 overflow-hidden border-b-8 border-brand-yellow">
+        <!-- Widescreen Video/GIF Background Layer -->
+        <div class="absolute inset-0 z-0 select-none pointer-events-none">
+            <img src="assets/gif/hero.gif" alt="Playgroup Classroom Loop" class="w-full h-full object-cover scale-105 filter blur-[1px]">
+        </div>
+        <!-- Premium Dark Purple Backdrop Overlay for High Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#381c65]/90 via-[#4c2882]/85 to-[#381c65]/90 z-10"></div>
+
+        <!-- Floating playful particles -->
+        <div class="absolute top-[15%] left-[8%] text-brand-yellow opacity-40 text-3xl animate-float-slow z-20"><i class="fa-solid fa-shapes"></i></div>
+        <div class="absolute bottom-[15%] right-[8%] text-[#fa8295] opacity-40 text-4xl animate-float-medium z-20"><i class="fa-solid fa-face-smile"></i></div>
+
+        <div class="max-w-[1000px] w-full mx-auto text-center relative z-20">
+            <span class="font-script text-brand-yellow text-[3.2rem] leading-none mb-3 inline-block transform -rotate-1">Exploring Together</span>
+            <h2 class="font-display text-4xl sm:text-6xl text-white font-black uppercase tracking-tight leading-none mb-6">
+                Play Group
+            </h2>
+            <!-- Playful divider -->
+            <svg class="w-36 h-3 text-brand-yellow fill-none stroke-current my-6 mx-auto" stroke-width="3.5" stroke-linecap="round" viewBox="0 0 100 10">
+                <path d="M5 5 Q20 1 35 5 T65 5 T95 5" />
+            </svg>
+            <p class="text-purple-100 font-semibold text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+                Designed to meet the developmental needs of precocious, active, and ever-aware toddlers aged 18 to 25 months old. Here, we welcome first words, guide tiny steps, and celebrate a world full of early wonders.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 1: Nurturing Play Group Care & Core Philosophy (Editorial Collage Style) -->
+    <section class="reveal-on-scroll w-full bg-[#FAF2ED] py-24 relative overflow-hidden z-10 border-b border-purple-50">
+        
+        <!-- Big text wall backdrop (tilted/layered in the background) -->
+        <div class="absolute inset-x-0 top-12 z-0 pointer-events-none select-none text-center px-4 max-w-5xl mx-auto">
+            <h4 class="font-display text-[2rem] sm:text-[4.2rem] font-black text-brand-purple/5 uppercase tracking-widest leading-none">
+                Nurturing <span class="text-[#fa8295]/5">/</span> Playful <span class="text-[#fa8295]/5">/</span> Secure <span class="text-[#fa8295]/5">/</span> Happy <span class="text-[#fa8295]/5">/</span> Active <span class="text-[#fa8295]/5">/</span> Loved <span class="text-[#fa8295]/5">/</span> Exploring <span class="text-[#fa8295]/5">/</span> Imaginative
+            </h4>
+        </div>
+
+        <div class="max-w-[1240px] w-full mx-auto px-6 sm:px-16 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Flanking Column: Nurturing Overview -->
+                <div class="md:col-span-4 text-center md:text-right flex flex-col items-center md:items-end order-2 md:order-1 mt-8 md:mt-0">
+                    <div class="bg-white p-3.5 rounded-2xl shadow-sm mb-4 border border-purple-50 card-interactive-lift">
+                        <i class="fa-solid fa-shapes text-xl text-[#fa8295]"></i>
+                    </div>
+                    <span class="text-xs font-black tracking-widest text-[#fa8295] uppercase mb-2">This Program Caters</span>
+                    <p class="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed max-w-xs">
+                        Toddlers aged 18–25 months who are exploring their widening world. We focus on keeping the child happy, engaged, and secure in a warm classroom.
+                    </p>
+                </div>
+
+                <!-- Center Column: Overlapping Toddler Cutout Pop-Out -->
+                <div class="md:col-span-4 flex flex-col items-center justify-center relative min-h-[360px] order-1 md:order-2">
+                    <!-- Background glowing spotlight -->
+                    <div class="absolute w-64 h-64 rounded-full bg-brand-yellow/10 filter blur-3xl z-0 animate-pulse"></div>
+                    <!-- Decorative floating elements -->
+                    <div class="absolute top-2 left-6 text-3xl animate-float-slow z-20 select-none">🎈</div>
+                    <div class="absolute bottom-6 right-6 text-3xl animate-float-medium z-20 select-none">🧸</div>
+                    
+                    <!-- Circular framed backup photo representing caregivers -->
+                    <div class="absolute w-44 h-44 rounded-full border-4 border-white overflow-hidden shadow-md bg-purple-50 z-0 opacity-40 translate-y-[-30px]">
+                        <img src="assets/caring_teacher_toddler.jpg" alt="Caregiver Portrait" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- The Happy Toddler cutout popping out in front (The focal point!) -->
+                    <div class="w-[280px] h-[280px] z-10 relative transform hover:scale-[1.04] transition duration-500 cursor-pointer drop-shadow-[0_20px_40px_rgba(76,40,130,0.18)]">
+                        <img src="assets/happy_toddler_cutout.png" alt="Happy Toddler Playing" class="w-full h-full object-contain">
+                    </div>
+                </div>
+
+                <!-- Right Flanking Column: Nurturing Pillars -->
+                <div class="md:col-span-4 text-center md:text-left flex flex-col items-center md:items-start order-3 mt-8 md:mt-0">
+                    <div class="bg-white p-3.5 rounded-2xl shadow-sm mb-4 border border-purple-50 card-interactive-lift">
+                        <i class="fa-solid fa-hand-holding-heart text-xl text-brand-purple"></i>
+                    </div>
+                    <span class="text-xs font-black tracking-widest text-brand-purple uppercase mb-2">Our Core Cornerstones</span>
+                    <p class="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed max-w-xs">
+                        Warm nurturing interactions with caregivers, days spent in a home-like environment for learning, individualized attention and meaningful partnerships with parents.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Interactive Color Hunt Game -->
+    <section class="reveal-on-scroll max-w-[1240px] w-full mx-auto px-6 sm:px-16 py-10 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="font-script text-[#fa8295] text-3xl">Interactive Fun</span>
+            <h3 class="font-display text-2xl sm:text-3xl text-brand-purple font-black uppercase">Color Hunt Adventure</h3>
+            <p class="text-gray-500 text-xs sm:text-sm font-semibold mt-2">Help the teddy bear find all the toys of the matching color! Tap them before they float away.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left Side: Canvas Frame -->
+            <div class="lg:col-span-7 w-full flex justify-center">
+                <div class="relative w-full aspect-[4/3] bg-white border-[14px] border-[#f5f0ff] rounded-[3.5rem] shadow-xl overflow-hidden p-2">
+                    <div id="color-hunt-container" class="relative w-full h-full rounded-[2.8rem] overflow-hidden shadow-inner cursor-pointer" style="background: linear-gradient(135deg, #fdfbf7 0%, #fffbeb 100%);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Game Details -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white border-2 border-purple-50 rounded-[3rem_4.5rem_3.5rem_3rem] p-8 shadow-sm">
+                    <h4 class="font-display text-brand-purple text-lg font-black mb-3">🎨 Play &amp; Learn Colors</h4>
+                    <p class="text-gray-500 text-sm font-semibold leading-relaxed mb-4">
+                        Color Hunt is a playful sensory game built specifically for our playgroup toddlers (ages 2-3) to learn primary colors in an engaging way.
+                    </p>
+                    <p class="text-gray-500 text-sm font-semibold leading-relaxed mb-4">
+                        Tapping the correct colors helps infants build <strong class="text-brand-purple">visual association</strong>, <strong class="text-brand-orange">hand-eye coordination</strong>, and cognitive response.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3 mt-4">
+                        <span class="bg-purple-50 text-brand-purple font-black text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full">✨ Color Match</span>
+                        <span class="bg-pink-50 text-[#fa8295] font-black text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full">🧸 Toy Taps</span>
+                        <span class="bg-yellow-50 text-brand-orange font-black text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full">🎯 Motor Skills</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Developmental Phases -->
+    <section class="reveal-on-scroll border-y border-purple-50 py-20 relative z-10 overflow-hidden" style="background-image: url('assets/kids_blocks_play.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <!-- Soft high-contrast overlay for text legibility -->
+        <div class="absolute inset-0 bg-[#fffdf5]/85 z-0"></div>
+        <div class="max-w-[1240px] w-full mx-auto px-6 sm:px-16 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="font-script text-brand-orange text-[2.4rem] block mb-1">Outward Phase</span>
+                <h3 class="font-display text-2xl sm:text-3xl text-brand-purple font-black uppercase">Rapid Toddler Development</h3>
+                <div class="w-20 h-1 bg-[#fa8295] mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+                <!-- Development card -->
+                <div class="bg-white border border-[#FDE68A]/80 rounded-[3.5rem_3.5rem_2.5rem_3.5rem] p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="bg-[#FFFBEB] text-[#D97706] w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm"><i class="fa-solid fa-child-reaching"></i></div>
+                        <h4 class="font-display text-brand-purple text-xl font-black mb-4">Growing Skills</h4>
+                        <p class="text-gray-500 text-sm sm:text-base font-semibold leading-relaxed">
+                            The Toddler begins a rapid development in their physical, cognitive, social and linguistic skills. Socially a toddler may begin asserting his individual needs, thoughts and preferences. 
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Independence card -->
+                <div class="bg-white border border-[#FECACA]/80 rounded-[3rem_4.5rem_3.5rem_3rem] p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="bg-[#FFF5F5] text-[#E11D48] w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm"><i class="fa-solid fa-arrows-spin"></i></div>
+                        <h4 class="font-display text-brand-purple text-xl font-black mb-4">stubborn Independence</h4>
+                        <p class="text-gray-500 text-sm sm:text-base font-semibold leading-relaxed">
+                            During this outward phase of development, he is caught uncomfortably between infancy and personhood; he may swing rapidly between clingy behaviors and stubborn independence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Early Learning Curriculum (Milestones) -->
+    <section class="reveal-on-scroll max-w-[1340px] w-full mx-auto px-6 sm:px-16 py-24 relative overflow-hidden bg-brand-bg">
+        
+        <!-- Decorative colored waves at the bottom background -->
+        <div class="absolute bottom-0 inset-x-0 h-24 w-full opacity-60 z-0 pointer-events-none flex items-end">
+            <svg viewBox="0 0 1440 120" class="w-full h-full" preserveAspectRatio="none">
+                <path d="M0,60 C360,110 720,20 1080,70 C1260,95 1350,75 1440,60 L1440,120 L0,120 Z" fill="#FAF5FF" />
+                <path d="M0,75 C360,125 720,35 1080,85 C1260,110 1350,90 1440,75 L1440,120 L0,120 Z" fill="#FFFBEB" opacity="0.75" />
+                <path d="M0,90 C360,140 720,50 1080,100 C1260,125 1350,105 1440,90 L1440,120 L0,120 Z" fill="#F0FDF4" opacity="0.6" />
+                <path d="M0,105 C360,155 720,65 1080,115 C1260,140 1350,120 1440,105 L1440,120 L0,120 Z" fill="#FFF5F5" opacity="0.4" />
+            </svg>
+        </div>
+
+        <!-- Upper Grid: Title and Widescreen Photo -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10 mb-16">
+            <!-- Left Side: Title -->
+            <div class="lg:col-span-5 text-center lg:text-left">
+                <span class="font-script text-[#fa8295] text-[2.4rem] block mb-1">Our Curriculum</span>
+                <h3 class="font-display text-3xl sm:text-4xl text-brand-purple font-black uppercase leading-tight">
+                    Development & Milestones
+                </h3>
+                <svg class="w-24 h-3 text-[#fa8295] fill-none stroke-current my-4 mx-auto lg:mx-0" stroke-width="3" stroke-linecap="round" viewBox="0 0 100 10">
+                    <path d="M5 5 Q20 1 35 5 T65 5 T95 5" />
+                </svg>
+                <p class="text-gray-500 text-sm font-semibold leading-relaxed max-w-md mx-auto lg:mx-0">
+                    Nurturing little minds through play, learning and real-world experiences.
+                </p>
+            </div>
+            
+            <!-- Right Side: Big, Widescreen Teacher & Toddlers Image -->
+            <div class="lg:col-span-7 flex justify-center">
+                <div class="rounded-[45%_55%_45%_55%_/_50%_50%_40%_40%] overflow-hidden border-8 border-white shadow-2xl w-full max-w-xl h-64 md:h-72 bg-white relative">
+                    <img src="assets/playgroup_curriculum.jpg" alt="Teacher and Playgroup Toddlers" class="w-full h-full object-cover hover:scale-[1.02] transition duration-500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Row with Scrapbook Cards -->
+        <div class="relative z-10 max-w-6xl mx-auto mt-12 pb-8">
+            
+             <!-- Cards Grid / Carousel Track -->
+            <div id="curriculum-carousel-track" class="flex lg:grid lg:grid-cols-4 gap-8 w-full overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-none scroll-smooth relative z-10 py-6 px-4 items-stretch justify-items-center">
+                
+                <!-- Card 1: Physical Skills (Purple Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-purple-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-purple-100 text-purple-700 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[-3deg] uppercase rounded shadow-sm border border-purple-200/50">
+                        Milestone 01
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-purple-50 border-2 border-purple-200 flex items-center justify-center text-brand-purple text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-brand-purple text-lg font-black mb-3">Physical Skills</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Refining gross and fine motor skills. Jumping, running, balancing, building tall block towers, and coloring outlines.
+                    </p>
+                </div>
+
+                <!-- Card 2: Cognitive Skills (Yellow Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-amber-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:-translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-amber-100 text-amber-850 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[3deg] uppercase rounded shadow-sm border border-amber-200/50">
+                        Milestone 02
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-amber-50 border-2 border-amber-200 flex items-center justify-center text-amber-600 text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-amber-700 text-lg font-black mb-3">Cognitive Skills</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Acquiring early logical and sorting skills. Sorting by shape and color, solving basic puzzles, and counting simple objects.
+                    </p>
+                </div>
+
+                <!-- Card 3: Social Skills (Green Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-green-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-green-100 text-green-800 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[-2deg] uppercase rounded shadow-sm border border-green-200/50">
+                        Milestone 03
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-green-50 border-2 border-green-200 flex items-center justify-center text-green-600 text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-green-700 text-lg font-black mb-3">Social Skills</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Learning early preschool sharing, cooperative group playtime, expressing affection appropriately, and handling tiny conflicts.
+                    </p>
+                </div>
+
+                <!-- Card 4: Linguistic Skills (Pink Theme) -->
+                <div class="snap-center shrink-0 w-[290px] sm:w-[310px] lg:w-full max-w-[320px] bg-white border-2 border-dashed border-rose-300 rounded-[2.5rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center relative lg:-translate-y-4 h-full">
+                    <!-- Washi Tape -->
+                    <div class="absolute -top-3 bg-rose-100 text-rose-800 text-[10px] font-black tracking-widest px-6 py-1.5 rotate-[2deg] uppercase rounded shadow-sm border border-rose-200/50">
+                        Milestone 04
+                    </div>
+                    
+                    <!-- Icon / Number Circle -->
+                    <div class="w-16 h-16 rounded-full bg-rose-50 border-2 border-rose-200 flex items-center justify-center text-rose-600 text-2xl font-black mb-4 shadow-inner mt-4">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    
+                    <h4 class="font-display text-rose-700 text-lg font-black mb-3">Linguistic Skills</h4>
+                    <p class="text-gray-500 text-xs sm:text-sm font-semibold leading-relaxed">
+                        Rapid vocabulary growth, speaking in 2-3 word phrases, listening to kids bedtime stories, and reciting basic rhymes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+ 
+
+    </section>
+
+    <!-- SECTION 4.5: Play & Activity Gallery -->
+    <section class="reveal-on-scroll max-w-[1240px] w-full mx-auto px-6 sm:px-16 py-12 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="font-script text-brand-orange text-[2.4rem] block mb-1">Toddler Adventures</span>
+            <h3 class="font-display text-2xl sm:text-3xl text-brand-purple font-black uppercase">Colorful Play & Activities</h3>
+            <p class="text-gray-500 text-xs sm:text-sm font-semibold mt-2">A glimpse into a day full of interactive games, park adventures, and creative arts.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 relative z-10 items-stretch mt-16">
+            
+            <!-- Row 1 Left: Park Adventures (Widescreen, tilted slightly left) -->
+            <div class="lg:col-span-7 flex flex-col justify-between group bg-white border-8 border-white rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 transform -rotate-[1.5deg] relative">
+                <!-- Polaroid Washi Tape Overlay -->
+                <div class="absolute top-[-16px] left-1/2 -translate-x-1/2 w-28 h-8 bg-yellow-100/60 backdrop-blur-[2px] border border-yellow-200/50 rotate-[-3deg] z-30 shadow-sm pointer-events-none"></div>
+                
+                <!-- Floating Doodle Cloud -->
+                <div class="absolute -bottom-4 -right-4 text-[#fa8295] text-3xl z-20 animate-float-slow select-none"><i class="fa-solid fa-cloud"></i></div>
+
+                <div class="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
+                    <img src="assets/kids_park_play.jpg" alt="Toddlers Playing in Park" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
+                    <span class="absolute top-4 left-4 bg-brand-purple text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Park Slide & Swings</span>
+                </div>
+                <div class="p-6 bg-white rounded-b-3xl">
+                    <h4 class="font-display text-brand-purple text-xl font-black mb-2">Outdoor Park Adventures</h4>
+                    <p class="text-gray-500 text-sm font-semibold leading-relaxed">Hear the sweet giggles floating through the warm sunshine as caregivers guide their steady steps down the slides. Held safely, they learn to run, slide, and explore the fresh green grass with eyes full of pure wonder.</p>
+                </div>
+            </div>
+
+            <!-- Row 1 Right: Circle Games (Tall card, tilted slightly right) -->
+            <div class="lg:col-span-5 flex flex-col justify-between group bg-white border-8 border-white rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 transform rotate-[2deg] relative">
+                <!-- Polaroid Washi Tape Overlay -->
+                <div class="absolute top-[-16px] left-1/2 -translate-x-1/2 w-28 h-8 bg-yellow-100/60 backdrop-blur-[2px] border border-yellow-200/50 rotate-[3deg] z-30 shadow-sm pointer-events-none"></div>
+                
+                <!-- Floating Doodle Music Note -->
+                <div class="absolute -top-4 -left-4 text-[#D97706] text-3xl z-20 animate-float-medium select-none"><i class="fa-solid fa-music"></i></div>
+
+                <div class="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
+                    <img src="assets/kids_chairs_game.jpg" alt="Toddlers Playing Chairs" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
+                    <span class="absolute top-4 left-4 bg-[#D97706] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Musical Chairs</span>
+                </div>
+                <div class="p-6 bg-white rounded-b-3xl">
+                    <h4 class="font-display text-[#D97706] text-xl font-black mb-2">Toddler Circle Games</h4>
+                    <p class="text-gray-500 text-sm font-semibold leading-relaxed">Little hands clap together in happy rhythm as warm smiles welcome them to the circle. Guided by their teacher's soft singing, they play games, learning to share and make their very first friends.</p>
+                </div>
+            </div>
+
+            <!-- Row 2 Left: Messy Art (Tall card, tilted slightly left) -->
+            <div class="lg:col-span-5 flex flex-col justify-between group bg-white border-8 border-white rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 transform -rotate-[2deg] relative">
+                <!-- Polaroid Washi Tape Overlay -->
+                <div class="absolute top-[-16px] left-1/2 -translate-x-1/2 w-28 h-8 bg-yellow-100/60 backdrop-blur-[2px] border border-yellow-200/50 rotate-[-2deg] z-30 shadow-sm pointer-events-none"></div>
+                
+                <!-- Floating Doodle Palette/Brush -->
+                <div class="absolute -bottom-4 -left-4 text-green-500 text-3xl z-20 animate-float-slow select-none"><i class="fa-solid fa-palette"></i></div>
+
+                <div class="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
+                    <img src="assets/kids_art_painting.jpg" alt="Toddlers Painting" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
+                    <span class="absolute top-4 left-4 bg-[#16A34A] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Fingerpaint</span>
+                </div>
+                <div class="p-6 bg-white rounded-b-3xl">
+                    <h4 class="font-display text-[#16A34A] text-xl font-black mb-2">Messy Finger Painting</h4>
+                    <p class="text-gray-500 text-sm font-semibold leading-relaxed">Messy, paint-covered fingers bring bright giggles! Toddlers happily stamp their tiny hands onto paper to create artwork for mommy and daddy, building the confidence to explore.</p>
+                </div>
+            </div>
+
+            <!-- Row 2 Right: Sandbox (Widescreen, tilted slightly right) -->
+            <div class="lg:col-span-7 flex flex-col justify-between group bg-white border-8 border-white rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:rotate-0 transition-all duration-300 transform rotate-[1.5deg] relative">
+                <!-- Polaroid Washi Tape Overlay -->
+                <div class="absolute top-[-16px] left-1/2 -translate-x-1/2 w-28 h-8 bg-yellow-100/60 backdrop-blur-[2px] border border-yellow-200/50 rotate-[2deg] z-30 shadow-sm pointer-events-none"></div>
+                
+                <!-- Floating Doodle Sun -->
+                <div class="absolute -top-4 -right-4 text-yellow-400 text-4xl z-20 animate-float-medium select-none"><i class="fa-solid fa-sun"></i></div>
+
+                <div class="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
+                    <img src="assets/kids_sand_play.jpg" alt="Toddlers in Sandpit" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500">
+                    <span class="absolute top-4 left-4 bg-[#E11D48] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Sandbox Castles</span>
+                </div>
+                <div class="p-6 bg-white rounded-b-3xl">
+                    <h4 class="font-display text-[#E11D48] text-xl font-black mb-2">Sandbox Castles & Trucks</h4>
+                    <p class="text-gray-500 text-sm font-semibold leading-relaxed">Happy little builders sit side-by-side, sharing toy trucks and patting warm sand into castles. Together, they laugh as their towers tumble, learning the simple joy of sharing under reassuring watch.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: Detailed Milestones Expanded -->
+    <section class="reveal-on-scroll max-w-[1240px] w-full mx-auto px-6 sm:px-16 pb-20 relative z-10 overflow-visible">
+        <div class="bg-white border-2 border-purple-50 rounded-[3.5rem] p-10 sm:p-12 shadow-xl relative overflow-visible">
+            
+            <!-- Floating top-right illustration -->
+            <img src="assets/play_blocks_plane.png" alt="Building Blocks &amp; Plane" class="absolute -top-12 -right-6 w-32 sm:w-40 h-auto drop-shadow-md z-20 pointer-events-none">
+            
+            <div class="flex items-center gap-5 mb-10">
+                <div class="relative w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center border-2 border-purple-100 shadow-inner shrink-0">
+                    <i class="fa-solid fa-child text-[#7c3aed] text-3xl"></i>
+                    <div class="absolute -top-1 -right-1 text-purple-300 text-xs animate-pulse"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div>
+                    <h3 class="font-display text-2xl sm:text-3xl text-brand-purple font-black uppercase tracking-tight">Development Details</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm font-semibold mt-1">Acquiring primary physical, social, and mental concepts</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Column 1: Physical Refining -->
+                <div class="bg-[#FFFBF7] border border-amber-100/50 rounded-[2.5rem] p-8 shadow-sm flex flex-col justify-between relative overflow-visible pb-12 pt-10">
+                    <div>
+                        <!-- Header Pill -->
+                        <div class="inline-flex items-center gap-2 bg-white border border-amber-100 px-4 py-2 rounded-full shadow-sm">
+                            <i class="fa-solid fa-dumbbell text-amber-500"></i>
+                            <span class="text-amber-600 font-black text-sm tracking-tight">Physical refining</span>
+                        </div>
+                        
+                        <!-- Heart Divider -->
+                        <div class="flex items-center gap-1.5 w-full my-6">
+                            <div class="h-[1px] bg-amber-200 flex-1"></div>
+                            <i class="fa-solid fa-heart text-amber-300 text-[10px]"></i>
+                            <div class="h-[1px] bg-amber-200 flex-1"></div>
+                        </div>
+
+                        <p class="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed">
+                            Stacking two to four blocks, scribbling, turning pages of a book, and using a spoon with help. Toddlers are capable of exercising the gross motor muscles necessary to run, walk up stairs with help and climb onto a curb. Some show symptoms of bowel control; however, most are not yet ready for toilet training.
+                        </p>
+                    </div>
+                    <!-- Absolute illustration -->
+                    <img src="assets/baby_shoe.png" alt="Baby Shoe" class="absolute -top-6 right-6 w-20 h-auto drop-shadow-sm pointer-events-none">
+                </div>
+
+                <!-- Column 2: Social Interaction -->
+                <div class="bg-[#FFF9FA] border border-pink-100/50 rounded-[2.5rem] p-8 shadow-sm flex flex-col justify-between relative overflow-visible pb-12 pt-10">
+                    <div>
+                        <!-- Header Pill -->
+                        <div class="inline-flex items-center gap-2 bg-white border border-pink-100 px-4 py-2 rounded-full shadow-sm">
+                            <i class="fa-solid fa-users text-rose-500"></i>
+                            <span class="text-rose-600 font-black text-sm tracking-tight">Social interaction</span>
+                        </div>
+                        
+                        <!-- Heart Divider -->
+                        <div class="flex items-center gap-1.5 w-full my-6">
+                            <div class="h-[1px] bg-rose-200 flex-1"></div>
+                            <i class="fa-solid fa-heart text-rose-300 text-[10px]"></i>
+                            <div class="h-[1px] bg-rose-200 flex-1"></div>
+                        </div>
+
+                        <p class="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed">
+                            Socially, the Toddler begins to engage other children in play and, on a very limited basis, begins to share toys. They assert individual needs, thoughts, and preferences, juggled between clingy behaviors and stubborn independence.
+                        </p>
+                    </div>
+                    <!-- Absolute illustration (Reuse teddy bear) -->
+                    <img src="assets/teddy_heart.png" alt="Teddy &amp; Heart" class="absolute -top-6 right-6 w-20 h-auto drop-shadow-sm pointer-events-none">
+                </div>
+
+                <!-- Column 3: Cognitive Learning -->
+                <div class="bg-[#FAF8FF] border border-purple-100/50 rounded-[2.5rem] p-8 shadow-sm flex flex-col justify-between relative overflow-visible pb-12 pt-10">
+                    <div>
+                        <!-- Header Pill -->
+                        <div class="inline-flex items-center gap-2 bg-white border border-purple-100 px-4 py-2 rounded-full shadow-sm">
+                            <i class="fa-solid fa-brain text-[#7c3aed]"></i>
+                            <span class="text-[#7c3aed] font-black text-sm tracking-tight">Cognitive learning</span>
+                        </div>
+                        
+                        <!-- Heart Divider -->
+                        <div class="flex items-center gap-1.5 w-full my-6">
+                            <div class="h-[1px] bg-purple-200 flex-1"></div>
+                            <i class="fa-solid fa-heart text-purple-300 text-[10px]"></i>
+                            <div class="h-[1px] bg-purple-200 flex-1"></div>
+                        </div>
+
+                        <p class="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed">
+                            Toddlers learn mental skills that are used in the process of acquiring knowledge (memoring, perception, and imitation). These are developed by showing affection, listening to the toddler or looking at pictures and through imitation. They are able to identify body parts, three dimensions and say “my” or “mine”.
+                        </p>
+                    </div>
+                    <!-- Absolute illustration -->
+                    <img src="assets/open_book.png" alt="Open Book" class="absolute -top-6 right-6 w-20 h-auto drop-shadow-sm pointer-events-none">
+                </div>
+
+                <!-- Column 4: Linguistic Growth -->
+                <div class="bg-[#F4FAF6] border border-green-100/50 rounded-[2.5rem] p-8 shadow-sm flex flex-col justify-between relative overflow-visible pb-12 pt-10">
+                    <div>
+                        <!-- Header Pill -->
+                        <div class="inline-flex items-center gap-2 bg-white border border-green-100 px-4 py-2 rounded-full shadow-sm">
+                            <i class="fa-solid fa-message text-green-500"></i>
+                            <span class="text-green-600 font-black text-sm tracking-tight">Linguistic growth</span>
+                        </div>
+                        
+                        <!-- Heart Divider -->
+                        <div class="flex items-center gap-1.5 w-full my-6">
+                            <div class="h-[1px] bg-green-200 flex-1"></div>
+                            <i class="fa-solid fa-heart text-green-300 text-[10px]"></i>
+                            <div class="h-[1px] bg-green-200 flex-1"></div>
+                        </div>
+
+                        <p class="text-gray-600 text-xs sm:text-sm font-semibold leading-relaxed">
+                            Linguistically, the Toddler begins a rapid acquisition of words. With the help of love or baby sign language, they may actually begin posing in sentences and are able to adequately express their wants and needs to caregivers.
+                        </p>
+                    </div>
+                    <!-- Absolute CSS ABC Speech Bubble (Scale for perfect placement) -->
+                    <div class="absolute -top-6 right-6 pointer-events-none select-none scale-[0.85]">
+                        <div class="relative bg-[#80deea] text-white font-black text-xs px-3.5 py-1.5 rounded-2xl shadow-sm flex items-center justify-center">
+                            abc
+                            <div class="absolute -bottom-1 right-3 w-2.5 h-2.5 bg-[#80deea] rotate-45 rounded-sm"></div>
+                        </div>
+                        <div class="absolute -right-2 -bottom-4 bg-[#ffb74d] px-2 py-0.5 rounded-xl shadow-sm flex gap-0.5 items-center justify-center scale-90">
+                            <span class="w-1 h-1 rounded-full bg-white"></span>
+                            <span class="w-1 h-1 rounded-full bg-white"></span>
+                            <span class="w-1 h-1 rounded-full bg-white"></span>
+                            <div class="absolute -bottom-0.5 left-2 w-1.5 h-1.5 bg-[#ffb74d] rotate-45 rounded-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRUST PHRASE BANNER -->
+    <section class="reveal-on-scroll max-w-[1240px] w-full mx-auto my-12 rounded-[3.5rem] overflow-hidden bg-brand-purple text-white p-8 sm:p-12 text-center shadow-lg relative z-10">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-purple-dark to-brand-purple opacity-90 z-0"></div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h4 class="font-poster text-[18px] sm:text-2xl tracking-wide font-bold italic text-brand-yellow leading-tight mb-4">
+                "By Word ! By Faith ! Through Love !"
+            </h4>
+            <p class="text-purple-100 text-sm sm:text-base font-semibold leading-relaxed">
+                To Pronounce and Proclaim the truth of knowledge and wisdom and facilitate to deliver and renew the strength of the Young Ones to " Arise and Shine ".
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-brand-purple-dark text-white py-12 border-t-[8px] border-brand-yellow">
+        <div class="max-w-[1340px] w-full mx-auto px-6 sm:px-16 pr-6 sm:pr-32 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h5 class="font-display text-lg font-bold text-white mb-2">&copy; Copyrights - Ryans Academy</h5>
+            <div class="flex items-center justify-center gap-2 mt-3 pt-3 border-t border-white/10">
+                <span class="text-gray-300 text-xs font-medium">Developed by</span>
+                <a href="https://yaaletech.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/95 hover:bg-white px-3 py-1.5 rounded-xl shadow-sm hover:shadow-md transition-all group" title="Yaale Technologies">
+                    <img src="assets/yaale_logo.png" alt="Yaale Technologies Logo" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform">
+                    <span class="text-xs font-extrabold tracking-tight text-[#006766] group-hover:text-[#004d4c] uppercase">YAALE TECHNOLOGIES</span>
+                </a>
+            </div>
+                
+            </div>
+            
+            <!-- Social handles -->
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com/ryanspreschool" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-brand-purple flex items-center justify-center transition"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                <a href="https://twitter.com/ryanspreschool" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-brand-purple flex items-center justify-center transition"><i class="fa-brands fa-twitter text-lg"></i></a>
+                <a href="https://linkedin.com/school/ryanspreschool" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-brand-purple flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Logic (Same as about.html) -->
+    <script>
+
+        // Curriculum carousel track scrolling
+        const track = document.getElementById('curriculum-carousel-track');
+        const prevBtn = document.getElementById('curriculum-prev-btn');
+        const nextBtn = document.getElementById('curriculum-next-btn');
+        const dots = document.querySelectorAll('.curriculum-dot');
+
+        if (track && prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                const cardWidth = track.firstElementChild ? track.firstElementChild.clientWidth + 24 : 320;
+                track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                const cardWidth = track.firstElementChild ? track.firstElementChild.clientWidth + 24 : 320;
+                track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            });
+
+            // Sync indicators on scroll
+            track.addEventListener('scroll', () => {
+                const cardWidth = track.firstElementChild ? track.firstElementChild.clientWidth + 24 : 320;
+                const index = Math.round(track.scrollLeft / cardWidth);
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('bg-brand-purple', 'w-5');
+                        dot.classList.remove('bg-purple-200', 'w-2.5');
+                    } else {
+                        dot.classList.remove('bg-brand-purple', 'w-5');
+                        dot.classList.add('bg-purple-200', 'w-2.5');
+                    }
+                });
+            });
+        }
+    </script>
+
+    <!-- HTML5 2D Canvas "Color Hunt" Game Script -->
+    <script>
+        function initColorHunt() {
+            const container = document.getElementById('color-hunt-container');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            const canvas = document.createElement('canvas');
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.display = 'block';
+            container.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+
+            let W = container.clientWidth || 400;
+            let H = container.clientHeight || 380;
+            canvas.width = W; canvas.height = H;
+
+            // Colors
+            const colorsList = [
+                { name: 'Red', hex: '#ef4444', textHex: '#b91c1c', bgHex: '#fee2e2' },
+                { name: 'Yellow', hex: '#eab308', textHex: '#854d0e', bgHex: '#fef9c3' },
+                { name: 'Green', hex: '#22c55e', textHex: '#166534', bgHex: '#dcfce7' },
+                { name: 'Blue', hex: '#3b82f6', textHex: '#1e40af', bgHex: '#dbeafe' },
+                { name: 'Purple', hex: '#a855f7', textHex: '#6b21a8', bgHex: '#f3e8ff' }
+            ];
+
+            let currentColorObj = colorsList[Math.floor(Math.random() * colorsList.length)];
+            let score = 0;
+            let toys = [];
+            let particles = [];
+
+            // Celebration text states for motivation
+            let celebrationText = "";
+            let celebrationTimer = 0;
+            const motivationPhrases = [
+                "Wow! Super! 🎉",
+                "Great Job! 🌟",
+                "You Did It! 🧸",
+                "Awesome! 🎈",
+                "Perfect! 🌈",
+                "Fantastic! ✨"
+            ];
+
+            // Spawn random toys
+            function spawnToys(count) {
+                const shapes = ['bear', 'star', 'ball', 'duck'];
+                for (let i = 0; i < count; i++) {
+                    const r = 25 + Math.random() * 8;
+                    toys.push({
+                        x: r + Math.random() * (W - r * 2),
+                        y: r + 50 + Math.random() * (H - r * 2 - 60),
+                        vx: (Math.random() - 0.5) * 1.5,
+                        vy: (Math.random() - 0.5) * 1.5,
+                        r: r,
+                        colorObj: colorsList[Math.floor(Math.random() * colorsList.length)],
+                        shape: shapes[Math.floor(Math.random() * shapes.length)],
+                        rot: Math.random() * Math.PI * 2,
+                        rotSpeed: (Math.random() - 0.5) * 0.02,
+                        wiggle: 0,
+                        wiggleDir: 1
+                    });
+                }
+            }
+
+            // Ensure we have at least 3 matching toys
+            function ensureMatchingToys() {
+                let matchCount = toys.filter(t => t.colorObj.name === currentColorObj.name).length;
+                while (matchCount < 3) {
+                    const r = 25 + Math.random() * 8;
+                    toys.push({
+                        x: r + Math.random() * (W - r * 2),
+                        y: r + 50 + Math.random() * (H - r * 2 - 60),
+                        vx: (Math.random() - 0.5) * 1.5,
+                        vy: (Math.random() - 0.5) * 1.5,
+                        r: r,
+                        colorObj: currentColorObj,
+                        shape: ['bear', 'star', 'ball', 'duck'][Math.floor(Math.random() * 4)],
+                        rot: Math.random() * Math.PI * 2,
+                        rotSpeed: (Math.random() - 0.5) * 0.02,
+                        wiggle: 0,
+                        wiggleDir: 1
+                    });
+                    matchCount++;
+                }
+            }
+
+            spawnToys(12);
+            ensureMatchingToys();
+
+            // Draw individual toy shapes
+            function drawToy(t) {
+                ctx.save();
+                ctx.translate(t.x, t.y);
+                ctx.rotate(t.rot + t.wiggle);
+                ctx.globalAlpha = 0.95;
+
+                ctx.shadowBlur = 6;
+                ctx.shadowColor = 'rgba(0,0,0,0.06)';
+
+                const c = t.colorObj.hex;
+
+                if (t.shape === 'bear') {
+                    // Head
+                    ctx.fillStyle = c;
+                    ctx.beginPath(); ctx.arc(0, 0, t.r * 0.8, 0, Math.PI * 2); ctx.fill();
+                    // Ears
+                    ctx.beginPath(); ctx.arc(-t.r * 0.6, -t.r * 0.5, t.r * 0.35, 0, Math.PI * 2); ctx.fill();
+                    ctx.beginPath(); ctx.arc(t.r * 0.6, -t.r * 0.5, t.r * 0.35, 0, Math.PI * 2); ctx.fill();
+                    // Inner Ears
+                    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+                    ctx.beginPath(); ctx.arc(-t.r * 0.6, -t.r * 0.5, t.r * 0.18, 0, Math.PI * 2); ctx.fill();
+                    ctx.beginPath(); ctx.arc(t.r * 0.6, -t.r * 0.5, t.r * 0.18, 0, Math.PI * 2); ctx.fill();
+                    // Snout
+                    ctx.fillStyle = '#fff7ed';
+                    ctx.beginPath(); ctx.ellipse(0, t.r * 0.15, t.r * 0.35, t.r * 0.25, 0, 0, Math.PI * 2); ctx.fill();
+                    // Eyes
+                    ctx.fillStyle = '#1e293b';
+                    ctx.beginPath(); ctx.arc(-t.r * 0.22, -t.r * 0.1, 2.5, 0, Math.PI * 2); ctx.fill();
+                    ctx.beginPath(); ctx.arc(t.r * 0.22, -t.r * 0.1, 2.5, 0, Math.PI * 2); ctx.fill();
+                    // Nose
+                    ctx.beginPath(); ctx.arc(0, t.r * 0.05, 3.5, 0, Math.PI * 2); ctx.fill();
+                } 
+                else if (t.shape === 'star') {
+                    ctx.fillStyle = c;
+                    ctx.beginPath();
+                    for (let i = 0; i < 5; i++) {
+                        ctx.lineTo(Math.cos((18 + i * 72) * Math.PI / 180) * t.r, -Math.sin((18 + i * 72) * Math.PI / 180) * t.r);
+                        ctx.lineTo(Math.cos((54 + i * 72) * Math.PI / 180) * (t.r * 0.45), -Math.sin((54 + i * 72) * Math.PI / 180) * (t.r * 0.45));
+                    }
+                    ctx.closePath();
+                    ctx.fill();
+                    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+                    ctx.beginPath(); ctx.arc(-t.r * 0.25, -t.r * 0.2, t.r * 0.15, 0, Math.PI * 2); ctx.fill();
+                } 
+                else if (t.shape === 'ball') {
+                    ctx.fillStyle = c;
+                    ctx.beginPath(); ctx.arc(0, 0, t.r * 0.85, 0, Math.PI * 2); ctx.fill();
+                    ctx.strokeStyle = 'rgba(255,255,255,0.45)';
+                    ctx.lineWidth = t.r * 0.2;
+                    ctx.beginPath(); ctx.arc(-t.r * 0.4, 0, t.r * 0.7, -Math.PI/3, Math.PI/3); ctx.stroke();
+                } 
+                else if (t.shape === 'duck') {
+                    ctx.fillStyle = c;
+                    ctx.beginPath(); ctx.ellipse(-t.r*0.1, t.r*0.15, t.r*0.65, t.r*0.5, 0, 0, Math.PI*2); ctx.fill();
+                    ctx.beginPath(); ctx.arc(t.r*0.3, -t.r*0.25, t.r*0.38, 0, Math.PI*2); ctx.fill();
+                    ctx.fillStyle = '#f97316';
+                    ctx.beginPath();
+                    ctx.moveTo(t.r*0.55, -t.r*0.25);
+                    ctx.lineTo(t.r*0.9, -t.r*0.18);
+                    ctx.lineTo(t.r*0.52, -t.r*0.1);
+                    ctx.closePath();
+                    ctx.fill();
+                    ctx.fillStyle = '#1e293b';
+                    ctx.beginPath(); ctx.arc(t.r*0.25, -t.r*0.32, 2.2, 0, Math.PI*2); ctx.fill();
+                }
+
+                ctx.restore();
+            }
+
+            // Confetti explosion
+            function spawnPop(x, y, color) {
+                for (let i = 0; i < 15; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = 1 + Math.random() * 3.5;
+                    particles.push({
+                        x: x, y: y,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed,
+                        r: 3 + Math.random() * 4,
+                        color: color,
+                        life: 1,
+                        decay: 0.02 + Math.random() * 0.02
+                    });
+                }
+            }
+
+            // Game UI (target banner)
+            function drawUI() {
+                ctx.save();
+                
+                // Target banner background
+                ctx.fillStyle = currentColorObj.bgHex;
+                ctx.beginPath();
+                ctx.roundRect(W/2 - 165, 12, 330, 42, 21);
+                ctx.fill();
+                ctx.strokeStyle = currentColorObj.hex;
+                ctx.lineWidth = 2.5;
+                ctx.stroke();
+
+                // Target text
+                ctx.fillStyle = currentColorObj.textHex;
+                ctx.font = 'bold 15px "Nunito", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(`Find the ${currentColorObj.name} Toys!`, W/2, 38);
+
+                // Score banner (Top-Right)
+                ctx.fillStyle = 'rgba(124,58,237,0.12)';
+                ctx.beginPath();
+                ctx.roundRect(W - 90, 12, 78, 42, 21);
+                ctx.fill();
+                ctx.fillStyle = '#7c3aed';
+                ctx.font = 'bold 14px "Nunito", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(`⭐ ${score}`, W - 51, 38);
+
+                ctx.restore();
+            }
+
+            function loop() {
+                ctx.clearRect(0, 0, W, H);
+
+                // Background gradient
+                const grad = ctx.createLinearGradient(0, 0, 0, H);
+                grad.addColorStop(0, '#fdfbf7');
+                grad.addColorStop(1, '#fff9e6');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, W, H);
+
+                // Update & draw toys
+                toys.forEach(t => {
+                    t.x += t.vx;
+                    t.y += t.vy;
+                    t.rot += t.rotSpeed;
+
+                    if (t.wiggle > 0 || t.wiggle < 0) {
+                        t.wiggle += 0.08 * t.wiggleDir;
+                        if (Math.abs(t.wiggle) > 0.25) {
+                            t.wiggleDir = -t.wiggleDir;
+                        }
+                        t.wiggle *= 0.93;
+                        if (Math.abs(t.wiggle) < 0.02) t.wiggle = 0;
+                    }
+
+                    if (t.x < t.r) { t.x = t.r; t.vx = Math.abs(t.vx); }
+                    if (t.x > W - t.r) { t.x = W - t.r; t.vx = -Math.abs(t.vx); }
+                    if (t.y < t.r + 65) { t.y = t.r + 65; t.vy = Math.abs(t.vy); }
+                    if (t.y > H - t.r) { t.y = H - t.r; t.vy = -Math.abs(t.vy); }
+
+                    drawToy(t);
+                });
+
+                // Update & draw particles
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+                    p.x += p.vx; p.y += p.vy;
+                    p.vy += 0.05;
+                    p.life -= p.decay;
+                    if (p.life <= 0) {
+                        particles.splice(i, 1);
+                        continue;
+                    }
+
+                    ctx.save();
+                    ctx.globalAlpha = p.life;
+                    ctx.fillStyle = p.color;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+
+                if (celebrationTimer > 0) {
+                    celebrationTimer--;
+                    drawCelebration();
+                }
+
+                drawUI();
+                requestAnimationFrame(loop);
+            }
+
+            function drawCelebration() {
+                if (celebrationTimer <= 0) return;
+
+                ctx.save();
+                
+                // Calculate opacity fade-out
+                let opacity = 1;
+                if (celebrationTimer < 25) {
+                    opacity = celebrationTimer / 25;
+                }
+
+                ctx.globalAlpha = opacity;
+
+                const cx = W / 2;
+                const cy = H / 2;
+
+                // Bounce scale effect
+                let scale = 1;
+                if (celebrationTimer > 75) {
+                    scale = 1 + Math.sin((90 - celebrationTimer) * 0.15) * 0.15;
+                }
+
+                ctx.translate(cx, cy);
+                ctx.scale(scale, scale);
+
+                // Card border shadow & pill background
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = 'rgba(124,58,237,0.18)';
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.roundRect(-130, -32, 260, 64, 28);
+                ctx.fill();
+
+                // Border stroke
+                ctx.strokeStyle = '#f472b6'; // pink border
+                ctx.lineWidth = 3.5;
+                ctx.stroke();
+
+                // Motivation Text
+                ctx.shadowBlur = 0;
+                ctx.fillStyle = '#db2777'; // pink text
+                ctx.font = 'bold 20px "Nunito", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(celebrationText, 0, 0);
+
+                ctx.restore();
+            }
+
+            function handleInteraction(ex, ey) {
+                for (let i = toys.length - 1; i >= 0; i--) {
+                    const t = toys[i];
+                    const dx = ex - t.x;
+                    const dy = ey - t.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+
+                    if (dist < t.r + 5) {
+                        if (t.colorObj.name === currentColorObj.name) {
+                            spawnPop(t.x, t.y, t.colorObj.hex);
+                            toys.splice(i, 1);
+                            score += 10;
+
+                            const matchCount = toys.filter(toy => toy.colorObj.name === currentColorObj.name).length;
+                            if (matchCount === 0) {
+                                // Start celebration popup!
+                                celebrationText = motivationPhrases[Math.floor(Math.random() * motivationPhrases.length)];
+                                celebrationTimer = 90; // ~1.5s
+
+                                setTimeout(() => {
+                                    currentColorObj = colorsList.filter(col => col.name !== currentColorObj.name)[Math.floor(Math.random() * (colorsList.length - 1))];
+                                    spawnToys(4 + Math.floor(Math.random() * 4));
+                                    ensureMatchingToys();
+                                }, 1200);
+                            }
+                        } else {
+                            t.wiggle = 0.05;
+                            t.wiggleDir = 1;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            function getEventPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                return { x: clientX - rect.left, y: clientY - rect.top };
+            }
+
+            canvas.addEventListener('mousedown', e => {
+                const pos = getEventPos(e);
+                handleInteraction(pos.x, pos.y);
+            });
+
+            canvas.addEventListener('touchstart', e => {
+                e.preventDefault();
+                const pos = getEventPos(e);
+                handleInteraction(pos.x, pos.y);
+            }, { passive: false });
+
+            window.addEventListener('resize', () => {
+                W = container.clientWidth; H = container.clientHeight;
+                canvas.width = W; canvas.height = H;
+            });
+
+            requestAnimationFrame(loop);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initColorHunt);
+        } else {
+            initColorHunt();
+        }
+    </script>
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>

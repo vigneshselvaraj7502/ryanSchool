@@ -170,37 +170,66 @@
                         </button>
                     </div>
 
-                    <!-- Trust Stats Bar -->
-                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-purple-100 max-w-md mx-auto lg:mx-0">
-                        <div>
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#4B1F6F]" data-counter-target="10" data-counter-suffix="+">10+</span>
-                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Years of Legacy</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#4B1F6F]" data-counter-target="10" data-counter-prefix="1:">1:10</span>
-                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Teacher Ratio</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#D4A72C]" data-counter-target="100" data-counter-suffix="%">100%</span>
-                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Holistic Care</span>
+                    <!-- Trust Stats Bar with Real Student Avatars -->
+                    <div class="pt-6 border-t border-purple-200/70 max-w-lg mx-auto lg:mx-0">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-extrabold text-[#4B1F6F]" data-counter-target="10" data-counter-suffix="+">10+</span>
+                                <span class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Years of Legacy</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-extrabold text-[#4B1F6F]" data-counter-target="10" data-counter-prefix="1:">1:10</span>
+                                <span class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Teacher Ratio</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl sm:text-3xl font-extrabold text-[#D4A72C]" data-counter-target="100" data-counter-suffix="%">100%</span>
+                                <span class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Stage Inclusion</span>
+                            </div>
+                            <!-- Real Student Community Avatars -->
+                            <div class="flex items-center -space-x-2 pl-2">
+                                <img src="asssssetss_opt/colours_day/colours_day_01.jpg" alt="Ryans Student" class="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm">
+                                <img src="asssssetss_opt/colours_day/colours_day_02.jpg" alt="Ryans Student" class="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm">
+                                <img src="asssssetss_opt/colours_day/colours_day_03.jpg" alt="Ryans Student" class="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm">
+                                <div class="w-9 h-9 rounded-full border-2 border-white bg-[#4B1F6F] text-white text-[10px] font-extrabold flex items-center justify-center shadow-sm">
+                                    500+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right: Large Real Student Photograph Showcase -->
+                <!-- Right: Layered Multi-Photo Hero Composition -->
                 <div class="lg:col-span-6 relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <!-- Decorative Backdrop Elements -->
-                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-[#F3D98B]/40 rounded-3xl -rotate-6 filter blur-xl"></div>
-                        <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-[#4B1F6F]/10 rounded-full filter blur-xl"></div>
-                        
-                        <!-- Main Hero Image (Real Ryans Academy Students) -->
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white hero-img-glow animate-float-gentle">
-                            <img src="assets/DSC_0868.jpg" alt="Ryans Academy Students in uniform" class="w-full h-[380px] sm:h-[460px] object-cover object-top hover:scale-105 transition-transform duration-700">
+                        <!-- Floating Stat Chip 1 (Top-Right): Convocation -->
+                        <div class="floating-stat-chip absolute -top-5 -right-2 sm:-right-6 hidden sm:flex animate-float-gentle">
+                            <div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 border-2 border-[#D4A72C]">
+                                <img src="asssssetss_opt/convocation/convocation_02.jpg" alt="Ryans Graduate" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-[#D4A72C] uppercase tracking-wider block">Kindergarten Honor</span>
+                                <p class="text-xs font-bold text-[#4B1F6F]">100% Convocation Success</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Chip 2 (Bottom-Left): Interschool Sports -->
+                        <div class="floating-stat-chip absolute -bottom-5 -left-2 sm:-left-6 hidden sm:flex animate-float-slow">
+                            <div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 border-2 border-emerald-500">
+                                <img src="asssssetss_opt/competition/competition_03.jpg" alt="Trophy Winner" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-emerald-600 uppercase tracking-wider block">Athletic Excellence</span>
+                                <p class="text-xs font-bold text-[#4B1F6F]">15+ Interschool Trophies</p>
+                            </div>
+                        </div>
+
+                        <!-- Main Hero Image (Real Annual Day Celebration) -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white hero-img-glow animate-float-gentle cursor-pointer group" data-title="Ryans Academy Annual Gala Showcase">
+                            <img src="asssssetss_opt/annual_day/annual_day_05.jpg" alt="Ryans Academy Annual Day Celebration" class="w-full h-[400px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700">
                             <!-- Overlay Pill -->
-                            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-purple-50 shadow-lg flex items-center justify-between">
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-purple-100 shadow-xl flex items-center justify-between z-20">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-[#4B1F6F] text-white flex items-center justify-center font-bold">
+                                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white flex items-center justify-center font-bold shadow-md shadow-purple-900/20">
                                         <i class="fa-solid fa-award text-base text-[#D4A72C]"></i>
                                     </div>
                                     <div>
@@ -208,7 +237,7 @@
                                         <p class="text-[11px] text-gray-500 font-medium">Joyful Childhood Environment</p>
                                     </div>
                                 </div>
-                                <span class="bg-[#F1EAF7] text-[#4B1F6F] text-[11px] font-extrabold px-3 py-1 rounded-full">CBSE Aligned</span>
+                                <span class="bg-[#F1EAF7] text-[#4B1F6F] text-[11px] font-extrabold px-3 py-1 rounded-full border border-purple-200/50">CBSE Aligned</span>
                             </div>
                         </div>
                     </div>
@@ -336,15 +365,40 @@
     <section class="py-16 bg-[#FAF8F4] reveal-on-scroll" id="welcome">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Split Layout: Real Student Photograph -->
+                <!-- Split Layout: Interactive Video Experience -->
                 <div class="lg:col-span-5 order-2 lg:order-1">
                     <div class="relative">
-                        <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
-                            <img src="assets/DSC_0857.jpg" alt="Ryans Academy welcoming environment" class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#1a0c28] group relative aspect-[4/3] sm:aspect-[16/11]">
+                            <video id="welcome-school-video" src="assets/ryans_school_tour.mp4" poster="assets/ryansinfra.jpg" playsinline muted loop class="w-full h-full object-cover cursor-pointer"></video>
+
+                            <!-- Top Overlay Bar -->
+                            <div class="absolute top-3 left-3 right-3 flex items-center justify-between z-20 pointer-events-none">
+                                <span id="video-status-badge" class="bg-[#4B1F6F]/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md border border-purple-300/30">
+                                    <span class="w-2 h-2 rounded-full bg-[#D4A72C]"></span>
+                                    <span>Life at Ryans in Motion</span>
+                                </span>
+
+                                <!-- Mute / Unmute Button -->
+                                <button type="button" id="video-mute-btn" class="pointer-events-auto bg-black/60 hover:bg-black/80 backdrop-blur-md text-white w-8 h-8 rounded-full flex items-center justify-center transition-all shadow-md hover:scale-110" title="Unmute Sound">
+                                    <i class="fa-solid fa-volume-xmark text-amber-300 text-xs"></i>
+                                </button>
+                            </div>
+
+                            <!-- Play Overlay (when paused) -->
+                            <div id="video-play-overlay" class="absolute inset-0 bg-black/35 backdrop-blur-[2px] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:bg-black/25 z-10">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#4B1F6F] to-[#8039b5] text-white flex items-center justify-center shadow-2xl ring-4 ring-[#D4A72C] hover:scale-110 transition-transform duration-300">
+                                    <i class="fa-solid fa-play text-xl sm:text-2xl text-[#F3D98B] ml-1"></i>
+                                </div>
+                                <p class="mt-3 text-white text-xs sm:text-sm font-bold tracking-wide drop-shadow-md bg-[#4B1F6F]/90 px-4 py-1 rounded-full border border-purple-300/40">
+                                    Watch Campus Tour Video
+                                </p>
+                            </div>
                         </div>
-                        <div class="absolute -bottom-6 -right-6 bg-[#4B1F6F] text-white p-5 rounded-2xl shadow-xl hidden sm:block max-w-[200px]">
-                            <p class="text-xs font-semibold text-[#F3D98B] uppercase tracking-wider mb-1">Our Philosophy</p>
-                            <p class="text-sm font-bold leading-snug">"Premium Learning. Joyful Childhood."</p>
+
+                        <!-- Philosophy Floating Badge -->
+                        <div class="absolute -bottom-5 -right-3 sm:-right-5 bg-[#4B1F6F] text-white p-4 sm:p-5 rounded-2xl shadow-xl hidden sm:block max-w-[210px] border border-purple-400/30 z-20 backdrop-blur-sm">
+                            <p class="text-[10px] font-semibold text-[#F3D98B] uppercase tracking-wider mb-0.5">Our Philosophy</p>
+                            <p class="text-xs sm:text-sm font-bold leading-snug">"Premium Learning. Joyful Childhood."</p>
                         </div>
                     </div>
                 </div>
@@ -605,11 +659,47 @@
                 <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-purple-100 shadow-md">
                     <!-- Detail 1: Creative Child -->
                     <div id="spark-creative" class="spark-detail-content space-y-4">
-                        <div class="h-64 sm:h-72 rounded-2xl overflow-hidden mb-4">
-                            <img src="assets/kids_art_painting.jpg" alt="Art painting at Ryans" class="w-full h-full object-cover">
+                        <div class="relative h-80 sm:h-96 md:h-[400px] rounded-3xl overflow-hidden mb-6 border-2 border-[#D4A72C]/40 bg-gradient-to-r from-[#210936] via-[#3a1458] to-[#210936] shadow-2xl flex items-center justify-center group cursor-pointer gallery-item" data-title="Creative Child - Freeform Colours Day Arts">
+                            <img src="asssssetss_opt/colours_day/colours_day_06.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-50 scale-125 pointer-events-none">
+                            <div class="absolute inset-0 bg-[radial-gradient(#D4A72C_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+
+                            <!-- Left Flank -->
+                            <div class="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#D4A72C] rounded-tl-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-[#D4A72C] rounded-bl-xl pointer-events-none z-20"></div>
+                            <div class="absolute left-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-palette text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] rotate-180 uppercase select-none">Creative Arts</span>
+                                <i class="fa-solid fa-sparkles text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Right Flank -->
+                            <div class="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#D4A72C] rounded-tr-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#D4A72C] rounded-br-xl pointer-events-none z-20"></div>
+                            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-crown text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] uppercase select-none">Excellence</span>
+                                <i class="fa-solid fa-star text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Center Image -->
+                            <div class="relative z-10 h-full max-h-full py-3 px-3 sm:px-14 flex items-center justify-center">
+                                <img src="asssssetss_opt/colours_day/colours_day_06.jpg" alt="Colours Day Art at Ryans" class="max-h-full max-w-full object-contain rounded-2xl shadow-2xl border-2 border-[#D4A72C]/80 ring-4 ring-black/40 group-hover:scale-[1.02] transition-transform duration-300">
+                            </div>
+
+                            <!-- Fullscreen Button -->
+                            <div class="absolute top-3.5 right-3.5 z-20 bg-[#4B1F6F]/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity shadow-lg border border-purple-300/30">
+                                <i class="fa-solid fa-expand text-[#F3D98B] text-xs"></i>
+                                <span>View Fullscreen</span>
+                            </div>
+
+                            <!-- Bottom Center Pill -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-[#4B1F6F]/90 backdrop-blur-md px-3.5 py-1 rounded-full border border-[#D4A72C]/60 text-white text-[10px] sm:text-[11px] font-bold shadow-xl flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i>
+                                <span>Authentic Student Achievement</span>
+                            </div>
                         </div>
                         <h3 class="text-2xl font-bold text-[#4B1F6F]">Nurturing the Creative Child</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed font-medium">Through guided painting, sculpture, and multi-sensory materials, children learn to translate their innermost thoughts and emotions into creative expressions. We cultivate original thinking rather than rote repetition.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed font-medium">Through guided painting, sculpture, and sensory materials during celebrations like Colours Day, children learn to translate their innermost thoughts into expressive creations.</p>
                         <ul class="grid grid-cols-2 gap-2 text-xs font-semibold text-gray-700 pt-2">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Freeform Canvas Art</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Clay & Origami Crafting</li>
@@ -620,8 +710,44 @@
 
                     <!-- Detail 2: Curious Learner -->
                     <div id="spark-curious" class="spark-detail-content hidden space-y-4">
-                        <div class="h-64 sm:h-72 rounded-2xl overflow-hidden mb-4">
-                            <img src="assets/DSC_0162.jpg" alt="Curious science and discovery" class="w-full h-full object-cover">
+                        <div class="relative h-80 sm:h-96 md:h-[400px] rounded-3xl overflow-hidden mb-6 border-2 border-[#D4A72C]/40 bg-gradient-to-r from-[#210936] via-[#3a1458] to-[#210936] shadow-2xl flex items-center justify-center group cursor-pointer gallery-item" data-title="Curious Learner - Hands-on Discovery Labs">
+                            <img src="assets/DSC_0162.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-50 scale-125 pointer-events-none">
+                            <div class="absolute inset-0 bg-[radial-gradient(#D4A72C_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+
+                            <!-- Left Flank -->
+                            <div class="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#D4A72C] rounded-tl-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-[#D4A72C] rounded-bl-xl pointer-events-none z-20"></div>
+                            <div class="absolute left-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-atom text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] rotate-180 uppercase select-none">STEM Wonder</span>
+                                <i class="fa-solid fa-sparkles text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Right Flank -->
+                            <div class="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#D4A72C] rounded-tr-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#D4A72C] rounded-br-xl pointer-events-none z-20"></div>
+                            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-award text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] uppercase select-none">Discovery</span>
+                                <i class="fa-solid fa-star text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Center Image -->
+                            <div class="relative z-10 h-full max-h-full py-3 px-3 sm:px-14 flex items-center justify-center">
+                                <img src="assets/DSC_0162.jpg" alt="Curious science and discovery" class="max-h-full max-w-full object-contain rounded-2xl shadow-2xl border-2 border-[#D4A72C]/80 ring-4 ring-black/40 group-hover:scale-[1.02] transition-transform duration-300">
+                            </div>
+
+                            <!-- Fullscreen Button -->
+                            <div class="absolute top-3.5 right-3.5 z-20 bg-[#4B1F6F]/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity shadow-lg border border-purple-300/30">
+                                <i class="fa-solid fa-expand text-[#F3D98B] text-xs"></i>
+                                <span>View Fullscreen</span>
+                            </div>
+
+                            <!-- Bottom Center Pill -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-[#4B1F6F]/90 backdrop-blur-md px-3.5 py-1 rounded-full border border-[#D4A72C]/60 text-white text-[10px] sm:text-[11px] font-bold shadow-xl flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i>
+                                <span>Authentic Student Achievement</span>
+                            </div>
                         </div>
                         <h3 class="text-2xl font-bold text-[#4B1F6F]">Igniting the Curious Learner</h3>
                         <p class="text-sm text-gray-600 leading-relaxed font-medium">Children are natural scientists. Our STEM discovery corners, nature observation modules, and interactive lab sessions encourage students to ask 'why' and test their ideas with confidence.</p>
@@ -635,11 +761,47 @@
 
                     <!-- Detail 3: Confident Speaker -->
                     <div id="spark-speaker" class="spark-detail-content hidden space-y-4">
-                        <div class="h-64 sm:h-72 rounded-2xl overflow-hidden mb-4">
-                            <img src="assets/DSC_0312.jpg" alt="Public speaking and presentation" class="w-full h-full object-cover">
+                        <div class="relative h-80 sm:h-96 md:h-[400px] rounded-3xl overflow-hidden mb-6 border-2 border-[#D4A72C]/40 bg-gradient-to-r from-[#210936] via-[#3a1458] to-[#210936] shadow-2xl flex items-center justify-center group cursor-pointer gallery-item" data-title="Confident Speaker - Phonics & Show-and-Tell Podiums">
+                            <img src="assets/DSC_0312.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-50 scale-125 pointer-events-none">
+                            <div class="absolute inset-0 bg-[radial-gradient(#D4A72C_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+
+                            <!-- Left Flank -->
+                            <div class="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#D4A72C] rounded-tl-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-[#D4A72C] rounded-bl-xl pointer-events-none z-20"></div>
+                            <div class="absolute left-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-microphone-lines text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] rotate-180 uppercase select-none">Oratory Skill</span>
+                                <i class="fa-solid fa-sparkles text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Right Flank -->
+                            <div class="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#D4A72C] rounded-tr-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#D4A72C] rounded-br-xl pointer-events-none z-20"></div>
+                            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-award text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] uppercase select-none">Confidence</span>
+                                <i class="fa-solid fa-star text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Center Image -->
+                            <div class="relative z-10 h-full max-h-full py-3 px-3 sm:px-14 flex items-center justify-center">
+                                <img src="assets/DSC_0312.jpg" alt="Public speaking and presentation" class="max-h-full max-w-full object-contain rounded-2xl shadow-2xl border-2 border-[#D4A72C]/80 ring-4 ring-black/40 group-hover:scale-[1.02] transition-transform duration-300">
+                            </div>
+
+                            <!-- Fullscreen Button -->
+                            <div class="absolute top-3.5 right-3.5 z-20 bg-[#4B1F6F]/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity shadow-lg border border-purple-300/30">
+                                <i class="fa-solid fa-expand text-[#F3D98B] text-xs"></i>
+                                <span>View Fullscreen</span>
+                            </div>
+
+                            <!-- Bottom Center Pill -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-[#4B1F6F]/90 backdrop-blur-md px-3.5 py-1 rounded-full border border-[#D4A72C]/60 text-white text-[10px] sm:text-[11px] font-bold shadow-xl flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i>
+                                <span>Authentic Student Achievement</span>
+                            </div>
                         </div>
                         <h3 class="text-2xl font-bold text-[#4B1F6F]">Empowering the Confident Speaker</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed font-medium">Strong communication opens every door in life. Ryans Academy introduces structured phonetics, daily circle-time sharing, and stage presentation from the early years.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed font-medium">Strong communication opens every door in life. Ryans Academy introduces structured phonetics, daily circle-time sharing, and stage presentation from early childhood.</p>
                         <ul class="grid grid-cols-2 gap-2 text-xs font-semibold text-gray-700 pt-2">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Jolly Phonics Curriculum</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#D4A72C]"></i> Show & Tell Sessions</li>
@@ -650,8 +812,44 @@
 
                     <!-- Detail 4: Active Child -->
                     <div id="spark-active" class="spark-detail-content hidden space-y-4">
-                        <div class="h-64 sm:h-72 rounded-2xl overflow-hidden mb-4">
-                            <img src="assets/sports (4).jpg" alt="Active sports and athletics" class="w-full h-full object-cover">
+                        <div class="relative h-80 sm:h-96 md:h-[400px] rounded-3xl overflow-hidden mb-6 border-2 border-[#D4A72C]/40 bg-gradient-to-r from-[#210936] via-[#3a1458] to-[#210936] shadow-2xl flex items-center justify-center group cursor-pointer gallery-item" data-title="Athletic Excellence & Championship Pride">
+                            <img src="asssssetss_opt/competition/competition_08.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-50 scale-125 pointer-events-none">
+                            <div class="absolute inset-0 bg-[radial-gradient(#D4A72C_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+
+                            <!-- Left Flank -->
+                            <div class="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#D4A72C] rounded-tl-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-[#D4A72C] rounded-bl-xl pointer-events-none z-20"></div>
+                            <div class="absolute left-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-person-running text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] rotate-180 uppercase select-none">Sports Agility</span>
+                                <i class="fa-solid fa-sparkles text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Right Flank -->
+                            <div class="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#D4A72C] rounded-tr-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#D4A72C] rounded-br-xl pointer-events-none z-20"></div>
+                            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-trophy text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] uppercase select-none">Champion</span>
+                                <i class="fa-solid fa-star text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Center Image -->
+                            <div class="relative z-10 h-full max-h-full py-3 px-3 sm:px-14 flex items-center justify-center">
+                                <img src="asssssetss_opt/competition/competition_08.jpg" alt="Active sports and athletics" class="max-h-full max-w-full object-contain rounded-2xl shadow-2xl border-2 border-[#D4A72C]/80 ring-4 ring-black/40 group-hover:scale-[1.02] transition-transform duration-300">
+                            </div>
+
+                            <!-- Fullscreen Button -->
+                            <div class="absolute top-3.5 right-3.5 z-20 bg-[#4B1F6F]/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity shadow-lg border border-purple-300/30">
+                                <i class="fa-solid fa-expand text-[#F3D98B] text-xs"></i>
+                                <span>View Fullscreen</span>
+                            </div>
+
+                            <!-- Bottom Center Pill -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-[#4B1F6F]/90 backdrop-blur-md px-3.5 py-1 rounded-full border border-[#D4A72C]/60 text-white text-[10px] sm:text-[11px] font-bold shadow-xl flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i>
+                                <span>Authentic Student Achievement</span>
+                            </div>
                         </div>
                         <h3 class="text-2xl font-bold text-[#4B1F6F]">Energizing the Active Child</h3>
                         <p class="text-sm text-gray-600 leading-relaxed font-medium">Physical vitality supports sharp intellects. Our sports curriculum emphasizes gross motor coordination, balance, athletic sportsmanship, and outdoor agility.</p>
@@ -665,8 +863,44 @@
 
                     <!-- Detail 5: Talented Performer -->
                     <div id="spark-performer" class="spark-detail-content hidden space-y-4">
-                        <div class="h-64 sm:h-72 rounded-2xl overflow-hidden mb-4">
-                            <img src="assets/westerndance.jpg" alt="Talented stage performers" class="w-full h-full object-cover">
+                        <div class="relative h-80 sm:h-96 md:h-[400px] rounded-3xl overflow-hidden mb-6 border-2 border-[#D4A72C]/40 bg-gradient-to-r from-[#210936] via-[#3a1458] to-[#210936] shadow-2xl flex items-center justify-center group cursor-pointer gallery-item" data-title="Talented Performer - Annual Gala Stage Elegance">
+                            <img src="asssssetss_opt/annual_day/annual_day_10.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-50 scale-125 pointer-events-none">
+                            <div class="absolute inset-0 bg-[radial-gradient(#D4A72C_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+
+                            <!-- Left Flank -->
+                            <div class="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#D4A72C] rounded-tl-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-[#D4A72C] rounded-bl-xl pointer-events-none z-20"></div>
+                            <div class="absolute left-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-masks-theater text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] rotate-180 uppercase select-none">Stage Poise</span>
+                                <i class="fa-solid fa-sparkles text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Right Flank -->
+                            <div class="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#D4A72C] rounded-tr-xl pointer-events-none z-20"></div>
+                            <div class="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#D4A72C] rounded-br-xl pointer-events-none z-20"></div>
+                            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-2 z-20 bg-black/45 backdrop-blur-md px-2.5 py-4 rounded-full border border-[#D4A72C]/40 shadow-xl">
+                                <i class="fa-solid fa-star text-[#F3D98B] text-xs"></i>
+                                <span class="text-[9px] font-black tracking-widest text-[#F3D98B] [writing-mode:vertical-rl] uppercase select-none">Performer</span>
+                                <i class="fa-solid fa-crown text-[#D4A72C] text-[10px]"></i>
+                            </div>
+
+                            <!-- Center Image -->
+                            <div class="relative z-10 h-full max-h-full py-3 px-3 sm:px-14 flex items-center justify-center">
+                                <img src="asssssetss_opt/annual_day/annual_day_10.jpg" alt="Talented stage performers" class="max-h-full max-w-full object-contain rounded-2xl shadow-2xl border-2 border-[#D4A72C]/80 ring-4 ring-black/40 group-hover:scale-[1.02] transition-transform duration-300">
+                            </div>
+
+                            <!-- Fullscreen Button -->
+                            <div class="absolute top-3.5 right-3.5 z-20 bg-[#4B1F6F]/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity shadow-lg border border-purple-300/30">
+                                <i class="fa-solid fa-expand text-[#F3D98B] text-xs"></i>
+                                <span>View Fullscreen</span>
+                            </div>
+
+                            <!-- Bottom Center Pill -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-[#4B1F6F]/90 backdrop-blur-md px-3.5 py-1 rounded-full border border-[#D4A72C]/60 text-white text-[10px] sm:text-[11px] font-bold shadow-xl flex items-center gap-1.5 whitespace-nowrap">
+                                <i class="fa-solid fa-circle-check text-[#D4A72C]"></i>
+                                <span>Authentic Student Achievement</span>
+                            </div>
                         </div>
                         <h3 class="text-2xl font-bold text-[#4B1F6F]">Inspiring the Talented Performer</h3>
                         <p class="text-sm text-gray-600 leading-relaxed font-medium">Through classical, western, and theatrical performances in grand events like RYANOVA, every child gains stage poise, rhythmic awareness, and radiant confidence.</p>
@@ -826,6 +1060,268 @@
         </div>
     </section>
 
+    <!-- NEW SIGNATURE SECTION: Ryans Spotlight - Live Event Chronicles -->
+    <section class="py-20 bg-gradient-to-b from-[#FAF8F4] via-white to-[#FAF8F4] border-t border-purple-100/70" id="events-chronicles">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+                <span class="gold-badge mb-3 animate-pulse-subtle">
+                    <i class="fa-solid fa-sparkles text-[10px]"></i> Authentic Event Chronicles
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#4B1F6F] leading-tight">
+                    Ryans Spotlight: <span class="text-[#D4A72C] font-serif italic">Celebrations & Honors</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed font-medium">
+                    Explore authentic glimpses from our grand stage galas, kindergarten convocation ceremonies, colorful preschool sensory fests, and inter-school championships.
+                </p>
+            </div>
+
+            <!-- Interactive Event Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10">
+                <button class="event-tab-btn px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2.5 bg-gradient-to-r from-[#4B1F6F] to-[#6B3A8D] text-white shadow-xl ring-2 ring-[#D4A72C] scale-105" data-event-target="event-annual">
+                    <i class="fa-solid fa-masks-theater text-[#F3D98B]"></i>
+                    <span>RYANOVA Annual</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#D4A72C] text-[#29252B] font-black">66 Photos</span>
+                </button>
+                <button class="event-tab-btn px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2.5 bg-white text-gray-700 border border-purple-200/80 hover:border-[#4B1F6F] hover:bg-purple-50/40 shadow-sm" data-event-target="event-convocation">
+                    <i class="fa-solid fa-graduation-cap text-[#4B1F6F]"></i>
+                    <span>Convocation & Graduation</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-100 text-[#4B1F6F]">23 Photos</span>
+                </button>
+                <button class="event-tab-btn px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2.5 bg-white text-gray-700 border border-purple-200/80 hover:border-[#4B1F6F] hover:bg-purple-50/40 shadow-sm" data-event-target="event-colours">
+                    <i class="fa-solid fa-palette text-[#4B1F6F]"></i>
+                    <span>Colours Day Sensory</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-100 text-[#4B1F6F]">48 Photos</span>
+                </button>
+                <button class="event-tab-btn px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2.5 bg-white text-gray-700 border border-purple-200/80 hover:border-[#4B1F6F] hover:bg-purple-50/40 shadow-sm" data-event-target="event-competition">
+                    <i class="fa-solid fa-trophy text-[#4B1F6F]"></i>
+                    <span>Interschool Triumphs</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-100 text-[#4B1F6F]">31 Photos</span>
+                </button>
+            </div>
+
+            <!-- Panel 1: Annual Day -->
+            <div id="event-annual" class="event-chronicle-panel">
+                <div class="bg-[#F1EAF7]/80 rounded-2xl p-4 sm:p-5 border border-purple-200/60 mb-8 max-w-4xl mx-auto text-center">
+                    <span class="text-[10px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-3 py-1 rounded-full border border-amber-200/50 mb-2 inline-block">Performing Arts</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#4B1F6F]">RYANOVA Annual Cultural Gala</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1 font-medium max-w-2xl mx-auto">Grand stage performances, classical & western dance ensembles, theatrical musical pantomimes, and 100% student stage inclusion.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="event-chronicle-card group" data-title="RYANOVA Stage Extravaganza">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/annual_day/annual_day_15.jpg" alt="RYANOVA Stage Extravaganza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">100% Stage Inclusion</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Annual Day Gala</p>
+                                <h4 class="font-extrabold text-sm leading-snug">RYANOVA Stage Extravaganza</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Theatrical Costumes & Drama">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/annual_day/annual_day_20.jpg" alt="Theatrical Costumes & Drama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Creative Role Play</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Annual Day Drama</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Theatrical Costumes & Drama</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Choral Harmony & Instrumental Melody">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/annual_day/annual_day_25.jpg" alt="Choral Harmony & Instrumental Melody" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Vocal Rhythm</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Annual Day Music</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Choral Harmony & Melody</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Rhythmic Folk & Western Ensemble">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/annual_day/annual_day_30.jpg" alt="Rhythmic Folk & Western Ensemble" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Grace & Rhythm</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Annual Day Dance</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Rhythmic Folk & Western Ensemble</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Convocation -->
+            <div id="event-convocation" class="event-chronicle-panel hidden">
+                <div class="bg-[#F1EAF7]/80 rounded-2xl p-4 sm:p-5 border border-purple-200/60 mb-8 max-w-4xl mx-auto text-center">
+                    <span class="text-[10px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-3 py-1 rounded-full border border-amber-200/50 mb-2 inline-block">Academic Milestones</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#4B1F6F]">Convocation & Little Scholars Graduation</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1 font-medium max-w-2xl mx-auto">Celebrating early childhood graduations as confident Senior KG scholars wear ceremonial gowns and receive their diplomas.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="event-chronicle-card group" data-title="Ceremonial Robes & Graduation Mortarboards">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/convocation/convocation_05.jpg" alt="Ceremonial Robes & Graduation Mortarboards" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Senior KG Milestone</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Convocation Ceremony</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Ceremonial Robes & Mortarboards</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Academic Diploma & Scroll Awarding">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/convocation/convocation_08.jpg" alt="Academic Diploma & Scroll Awarding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Excellence Recognition</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Convocation Ceremony</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Diploma & Scroll Awarding</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Proud Scholar Tributes on Grand Stage">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/convocation/convocation_12.jpg" alt="Proud Scholar Tributes on Grand Stage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Speech & Confidence</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Convocation Ceremony</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Proud Scholar Stage Tributes</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Future Ready: Stepping Forward to CBSE Grade 1">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/convocation/convocation_16.jpg" alt="Stepping Forward to CBSE Grade 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Primary Transition</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Convocation Ceremony</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Stepping Forward to CBSE Grade 1</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Colours Day -->
+            <div id="event-colours" class="event-chronicle-panel hidden">
+                <div class="bg-[#F1EAF7]/80 rounded-2xl p-4 sm:p-5 border border-purple-200/60 mb-8 max-w-4xl mx-auto text-center">
+                    <span class="text-[10px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-3 py-1 rounded-full border border-amber-200/50 mb-2 inline-block">Sensory Wonder</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#4B1F6F]">Colours Day Sensory Kindergarten Celebrations</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1 font-medium max-w-2xl mx-auto">Joyous sensory discovery days where children explore colors, finger-painting, themed costumes, and creative tactile arts.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="event-chronicle-card group" data-title="Vibrant Yellow Day Sunshine Celebrations">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/colours_day/colours_day_10.jpg" alt="Vibrant Yellow Day Celebrations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Sensory Exploration</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Colours Day Carnival</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Vibrant Yellow Day Celebrations</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Tactile Red & Blue Discovery Stations">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/colours_day/colours_day_15.jpg" alt="Tactile Red & Blue Stations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Fine Motor Tactile</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Colours Day Craft</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Tactile Red & Blue Stations</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Cheerful Kindergarten Costumes & Props">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/colours_day/colours_day_20.jpg" alt="Kindergarten Costumes & Props" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Social Play & Joy</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Colours Day Dress</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Cheerful Costumes & Props</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Rainbow Collaborative Floor Murals">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/colours_day/colours_day_25.jpg" alt="Rainbow Floor Murals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Expressive Painting</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Colours Day Art</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Rainbow Collaborative Murals</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4: Competition -->
+            <div id="event-competition" class="event-chronicle-panel hidden">
+                <div class="bg-[#F1EAF7]/80 rounded-2xl p-4 sm:p-5 border border-purple-200/60 mb-8 max-w-4xl mx-auto text-center">
+                    <span class="text-[10px] font-black uppercase tracking-wider text-[#D4A72C] bg-[#FDF8E7] px-3 py-1 rounded-full border border-amber-200/50 mb-2 inline-block">Championship Pride</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#4B1F6F]">Interschool Triumphs & Velocity Sports Championships</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mt-1 font-medium max-w-2xl mx-auto">Ryans students bringing home gold medals, overall championship trophies, karate podiums, and track & field achievements.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="event-chronicle-card group" data-title="Overall Interschool Championship Cup">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/competition/competition_10.jpg" alt="Overall Championship Cup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">1st Place Victories</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Interschool Triumphs</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Overall Championship Cup</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Gold Medal Sprint Athletics & Relays">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/competition/competition_15.jpg" alt="Gold Medal Sprint Athletics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Speed & Endurance</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Velocity Sports Fest</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Gold Medal Sprint Athletics</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="State Level Martial Arts & Karate Honors">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/competition/competition_20.jpg" alt="Martial Arts Honors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Discipline & Agility</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Co-Curricular Arena</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Martial Arts & Karate Honors</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-chronicle-card group" data-title="Academic Olympiad & Public Speaking Trophies">
+                        <div class="h-64 sm:h-72 overflow-hidden relative">
+                            <img src="asssssetss_opt/competition/competition_25.jpg" alt="Public Speaking Trophies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                            <span class="absolute top-3 left-3 bg-[#4B1F6F]/90 backdrop-blur-md text-[#F3D98B] text-[9.5px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border border-purple-300/30">Rhetoric & Logic</span>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <p class="text-[10px] font-bold text-[#F3D98B] uppercase tracking-wider mb-0.5">Cognitive Arenas</p>
+                                <h4 class="font-extrabold text-sm leading-snug">Olympiad & Speech Trophies</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section 8 & 10: Life at Ryans - Curated Photo Showcase -->
     <section class="py-16 bg-white" id="gallery">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -840,11 +1336,11 @@
                 </a>
             </div>
 
-            <!-- Sleek 4-Photo Showcase Grid -->
+            <!-- Sleek 4-Photo Showcase Grid (100% Unique Photos) -->
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4" id="gallery-grid">
                 <!-- Image 1 -->
-                <div class="gallery-item h-56" data-category="events" data-title="Annual Day & Celebrations">
-                    <img src="assets/anual1.png" alt="Annual Day gala celebration" class="w-full h-full object-cover">
+                <div class="gallery-item h-56 cursor-pointer" data-category="events" data-title="RYANOVA Annual Cultural Gala Stage Performance">
+                    <img src="asssssetss_opt/annual_day/annual_day_35.jpg" alt="Annual Day gala celebration" class="w-full h-full object-cover">
                     <div class="gallery-overlay absolute inset-0 flex items-end p-4 text-white">
                         <div>
                             <p class="font-bold text-xs">Annual Day Gala</p>
@@ -854,8 +1350,8 @@
                 </div>
 
                 <!-- Image 2 -->
-                <div class="gallery-item h-56" data-category="sports" data-title="Sports Day Velocity Fest">
-                    <img src="assets/sports (1).jpg" alt="Sports events" class="w-full h-full object-cover">
+                <div class="gallery-item h-56 cursor-pointer" data-category="sports" data-title="Sports Day Velocity Fest Athletics">
+                    <img src="asssssetss_opt/competition/competition_28.jpg" alt="Sports events" class="w-full h-full object-cover">
                     <div class="gallery-overlay absolute inset-0 flex items-end p-4 text-white">
                         <div>
                             <p class="font-bold text-xs">Velocity Fest</p>
@@ -865,8 +1361,8 @@
                 </div>
 
                 <!-- Image 3 -->
-                <div class="gallery-item h-56" data-category="activities" data-title="Creative Arts Workshop">
-                    <img src="assets/jkg_arts.jpg" alt="Creative arts workshop" class="w-full h-full object-cover">
+                <div class="gallery-item h-56 cursor-pointer" data-category="activities" data-title="Creative Arts Workshop & Colours Day">
+                    <img src="asssssetss_opt/colours_day/colours_day_30.jpg" alt="Creative arts workshop" class="w-full h-full object-cover">
                     <div class="gallery-overlay absolute inset-0 flex items-end p-4 text-white">
                         <div>
                             <p class="font-bold text-xs">Art & Painting</p>
@@ -876,7 +1372,7 @@
                 </div>
 
                 <!-- Image 4 -->
-                <div class="gallery-item h-56" data-category="campus" data-title="Classroom Interactive Learning">
+                <div class="gallery-item h-56 cursor-pointer" data-category="campus" data-title="Classroom Interactive Learning">
                     <img src="assets/DSC_0014.jpg" alt="Classroom learning" class="w-full h-full object-cover">
                     <div class="gallery-overlay absolute inset-0 flex items-end p-4 text-white">
                         <div>
@@ -887,51 +1383,57 @@
                 </div>
             </div>
 
-            <!-- Infinite Continuous Photo Stream Marquee -->
-            <div class="mt-10 reveal-on-scroll">
+            <!-- Infinite Continuous Dual Stream Marquee (32 100% Unique Authentic Photos) -->
+            <div class="mt-12 reveal-on-scroll">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center gap-2">
                         <span class="w-2.5 h-2.5 rounded-full bg-[#D4A72C] animate-ping"></span>
-                        <span class="text-xs font-extrabold uppercase tracking-wider text-[#4B1F6F]">Live Photo Stream • Ryans Academy In Motion</span>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-[#4B1F6F]">Live Photo Stream • 32 Distinct Ryans Milestones in Motion</span>
                     </div>
                     <span class="text-[11px] text-gray-500 font-medium hidden sm:inline"><i class="fa-solid fa-hand-pointer text-[#D4A72C] mr-1"></i> Hover to pause stream</span>
                 </div>
-                <div class="marquee-container rounded-2xl py-2 shadow-inner bg-[#FAF8F4]/80 p-2 border border-purple-100">
+
+                <!-- Stream Row 1: Forward Marquee (16 Unique Photos) -->
+                <div class="marquee-container rounded-2xl py-2 shadow-inner bg-[#FAF8F4]/80 p-2 border border-purple-100 mb-3">
                     <div class="marquee-track">
-                        <div class="marquee-item"><img src="assets/DSC_0013.jpg" alt="Students in Classroom" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (3).jpg" alt="Sports Day Athletics" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0151.jpg" alt="Curiosity & STEM Lab" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/anual2.png" alt="Annual Cultural Day" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0208.jpg" alt="Collaborative Learning" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/kids_slide_play.jpg" alt="Joyful Outdoor Playground" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (4).jpg" alt="Team Sports Games" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0269.jpg" alt="Montessori Activity Corner" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/anual3.png" alt="RYANOVA Stage Performance" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0300.jpg" alt="Interactive Classroom" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (6).jpg" alt="Velocity Sprint Races" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/kids_sand_play.jpg" alt="Outdoor Sensory Sand Play" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0898.jpg" alt="School Assembly & Discipline" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (7).jpg" alt="Relay Champions" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0922.jpg" alt="Happy Ryans Scholars" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/daycare_meals.jpg" alt="Nourishing Daycare & Meals" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Annual Cultural Day Stage"><img src="asssssetss_opt/annual_day/annual_day_40.jpg" alt="Annual Gala" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Colours Day Kindergarten"><img src="asssssetss_opt/colours_day/colours_day_32.jpg" alt="Colours Day" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Convocation Little Scholars"><img src="asssssetss_opt/convocation/convocation_18.jpg" alt="Convocation" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Interschool Trophy Winners"><img src="asssssetss_opt/competition/competition_12.jpg" alt="Sports Winner" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Theatrical Performance"><img src="asssssetss_opt/annual_day/annual_day_42.jpg" alt="Stage Play" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Sensory Tactile Fun"><img src="asssssetss_opt/colours_day/colours_day_35.jpg" alt="Sensory Fun" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Graduation Day Cap Ceremony"><img src="asssssetss_opt/convocation/convocation_19.jpg" alt="Graduation" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Track Sprint Honors"><img src="asssssetss_opt/competition/competition_14.jpg" alt="Athletics" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Classical Dance Rhythms"><img src="asssssetss_opt/annual_day/annual_day_45.jpg" alt="Dance Performance" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Creative Painting Smiles"><img src="asssssetss_opt/colours_day/colours_day_38.jpg" alt="Art Painting" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Proud Certificate Moment"><img src="asssssetss_opt/convocation/convocation_21.jpg" alt="Honors" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Karate Championship Gold"><img src="asssssetss_opt/competition/competition_16.jpg" alt="Martial Arts" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Chorus Stage Ensemble"><img src="asssssetss_opt/annual_day/annual_day_50.jpg" alt="Choir" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Festive Classroom Decor"><img src="asssssetss_opt/colours_day/colours_day_40.jpg" alt="Class Celebration" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Little Graduate Smiles"><img src="asssssetss_opt/convocation/convocation_22.jpg" alt="Happy Scholar" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Team Relay Champions"><img src="asssssetss_opt/competition/competition_18.jpg" alt="Team Relay" loading="lazy"></div>
                     </div>
-                    <div class="marquee-track" aria-hidden="true">
-                        <div class="marquee-item"><img src="assets/DSC_0013.jpg" alt="Students in Classroom" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (3).jpg" alt="Sports Day Athletics" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0151.jpg" alt="Curiosity & STEM Lab" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/anual2.png" alt="Annual Cultural Day" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0208.jpg" alt="Collaborative Learning" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/kids_slide_play.jpg" alt="Joyful Outdoor Playground" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (4).jpg" alt="Team Sports Games" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0269.jpg" alt="Montessori Activity Corner" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/anual3.png" alt="RYANOVA Stage Performance" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0300.jpg" alt="Interactive Classroom" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (6).jpg" alt="Velocity Sprint Races" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/kids_sand_play.jpg" alt="Outdoor Sensory Sand Play" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0898.jpg" alt="School Assembly & Discipline" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/sports (7).jpg" alt="Relay Champions" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/DSC_0922.jpg" alt="Happy Ryans Scholars" loading="lazy"></div>
-                        <div class="marquee-item"><img src="assets/daycare_meals.jpg" alt="Nourishing Daycare & Meals" loading="lazy"></div>
+                </div>
+
+                <!-- Stream Row 2: Reverse Marquee (16 Different Unique Photos) -->
+                <div class="marquee-container rounded-2xl py-2 shadow-inner bg-[#FAF8F4]/80 p-2 border border-purple-100">
+                    <div class="marquee-track-reverse">
+                        <div class="marquee-item" data-title="Grand Musical Finale"><img src="asssssetss_opt/annual_day/annual_day_52.jpg" alt="Musical" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Kindergarten Play Day"><img src="asssssetss_opt/colours_day/colours_day_42.jpg" alt="Kindergarten Play" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Grand Stage Graduation"><img src="asssssetss_opt/convocation/convocation_23.jpg" alt="Convocation Honors" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Podium Champions"><img src="asssssetss_opt/competition/competition_22.jpg" alt="Podium Honors" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Vibrant Stage Lights"><img src="asssssetss_opt/annual_day/annual_day_55.jpg" alt="Stage Lights" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Vibrant Green Day"><img src="asssssetss_opt/colours_day/colours_day_44.jpg" alt="Green Day" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Drama & Expression"><img src="asssssetss_opt/annual_day/annual_day_58.jpg" alt="Drama Acting" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Interschool Medalist"><img src="asssssetss_opt/competition/competition_24.jpg" alt="Medalist" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Stage Costumes Elegance"><img src="asssssetss_opt/annual_day/annual_day_60.jpg" alt="Costume Elegance" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Tactile Art Fun"><img src="asssssetss_opt/colours_day/colours_day_46.jpg" alt="Tactile Art" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Celebration Confetti"><img src="asssssetss_opt/annual_day/annual_day_62.jpg" alt="Celebration" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Athletic Track Relay"><img src="asssssetss_opt/competition/competition_26.jpg" alt="Relay Running" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Auditorium Applause"><img src="asssssetss_opt/annual_day/annual_day_64.jpg" alt="Auditorium" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Joyful Childhood Smile"><img src="asssssetss_opt/colours_day/colours_day_48.jpg" alt="Childhood Smiles" loading="lazy"></div>
+                        <div class="marquee-item" data-title="RYANOVA Grand Curtain Call"><img src="asssssetss_opt/annual_day/annual_day_66.jpg" alt="Curtain Call" loading="lazy"></div>
+                        <div class="marquee-item" data-title="Trophy Celebration Pride"><img src="asssssetss_opt/competition/competition_30.jpg" alt="Trophy Pride" loading="lazy"></div>
                     </div>
                 </div>
             </div>
@@ -960,7 +1462,7 @@
 
             <!-- Extraordinary Interactive Features Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
-                <!-- Card 1: Dual-Brain Abacus & Mental Agility -->
+                <!-- Card 1: Curiosity & Wonder Labs -->
                 <div class="extraordinary-card p-7 flex flex-col justify-between reveal-on-scroll stagger-1 glow-shimmer">
                     <div>
                         <div class="h-48 rounded-2xl overflow-hidden mb-5 img-zoom-container relative shadow-md">
@@ -994,15 +1496,14 @@
                 <div class="extraordinary-card p-7 flex flex-col justify-between reveal-on-scroll stagger-2 glow-shimmer">
                     <div>
                         <div class="h-48 rounded-2xl overflow-hidden mb-5 img-zoom-container relative shadow-md">
-                            <img src="assets/sports3.png" alt="Annual Velocity Fest Sports" class="w-full h-full object-cover">
+                            <img src="asssssetss_opt/competition/competition_01.jpg" alt="Annual Velocity Fest Sports" class="w-full h-full object-cover">
                             <span class="absolute top-3 left-3 bg-[#D4A72C] text-[#3b2408] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm inline-flex items-center gap-1.5">
-                                <img src="assets/animated.gif" alt="Athletic Agility" class="w-4 h-4 object-contain">
-                                Annual Velocity Fest
+                                <i class="fa-solid fa-medal text-xs"></i> Annual Velocity Fest
                             </span>
                         </div>
                         <div class="flex items-center gap-3.5 mb-3">
                             <div class="w-12 h-12 rounded-2xl bg-[#FDF8E7] text-[#D4A72C] flex items-center justify-center text-xl extraordinary-icon flex-shrink-0">
-                                <i class="fa-solid fa-medal text-[#4B1F6F] transition-colors duration-300"></i>
+                                <i class="fa-solid fa-medal text-[#4B1F6F]"></i>
                             </div>
                             <div>
                                 <span class="text-[10px] font-extrabold text-[#4B1F6F] uppercase tracking-wider">Athletic Excellence</span>
@@ -1014,7 +1515,7 @@
                         </p>
                     </div>
                     <div class="pt-4 border-t border-purple-50 flex items-center justify-between">
-                        <span class="text-[11px] font-semibold text-purple-900/60">Track & Field • Yoga Drills</span>
+                        <span class="text-[11px] font-semibold text-purple-900/60">Track & Field • Relay Honors</span>
                         <a href="activities.html" class="text-xs font-bold text-[#4B1F6F] hover:text-[#D4A72C] transition flex items-center gap-1">
                             Explore <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
@@ -1025,7 +1526,7 @@
                 <div class="extraordinary-card p-7 flex flex-col justify-between reveal-on-scroll stagger-3 glow-shimmer">
                     <div>
                         <div class="h-48 rounded-2xl overflow-hidden mb-5 img-zoom-container relative shadow-md">
-                            <img src="assets/anual2.png" alt="RYANOVA Annual Day Cultural Gala" class="w-full h-full object-cover">
+                            <img src="asssssetss_opt/annual_day/annual_day_01.jpg" alt="RYANOVA Annual Day Cultural Gala" class="w-full h-full object-cover">
                             <span class="absolute top-3 left-3 bg-[#4B1F6F] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                                 RYANOVA Gala
                             </span>

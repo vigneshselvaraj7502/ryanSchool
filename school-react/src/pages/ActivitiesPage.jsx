@@ -15,7 +15,7 @@ export default function ActivitiesPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -24,14 +24,14 @@ export default function ActivitiesPage() {
   return (
     <div className="activitiespage-page">
       {/* Banner */}
-    <section className="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <section className="reveal-on-scroll py-14 anim-aurora-bg text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
             <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Beyond The Classroom</span>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">Activities & Sports</h1>
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B] bg-white/10 px-3 py-1 rounded-full border border-white/20 inline-block mb-2">Beyond The Classroom</span>
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-white mt-1">Activities & <span className="text-shimmer-gold font-serif italic">Sports</span></h1>
                 <p className="text-purple-200 text-sm mt-2">Nurturing creative talents, athletic vigor, and social camaraderie.</p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200">
+            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
                 <Link to="/" className="hover:text-white transition">Home</Link>
                 <span>/</span>
                 <span className="text-[#D4A72C]">Activities</span>
@@ -44,7 +44,7 @@ export default function ActivitiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Activity 1: Physical Education & Sports */}
-                <div className="premium-card overflow-hidden card-interactive-lift">
+                <div className="premium-card overflow-hidden card-interactive-lift anim-tilt-card card-shine-effect">
                     <div className="h-52 overflow-hidden">
                         <img src="/assets/sports (1).jpg" alt="Physical Education at Ryans" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                     </div>
@@ -146,19 +146,19 @@ export default function ActivitiesPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
-                    <img src="/assets/kids_art_painting.jpg" alt="Art painting workshop" className="w-full h-full object-cover" loading="lazy" />
+                    <img src="/assets/DSC_0230.jpg" alt="Interactive storytelling" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
-                    <img src="/assets/teacher_kids_blocks.jpg" alt="Montessori block building" className="w-full h-full object-cover" loading="lazy" />
+                    <img src="/assets/DSC_0108.jpg" alt="Montessori learning station" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
-                    <img src="/assets/kids_sand_play.jpg" alt="Sensory sand play" className="w-full h-full object-cover" loading="lazy" />
+                    <img src="/assets/DSC_0093.jpg" alt="Early childhood activity" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
-                    <img src="/assets/kids_slide_play.jpg" alt="Playground agility" className="w-full h-full object-cover" loading="lazy" />
+                    <img src="/assets/sports (4).jpg" alt="Obstacle course agility" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
-                    <img src="/assets/sports (5).jpg" alt="Obstacle challenge" className="w-full h-full object-cover" loading="lazy" />
+                    <img src="/assets/sports (5).jpg" alt="Team coordination" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
                     <img src="/assets/DSC_0151.jpg" alt="Science wonder lab" className="w-full h-full object-cover" loading="lazy" />
@@ -167,7 +167,7 @@ export default function ActivitiesPage() {
                     <img src="/assets/DSC_0208.jpg" alt="Collaborative craft" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white img-zoom-container h-48">
-                    <img src="/assets/kids_chairs_game.jpg" alt="Musical movement" className="w-full h-full object-cover" loading="lazy" />
+                    <img src="/assets/DSC_0269.jpg" alt="Montessori manipulatives" className="w-full h-full object-cover" loading="lazy" />
                 </div>
             </div>
         </div>

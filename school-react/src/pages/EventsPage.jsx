@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useModal } from '../context/ModalContext';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -15,7 +15,7 @@ export default function EventsPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -24,14 +24,14 @@ export default function EventsPage() {
   return (
     <div className="eventspage-page">
       {/* Banner */}
-    <section className="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <section className="reveal-on-scroll py-14 anim-aurora-bg text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
             <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Milestones & Festivities</span>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">Featured Events & Celebrations</h1>
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B] bg-white/10 px-3 py-1 rounded-full border border-white/20 inline-block mb-2">Milestones & Festivities</span>
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-white mt-1">Featured Events & <span className="text-shimmer-gold font-serif italic">Celebrations</span></h1>
                 <p className="text-purple-200 text-sm mt-2">Home of Velocity Fest, RYANOVA, and vibrant cultural galas.</p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200">
+            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
                 <Link to="/" className="hover:text-white transition">Home</Link>
                 <span>/</span>
                 <span className="text-[#D4A72C]">Events</span>
@@ -113,6 +113,86 @@ export default function EventsPage() {
                         <div className="flex items-center gap-2"><i className="fa-solid fa-music text-[#D4A72C]"></i> Multi-Lingual Choirs</div>
                         <div className="flex items-center gap-2"><i className="fa-solid fa-wand-magic-sparkles text-[#D4A72C]"></i> Classical & Fusion Dance</div>
                         <div className="flex items-center gap-2"><i className="fa-solid fa-award text-[#D4A72C]"></i> Annual Academic Honor Roll</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* Section 3: Convocation & Little Scholars Graduation */}
+    <section className="reveal-on-scroll py-16 bg-white border-b border-purple-50" id="convocation">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-6 space-y-5">
+                    <span className="gold-badge anim-ring-gold">Academic Milestone</span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F]">Convocation: Celebrating Our Little Graduates</h2>
+                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                        A milestone celebration honoring our Senior KG scholars as they step forward into primary CBSE Grade 1. Dressed in ceremonial gowns and mortarboards, each child receives their graduation diploma before proud families and mentors.
+                    </p>
+                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                        With valedictory speeches, graduation songs, and heartfelt reflections, Convocation instills lifelong pride, confidence, and scholarly ambition.
+                    </p>
+                    <div className="grid grid-cols-2 gap-3 text-xs font-bold text-gray-700 pt-2">
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-graduation-cap text-[#D4A72C]"></i> 100% Graduation Success</div>
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-scroll text-[#D4A72C]"></i> Official Diplomas Awarded</div>
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-microphone text-[#D4A72C]"></i> Scholar Valedictory Speeches</div>
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-star text-[#D4A72C]"></i> Ready for Primary CBSE</div>
+                    </div>
+                </div>
+                <div className="lg:col-span-6">
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/convocation/convocation_01.jpg" alt="Convocation Ceremony" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/convocation/convocation_05.jpg" alt="Graduate Robes" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/convocation/convocation_08.jpg" alt="Diploma Presentation" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/convocation/convocation_12.jpg" alt="Scholar Tributes" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* Section 4: Colours Day Kindergarten Sensory Carnival */}
+    <section className="reveal-on-scroll py-16 bg-[#FAF8F4] border-b border-purple-50" id="colours">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-6 order-2 lg:order-1">
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/colours_day/colours_day_05.jpg" alt="Yellow Day Sunshine" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/colours_day/colours_day_10.jpg" alt="Tactile Arts" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/colours_day/colours_day_15.jpg" alt="Sensory Stations" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-white anim-tilt-card card-shine-effect">
+                            <img src="/asssssetss_opt/colours_day/colours_day_20.jpg" alt="Collaborative Murals" className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                    </div>
+                </div>
+                <div className="lg:col-span-6 order-1 lg:order-2 space-y-5">
+                    <span className="purple-badge">Sensory Wonder Carnival</span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-[#4B1F6F]">Colours Day: An Explosion of Joy & Creativity</h2>
+                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                        Colours Day brings the rainbow directly into our classrooms! A celebration of sensory discovery where toddlers and kindergarteners explore colors through themed costumes, finger painting, collaborative murals, and tactile sorting games.
+                    </p>
+                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                        These vibrant celebrations foster fine motor coordination, associative thinking, peer socialization, and pure artistic expression in an immersive, laughter-filled setting.
+                    </p>
+                    <div className="grid grid-cols-2 gap-3 text-xs font-bold text-gray-700 pt-2">
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-palette text-[#D4A72C]"></i> Sensory Finger-Painting</div>
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-shirt text-[#D4A72C]"></i> Themed Color Dress Days</div>
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-shapes text-[#D4A72C]"></i> Tactile Sensory Stations</div>
+                        <div className="flex items-center gap-2"><i className="fa-solid fa-face-smile text-[#D4A72C]"></i> Joyful Social Memories</div>
                     </div>
                 </div>
             </div>

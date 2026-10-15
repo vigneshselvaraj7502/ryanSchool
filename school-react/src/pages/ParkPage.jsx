@@ -15,7 +15,7 @@ export default function ParkPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -51,7 +51,7 @@ export default function ParkPage() {
     </div>
 
     {/* ULTRA PREMIUM PARALLAX HERO SECTION */}
-    <section className="reveal-on-scroll relative w-full h-[400px] md:h-[500px] bg-fixed bg-center bg-cover flex flex-col items-center justify-center overflow-hidden" style={{ backgroundImage: 'url(\'/assets/kids_park_play.jpg\')' }}>
+    <section className="reveal-on-scroll relative w-full h-[400px] md:h-[500px] bg-fixed bg-center bg-cover flex flex-col items-center justify-center overflow-hidden" style={{ backgroundImage: 'url(\'/assets/DSC_0001.jpg\')' }}>
         {/* Vibrant Multi-Stop Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-purple-dark/95 via-purple-700/70 to-green-500/60 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-purple-dark/100 via-transparent to-transparent"></div>
@@ -139,7 +139,7 @@ export default function ParkPage() {
 
             {/* Benefit 3 */}
             <div className="rounded-[2rem] border-[4px] border-white shadow-[0_15px_30px_rgba(76,40,130,0.15)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(76,40,130,0.25)] transition-all duration-500 relative group overflow-hidden h-[340px] flex flex-col justify-end">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(\'/assets/toy_train_playroom.jpg\')' }}></div>
+                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(\'/assets/DSC_0857.jpg\')' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-600/50 to-transparent"></div>
                 
                 <div className="relative z-10 bg-white/10 backdrop-blur-md border-t border-white/30 p-6 transform transition-transform duration-300">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useModal } from '../context/ModalContext';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -15,7 +15,7 @@ export default function AboutPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -24,19 +24,19 @@ export default function AboutPage() {
   return (
     <div className="aboutpage-page">
       {/* Breadcrumb & Hero Banner */}
-    <section className="py-14 lg:py-20 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white relative overflow-hidden">
+    <section className="py-14 lg:py-20 anim-aurora-bg text-white relative overflow-hidden">
         {/* Ambient decorative shapes */}
-        <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#D4A72C]/15 rounded-full filter blur-2xl animate-float-gentle pointer-events-none"></div>
+        <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#D4A72C]/20 rounded-full filter blur-2xl animate-float-gentle pointer-events-none"></div>
         <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-white/10 rounded-full filter blur-2xl animate-float-inverse pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="reveal-on-scroll">
-                    <span className="bg-[#D4A72C] text-[#3b2408] text-[11px] font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm inline-flex items-center gap-1.5 mb-3">
+                    <span className="bg-[#D4A72C] text-[#3b2408] text-[11px] font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm inline-flex items-center gap-1.5 mb-3 anim-ring-gold">
                         <i className="fa-solid fa-sparkles text-[10px]"></i> Our Story & Purpose
                     </span>
                     <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-                        About <span className="text-[#F3D98B] font-serif italic">Ryans Academy</span>
+                        About <span className="text-shimmer-gold font-serif italic">Ryans Academy</span>
                     </h1>
                     <p className="text-purple-100 text-sm sm:text-base mt-3 max-w-2xl leading-relaxed font-medium">
                         Where intellectual curiosity, compassionate mentorship, and joyful discovery empower every child to thrive from their earliest steps.
@@ -146,12 +146,12 @@ export default function AboutPage() {
             {/* Vision & Mission Dual Pillars (Luxury Showcase) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                 {/* Vision Card */}
-                <div className="vision-mission-card reveal-on-scroll stagger-1 group">
+                <div className="vision-mission-card anim-tilt-card card-shine-effect reveal-on-scroll stagger-1 group">
                     <div className="vision-mission-accent bg-gradient-to-r from-[#D4A72C] via-[#F3D98B] to-[#E67E22]"></div>
                     <div className="absolute -top-10 -right-10 w-44 h-44 bg-[#D4A72C]/10 rounded-full filter blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
                     
                     <div className="flex items-start justify-between gap-4 mb-4 relative z-10">
-                        <div className="vision-mission-icon bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white shadow-xl shadow-amber-500/30">
+                        <div className="vision-mission-icon bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white shadow-xl shadow-amber-500/30 group-hover:scale-110 transition-transform">
                             <i className="fa-solid fa-eye"></i>
                         </div>
                         <span className="text-[10px] font-black uppercase tracking-widest text-[#D4A72C] bg-[#FDF8E7] px-3.5 py-1 rounded-full border border-amber-200/60 shadow-sm">
@@ -180,12 +180,12 @@ export default function AboutPage() {
                 </div>
 
                 {/* Mission Card */}
-                <div className="vision-mission-card reveal-on-scroll stagger-2 group">
+                <div className="vision-mission-card anim-tilt-card card-shine-effect reveal-on-scroll stagger-2 group">
                     <div className="vision-mission-accent bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#834aa7]"></div>
                     <div className="absolute -top-10 -right-10 w-44 h-44 bg-[#4B1F6F]/10 rounded-full filter blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
 
                     <div className="flex items-start justify-between gap-4 mb-4 relative z-10">
-                        <div className="vision-mission-icon bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white shadow-xl shadow-purple-900/30">
+                        <div className="vision-mission-icon bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white shadow-xl shadow-purple-900/30 group-hover:scale-110 transition-transform">
                             <i className="fa-solid fa-bullseye"></i>
                         </div>
                         <span className="text-[10px] font-black uppercase tracking-widest text-[#4B1F6F] bg-[#F1EAF7] px-3.5 py-1 rounded-full border border-purple-200/60 shadow-sm">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useModal } from '../context/ModalContext';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -15,7 +15,7 @@ export default function AdmissionsPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -24,14 +24,14 @@ export default function AdmissionsPage() {
   return (
     <div className="admissionspage-page">
       {/* Banner */}
-    <section className="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <section className="reveal-on-scroll py-14 anim-aurora-bg text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
             <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Academic Year 2026-27</span>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">Begin Your Child's Journey With Us</h1>
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B] bg-white/10 px-3 py-1 rounded-full border border-white/20 inline-block mb-2 anim-ring-gold">Academic Year 2026-27</span>
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-white mt-1">Begin Your Child's Journey With <span className="text-shimmer-gold font-serif italic">Us</span></h1>
                 <p className="text-purple-200 text-sm mt-2">Transparent admission process, age criteria, and quick online enquiry.</p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200">
+            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
                 <Link to="/" className="hover:text-white transition">Home</Link>
                 <span>/</span>
                 <span className="text-[#D4A72C]">Admissions</span>

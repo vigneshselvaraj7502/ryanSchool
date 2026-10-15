@@ -34,10 +34,14 @@ export default function EnquiryModal() {
       <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 text-gray-400 hover:text-[#4B1F6F] p-2 transition-colors"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-red-50 text-gray-500 hover:text-red-600 border border-gray-200 hover:border-red-200 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm cursor-pointer z-10"
           aria-label="Close Modal"
+          title="Close (Esc)"
         >
-          <i className="fa-solid fa-xmark text-xl"></i>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
 
         {!isSubmitted ? (

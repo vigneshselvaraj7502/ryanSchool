@@ -475,13 +475,13 @@ nav a, .nav-link-item {
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
 
-/* 2. Gentle Floating Accents */
+/* 2. Gentle Floating Accents - Straight Vertical */
 @keyframes floatGentle {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-8px) rotate(1deg);
+    transform: translateY(-8px);
   }
 }
 
@@ -597,13 +597,13 @@ nav a, .nav-link-item {
   box-shadow: 0 16px 32px rgba(75, 31, 111, 0.08);
 }
 
-/* 10. Subtle Float Inverse */
+/* 10. Subtle Float Inverse - Straight Vertical */
 @keyframes floatInverse {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(8px) rotate(-1deg);
+    transform: translateY(8px);
   }
 }
 
@@ -728,6 +728,85 @@ nav a, .nav-link-item {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Reverse Marquee for Dynamic Dual Stream */
+.marquee-track-reverse {
+  display: flex;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  min-width: 100%;
+  animation: marqueeScrollReverse 48s linear infinite;
+}
+
+.marquee-container:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScrollReverse {
+  from {
+    transform: translateX(calc(-100% - 1.25rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Event Chronicle Interactive Cards */
+.event-chronicle-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(75, 31, 111, 0.08);
+  border: 3px solid #ffffff;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  background-color: #FAF8F4;
+}
+
+.event-chronicle-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--color-elegant-gold);
+  box-shadow: 0 20px 40px rgba(75, 31, 111, 0.22);
+}
+
+.event-chronicle-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.event-chronicle-card:hover img {
+  transform: scale(1.08);
+}
+
+.floating-stat-chip {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 0.65rem 1.1rem;
+  border-radius: 1.125rem;
+  border: 1px solid rgba(212, 167, 44, 0.35);
+  box-shadow: 0 12px 30px rgba(75, 31, 111, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 20;
 }
 
 /* 13. Six Core Pillars Section */

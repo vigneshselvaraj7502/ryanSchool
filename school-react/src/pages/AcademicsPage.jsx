@@ -31,7 +31,7 @@ export default function AcademicsPage() {
       hoverTextColor: "group-hover:text-[#D4A72C]",
       title: "2. Montessori Independence",
       desc: "Self-directed sensory equipment fostering deep concentration, self-discipline, and fine motor precision.",
-      image: "/assets/teacher_kids_blocks.jpg",
+      image: "/assets/DSC_0108.jpg",
       tagIcon: "fa-puzzle-piece text-[#F3D98B]",
       tagText: "Self-Directed Montessori Sensorial Apparatus",
       cardClass: "triad-card-2",
@@ -61,7 +61,7 @@ export default function AcademicsPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -70,17 +70,17 @@ export default function AcademicsPage() {
   return (
     <div className="academicspage-page">
       {/* Banner */}
-    <section className="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <section className="reveal-on-scroll py-14 anim-aurora-bg text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
             <div>
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 mb-2">
                     <img src="/assets/pencil.gif" alt="Pencil Animation" className="w-4 h-4 object-contain" />
                     <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Methodology & Rigor</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">Academics & Curriculum</h1>
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-white mt-1">Academics & <span className="text-shimmer-gold font-serif italic">Curriculum</span></h1>
                 <p className="text-purple-200 text-sm mt-2">Harmonizing CBSE framework with Montessori and Activity-Based discovery.</p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200">
+            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
                 <Link to="/" className="hover:text-white transition">Home</Link>
                 <span>/</span>
                 <span className="text-[#D4A72C]">Academics</span>
@@ -203,9 +203,9 @@ export default function AcademicsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Domain 1: Language & Phonics */}
-                <div className="academic-domain-card reveal-on-scroll stagger-1 group">
+                <div className="academic-domain-card reveal-on-scroll stagger-1 group card-shine-effect hover:-translate-y-2 hover:shadow-2xl hover:border-[#4B1F6F] transition-all duration-300">
                     <div className="academic-domain-accent bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#834aa7]"></div>
-                    <div className="academic-domain-icon bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white shadow-lg shadow-purple-900/25">
+                    <div className="academic-domain-icon bg-gradient-to-br from-[#4B1F6F] to-[#6B3A8D] text-white shadow-lg shadow-purple-900/25 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                         <i className="fa-solid fa-spell-check"></i>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
@@ -223,9 +223,9 @@ export default function AcademicsPage() {
                 </div>
 
                 {/* Domain 2: Abacus & Mathematics */}
-                <div className="academic-domain-card reveal-on-scroll stagger-2 group">
+                <div className="academic-domain-card reveal-on-scroll stagger-2 group card-shine-effect hover:-translate-y-2 hover:shadow-2xl hover:border-[#D4A72C] transition-all duration-300">
                     <div className="academic-domain-accent bg-gradient-to-r from-[#D4A72C] via-[#F3D98B] to-[#E67E22]"></div>
-                    <div className="academic-domain-icon bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white shadow-lg shadow-amber-500/25">
+                    <div className="academic-domain-icon bg-gradient-to-br from-[#D4A72C] to-[#E67E22] text-white shadow-lg shadow-amber-500/25 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                         <i className="fa-solid fa-calculator"></i>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
@@ -243,9 +243,9 @@ export default function AcademicsPage() {
                 </div>
 
                 {/* Domain 3: STEM & Discovery Science */}
-                <div className="academic-domain-card reveal-on-scroll stagger-3 group">
+                <div className="academic-domain-card reveal-on-scroll stagger-3 group card-shine-effect hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-500 transition-all duration-300">
                     <div className="academic-domain-accent bg-gradient-to-r from-[#059669] via-[#10B981] to-[#34D399]"></div>
-                    <div className="academic-domain-icon bg-gradient-to-br from-[#059669] to-[#10B981] text-white shadow-lg shadow-emerald-500/25">
+                    <div className="academic-domain-icon bg-gradient-to-br from-[#059669] to-[#10B981] text-white shadow-lg shadow-emerald-500/25 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                         <i className="fa-solid fa-flask-vial"></i>
                     </div>
                     <div className="flex items-center gap-2 mb-2">

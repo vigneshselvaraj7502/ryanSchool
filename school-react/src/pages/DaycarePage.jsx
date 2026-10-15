@@ -15,7 +15,7 @@ export default function DaycarePage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -108,7 +108,7 @@ export default function DaycarePage() {
 
 
     {/* SECTION 3: Communication & Schedules (Daily routines) */}
-    <section className="reveal-on-scroll border-y border-purple-50 py-20 relative z-10 overflow-hidden" style={{ backgroundImage: 'url(\'/assets/toy_train_playroom.jpg\')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="reveal-on-scroll border-y border-purple-50 py-20 relative z-10 overflow-hidden" style={{ backgroundImage: 'url(\'/assets/DSC_0057.jpg\')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         {/* Soft high-contrast overlay for text legibility */}
         <div className="absolute inset-0 bg-[#fffdf5]/85 z-0"></div>
         <div className="max-w-[1240px] w-full mx-auto px-6 sm:px-16 relative z-10">
@@ -218,7 +218,7 @@ export default function DaycarePage() {
             {/* Right Side: Big, Widescreen Teacher & Toddlers Image */}
             <div className="lg:col-span-7 flex justify-center">
                 <div className="rounded-[45%_55%_45%_55%_/_50%_50%_40%_40%] overflow-hidden border-8 border-white shadow-2xl w-full max-w-xl h-64 md:h-72 bg-white relative">
-                    <img src="/assets/teacher_kids_blocks.jpg" alt="Teacher Playing Blocks with Toddlers" className="w-full h-full object-cover hover:scale-[1.02] transition duration-500" />
+                    <img src="/assets/DSC_0108.jpg" alt="Montessori Activity Routine" className="w-full h-full object-cover hover:scale-[1.02] transition duration-500" />
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ export default function Footer() {
               <img
                 src="/assets/logo.png"
                 alt="Ryans Academy Logo"
-                className="h-12 w-auto object-contain bg-white rounded-xl p-1"
+                className="h-14 w-auto object-contain bg-white rounded-xl p-1 shadow-sm"
               />
               <div>
                 <span className="font-heading font-extrabold text-lg text-white block">RYANS ACADEMY</span>
@@ -26,15 +26,78 @@ export default function Footer() {
             <p className="text-gray-400 text-xs leading-relaxed font-normal">
               Nurturing confident, creative, and curious learners through CBSE rigor, Montessori independence, and experiential discovery.
             </p>
-            <div className="flex items-center gap-3 pt-2">
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4A72C] hover:text-[#4B1F6F] flex items-center justify-center text-sm transition-all" aria-label="Facebook">
-                <i className="fa-brands fa-facebook-f"></i>
+            {/* Social & Business Directory Links */}
+            <div className="flex items-center gap-2.5 pt-2 flex-wrap">
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/ryanspreschool"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 min-w-[36px] min-h-[36px] rounded-full bg-white text-[#4B1F6F] border-2 border-white/30 hover:bg-[#4B1F6F] hover:border-[#D4A72C] hover:text-[#F3D98B] flex items-center justify-center text-sm transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm group"
+                aria-label="Facebook"
+                title="Ryans Academy on Facebook"
+              >
+                <i className="fa-brands fa-facebook-f group-hover:text-[#F3D98B] transition-colors"></i>
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4A72C] hover:text-[#4B1F6F] flex items-center justify-center text-sm transition-all" aria-label="Instagram">
-                <i className="fa-brands fa-instagram"></i>
+
+              {/* Twitter / X */}
+              <a
+                href="https://x.com/ryanspreschool1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 min-w-[36px] min-h-[36px] rounded-full bg-white text-[#4B1F6F] border-2 border-white/30 hover:bg-[#4B1F6F] hover:border-[#D4A72C] hover:text-[#F3D98B] flex items-center justify-center text-sm transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm group"
+                aria-label="Twitter"
+                title="Ryans Academy on Twitter / X"
+              >
+                <i className="fa-brands fa-twitter group-hover:text-[#F3D98B] transition-colors"></i>
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4A72C] hover:text-[#4B1F6F] flex items-center justify-center text-sm transition-all" aria-label="YouTube">
-                <i className="fa-brands fa-youtube"></i>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/ryans-preschool-bb2212150/?isSelfProfile=false"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 min-w-[36px] min-h-[36px] rounded-full bg-white text-[#4B1F6F] border-2 border-white/30 hover:bg-[#4B1F6F] hover:border-[#D4A72C] hover:text-[#F3D98B] flex items-center justify-center text-sm transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm group"
+                aria-label="LinkedIn"
+                title="Ryans Academy on LinkedIn"
+              >
+                <i className="fa-brands fa-linkedin-in group-hover:text-[#F3D98B] transition-colors"></i>
+              </a>
+
+              {/* Justdial */}
+              <a
+                href="https://www.justdial.com/Chennai/Ryans-Academy-Keelkatalai/044PXX44-XX44-161025115747-G5C9_BZDET"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 min-w-[36px] min-h-[36px] rounded-full bg-white border-2 border-white/30 hover:bg-[#4B1F6F] hover:border-[#D4A72C] flex items-center justify-center p-1.5 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm group"
+                aria-label="Justdial"
+                title="Ryans Academy on Justdial"
+              >
+                <span className="w-5 h-5 flex items-center justify-center rounded-sm bg-white overflow-hidden p-0.5">
+                  <img
+                    src="/assets/jd.png"
+                    alt="Justdial"
+                    className="w-full h-full object-contain"
+                  />
+                </span>
+              </a>
+
+              {/* Sulekha */}
+              <a
+                href="https://www.sulekha.com/ryans-pre-school-keelkattalai-chennai-contact-address"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 min-w-[36px] min-h-[36px] rounded-full bg-white border-2 border-white/30 hover:bg-[#4B1F6F] hover:border-[#D4A72C] flex items-center justify-center p-1.5 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm group"
+                aria-label="Sulekha"
+                title="Ryans Academy on Sulekha"
+              >
+                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-white overflow-hidden p-0.5">
+                  <img
+                    src="/assets/suleka.png"
+                    alt="Sulekha"
+                    className="w-full h-full object-contain"
+                  />
+                </span>
               </a>
             </div>
           </div>

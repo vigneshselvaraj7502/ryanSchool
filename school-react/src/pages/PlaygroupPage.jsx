@@ -15,7 +15,7 @@ export default function PlaygroupPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -112,7 +112,7 @@ export default function PlaygroupPage() {
                     
                     {/* Circular framed backup photo representing caregivers */}
                     <div className="absolute w-44 h-44 rounded-full border-4 border-white overflow-hidden shadow-md bg-purple-50 z-0 opacity-40 translate-y-[-30px]">
-                        <img src="/assets/caring_teacher_toddler.jpg" alt="Caregiver Portrait" className="w-full h-full object-cover" />
+                        <img src="/assets/playgroup.jpg" alt="Caregiver Portrait" className="w-full h-full object-cover" />
                     </div>
 
                     {/* The Happy Toddler cutout popping out in front (The focal point!) */}
@@ -174,7 +174,7 @@ export default function PlaygroupPage() {
     </section>
 
     {/* SECTION 3: Developmental Phases */}
-    <section className="reveal-on-scroll border-y border-purple-50 py-20 relative z-10 overflow-hidden" style={{ backgroundImage: 'url(\'/assets/kids_blocks_play.jpg\')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="reveal-on-scroll border-y border-purple-50 py-20 relative z-10 overflow-hidden" style={{ backgroundImage: 'url(\'/assets/DSC_0057.jpg\')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         {/* Soft high-contrast overlay for text legibility */}
         <div className="absolute inset-0 bg-[#fffdf5]/85 z-0"></div>
         <div className="max-w-[1240px] w-full mx-auto px-6 sm:px-16 relative z-10">
@@ -349,12 +349,12 @@ export default function PlaygroupPage() {
                 <div className="absolute -bottom-4 -right-4 text-[#fa8295] text-3xl z-20 animate-float-slow select-none"><i className="fa-solid fa-cloud"></i></div>
 
                 <div className="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
-                    <img src="/assets/kids_park_play.jpg" alt="Toddlers Playing in Park" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
-                    <span className="absolute top-4 left-4 bg-brand-purple text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Park Slide & Swings</span>
+                    <img src="/assets/DSC_0001.jpg" alt="Toddlers Playing in Park" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
+                    <span className="absolute top-4 left-4 bg-brand-purple text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Campus Courtyard</span>
                 </div>
                 <div className="p-6 bg-white rounded-b-3xl">
-                    <h4 className="font-display text-brand-purple text-xl font-black mb-2">Outdoor Park Adventures</h4>
-                    <p className="text-gray-500 text-sm font-semibold leading-relaxed">Hear the sweet giggles floating through the warm sunshine as caregivers guide their steady steps down the slides. Held safely, they learn to run, slide, and explore the fresh green grass with eyes full of pure wonder.</p>
+                    <h4 className="font-display text-brand-purple text-xl font-black mb-2">Outdoor Campus Play</h4>
+                    <p className="text-gray-500 text-sm font-semibold leading-relaxed">Hear the sweet giggles floating through the warm sunshine as caregivers guide their steady steps across the courtyard. Held safely, they learn to run, slide, and explore the fresh green grass with eyes full of pure wonder.</p>
                 </div>
             </div>
 
@@ -367,11 +367,11 @@ export default function PlaygroupPage() {
                 <div className="absolute -top-4 -left-4 text-[#D97706] text-3xl z-20 animate-float-medium select-none"><i className="fa-solid fa-music"></i></div>
 
                 <div className="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
-                    <img src="/assets/kids_chairs_game.jpg" alt="Toddlers Playing Chairs" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
-                    <span className="absolute top-4 left-4 bg-[#D97706] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Musical Chairs</span>
+                    <img src="/assets/DSC_0230.jpg" alt="Toddlers in Circle Time" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
+                    <span className="absolute top-4 left-4 bg-[#D97706] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Story Circle</span>
                 </div>
                 <div className="p-6 bg-white rounded-b-3xl">
-                    <h4 className="font-display text-[#D97706] text-xl font-black mb-2">Toddler Circle Games</h4>
+                    <h4 className="font-display text-[#D97706] text-xl font-black mb-2">Toddler Circle Time</h4>
                     <p className="text-gray-500 text-sm font-semibold leading-relaxed">Little hands clap together in happy rhythm as warm smiles welcome them to the circle. Guided by their teacher's soft singing, they play games, learning to share and make their very first friends.</p>
                 </div>
             </div>
@@ -385,12 +385,12 @@ export default function PlaygroupPage() {
                 <div className="absolute -bottom-4 -left-4 text-green-500 text-3xl z-20 animate-float-slow select-none"><i className="fa-solid fa-palette"></i></div>
 
                 <div className="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
-                    <img src="/assets/kids_art_painting.jpg" alt="Toddlers Painting" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
-                    <span className="absolute top-4 left-4 bg-[#16A34A] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Fingerpaint</span>
+                    <img src="/assets/DSC_0208.jpg" alt="Toddlers Craft Modeling" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
+                    <span className="absolute top-4 left-4 bg-[#16A34A] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Clay Studio</span>
                 </div>
                 <div className="p-6 bg-white rounded-b-3xl">
-                    <h4 className="font-display text-[#16A34A] text-xl font-black mb-2">Messy Finger Painting</h4>
-                    <p className="text-gray-500 text-sm font-semibold leading-relaxed">Messy, paint-covered fingers bring bright giggles! Toddlers happily stamp their tiny hands onto paper to create artwork for mommy and daddy, building the confidence to explore.</p>
+                    <h4 className="font-display text-[#16A34A] text-xl font-black mb-2">Tactile Clay &amp; Crafts</h4>
+                    <p className="text-gray-500 text-sm font-semibold leading-relaxed">Little fingers happily mold soft clay and shape bright crafts! Toddlers proudly present their artwork for mommy and daddy, building the confidence to explore.</p>
                 </div>
             </div>
 
@@ -403,12 +403,12 @@ export default function PlaygroupPage() {
                 <div className="absolute -top-4 -right-4 text-yellow-400 text-4xl z-20 animate-float-medium select-none"><i className="fa-solid fa-sun"></i></div>
 
                 <div className="overflow-hidden h-72 sm:h-96 rounded-t-xl relative">
-                    <img src="/assets/kids_sand_play.jpg" alt="Toddlers in Sandpit" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
-                    <span className="absolute top-4 left-4 bg-[#E11D48] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Sandbox Castles</span>
+                    <img src="/assets/DSC_0093.jpg" alt="Toddlers in Activity Room" className="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
+                    <span className="absolute top-4 left-4 bg-[#E11D48] text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Activity Room</span>
                 </div>
                 <div className="p-6 bg-white rounded-b-3xl">
-                    <h4 className="font-display text-[#E11D48] text-xl font-black mb-2">Sandbox Castles & Trucks</h4>
-                    <p className="text-gray-500 text-sm font-semibold leading-relaxed">Happy little builders sit side-by-side, sharing toy trucks and patting warm sand into castles. Together, they laugh as their towers tumble, learning the simple joy of sharing under reassuring watch.</p>
+                    <h4 className="font-display text-[#E11D48] text-xl font-black mb-2">Early Learning Activities</h4>
+                    <p className="text-gray-500 text-sm font-semibold leading-relaxed">Happy little builders sit side-by-side, sharing educational toys and exploring sensory manipulatives. Together, they laugh and learn the simple joy of sharing under reassuring care.</p>
                 </div>
             </div>
 
@@ -420,7 +420,7 @@ export default function PlaygroupPage() {
         <div className="bg-white border-2 border-purple-50 rounded-[3.5rem] p-10 sm:p-12 shadow-xl relative overflow-visible">
             
             {/* Floating top-right illustration */}
-            <img src="/assets/play_blocks_plane.png" alt="Building Blocks &amp; Plane" className="absolute -top-12 -right-6 w-32 sm:w-40 h-auto drop-shadow-md z-20 pointer-events-none" />
+            <img src="/assets/sports (4).jpg" alt="Gross Motor Activity" className="absolute -top-10 -right-4 w-28 sm:w-36 h-28 sm:h-36 object-cover rounded-3xl border-4 border-white drop-shadow-md z-20 pointer-events-none" />
             
             <div className="flex items-center gap-5 mb-10">
                 <div className="relative w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center border-2 border-purple-100 shadow-inner shrink-0">

@@ -33,7 +33,7 @@ export default function App() {
   return (
     <ModalProvider>
       <Router>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-full relative">
           <Navbar />
           <main className="flex-grow">
             <Routes>

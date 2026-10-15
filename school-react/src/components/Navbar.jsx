@@ -15,23 +15,23 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    { name: 'About', path: '/about' },
     { name: 'Academics', path: '/academics' },
-    { name: 'Our Programs', path: '/programs' },
+    { name: 'Programs', path: '/programs' },
     { name: 'Facilities', path: '/facilities' },
-    { name: 'Activities & Sports', path: '/activities' },
+    { name: 'Activities', path: '/activities' },
     { name: 'Events', path: '/events' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Admissions', path: '/admissions' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <>
       {/* Top Announcement Bar */}
-      <div className="bg-[#4B1F6F] text-white text-xs py-2 px-4 sm:px-8 border-b border-purple-900/30">
+      <div className="bg-[#4B1F6F] text-white text-xs py-2 px-4 sm:px-8 border-b border-purple-900/30 overflow-hidden w-full">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-          <div className="flex items-center flex-wrap gap-4 text-[13px]">
+          <div className="flex items-center flex-wrap gap-4 text-[13px] min-w-0">
             <span className="flex items-center gap-1.5 text-purple-200">
               <i className="fa-solid fa-graduation-cap text-[#D4A72C]"></i>
               <strong className="text-white">Admissions Open 2026-27:</strong> Play Group to Graders
@@ -42,12 +42,12 @@ export default function Navbar() {
               Madhavaram, Chennai
             </span>
           </div>
-          <div className="flex items-center gap-4 text-[12px]">
+          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-[12px] flex-wrap justify-center flex-shrink-0">
             <a href="tel:+919840012345" className="text-purple-200 hover:text-white transition flex items-center gap-1">
               <i className="fa-solid fa-phone text-[#D4A72C]"></i> +91 98400 12345
             </a>
-            <span className="text-purple-400">|</span>
-            <a href="mailto:admissions@ryansacademy.in" className="text-purple-200 hover:text-white transition flex items-center gap-1">
+            <span className="text-purple-400 hidden xs:inline">|</span>
+            <a href="mailto:admissions@ryansacademy.in" className="text-purple-200 hover:text-white transition hidden xs:flex items-center gap-1">
               <i className="fa-solid fa-envelope text-[#D4A72C]"></i> admissions@ryansacademy.in
             </a>
           </div>
@@ -55,27 +55,27 @@ export default function Navbar() {
       </div>
 
       {/* Main Frosted Navigation Island Header */}
-      <header id="navbar" className="sticky top-0 z-40 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 lg:gap-4">
+      <header id="navbar" className="sticky top-0 z-40 transition-all duration-300 w-full overflow-hidden sm:overflow-visible">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 lg:gap-3">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0 group">
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group">
             <img
               src="/assets/logo.png"
               alt="Ryans Academy Logo"
-              className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-transform group-hover:scale-105 flex-shrink-0"
             />
-            <div className="hidden sm:flex flex-col">
-              <span className="font-heading font-extrabold text-lg sm:text-xl text-[#4B1F6F] tracking-tight leading-tight">
+            <div className="flex flex-col">
+              <span className="font-heading font-extrabold text-base sm:text-lg lg:text-xl text-[#4B1F6F] tracking-tight leading-tight whitespace-nowrap">
                 RYANS ACADEMY
               </span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#D4A72C]">
+              <span className="hidden xl:block text-[10px] uppercase font-bold tracking-widest text-[#D4A72C] whitespace-nowrap">
                 CBSE • Montessori • Experiential
               </span>
             </div>
           </Link>
 
           {/* Desktop Frosted Capsule Navigation Island */}
-          <nav className="hidden lg:flex items-center">
+          <nav className="hidden lg:flex items-center flex-shrink min-w-0">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
@@ -92,10 +92,10 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action Button & Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <button
               onClick={() => openModal('Play Group', 'enquiry')}
-              className="hidden sm:inline-flex btn-gold text-xs py-2.5 px-5"
+              className="hidden sm:inline-flex btn-gold text-xs py-2.5 px-3.5 sm:px-4 lg:px-5 flex-shrink-0 whitespace-nowrap shadow-md shadow-amber-500/20"
             >
               <span>Enquire Now</span>
               <i className="fa-solid fa-paper-plane text-xs"></i>
@@ -105,7 +105,7 @@ export default function Navbar() {
             <button
               id="mobile-menu-btn"
               onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              className="lg:hidden p-2 rounded-xl text-[#4B1F6F] hover:bg-purple-50 transition"
+              className="lg:hidden p-2 rounded-xl text-[#4B1F6F] hover:bg-purple-50 transition flex-shrink-0"
               aria-label="Toggle Menu"
             >
               <i className="fa-solid fa-bars text-xl"></i>

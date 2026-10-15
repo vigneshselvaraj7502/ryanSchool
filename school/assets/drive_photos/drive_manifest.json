@@ -1,0 +1,1138 @@
+{
+  "infrastructure": [
+    {
+      "id": "infrastructure-1",
+      "src": "/assets/drive_photos/infrastructure/infra_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.52.59 AM.jpeg",
+      "size_kb": 289.9
+    },
+    {
+      "id": "infrastructure-2",
+      "src": "/assets/drive_photos/infrastructure/infra_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.22 AM (1).jpeg",
+      "size_kb": 318.3
+    },
+    {
+      "id": "infrastructure-3",
+      "src": "/assets/drive_photos/infrastructure/infra_03.jpg",
+      "orig_file": "infra_activity_classroom.jpg",
+      "size_kb": 280.8
+    },
+    {
+      "id": "infrastructure-4",
+      "src": "/assets/drive_photos/infrastructure/infra_04.jpg",
+      "orig_file": "infra_campus_front.jpg",
+      "size_kb": 365.5
+    },
+    {
+      "id": "infrastructure-5",
+      "src": "/assets/drive_photos/infrastructure/infra_05.jpg",
+      "orig_file": "infra_indoor_play_zone.jpg",
+      "size_kb": 287.9
+    },
+    {
+      "id": "infrastructure-6",
+      "src": "/assets/drive_photos/infrastructure/infra_06.jpg",
+      "orig_file": "infra_library_reading_corner.jpg",
+      "size_kb": 325.4
+    },
+    {
+      "id": "infrastructure-7",
+      "src": "/assets/drive_photos/infrastructure/infra_07.jpg",
+      "orig_file": "infra_montessori_environment.jpg",
+      "size_kb": 212.6
+    },
+    {
+      "id": "infrastructure-8",
+      "src": "/assets/drive_photos/infrastructure/infra_08.jpg",
+      "orig_file": "infra_outdoor_play_turf.jpg",
+      "size_kb": 346.6
+    },
+    {
+      "id": "infrastructure-9",
+      "src": "/assets/drive_photos/infrastructure/infra_09.jpg",
+      "orig_file": "infra_reception_lobby.jpg",
+      "size_kb": 501.5
+    },
+    {
+      "id": "infrastructure-10",
+      "src": "/assets/drive_photos/infrastructure/infra_10.jpg",
+      "orig_file": "infra_safety_security_hallway.jpg",
+      "size_kb": 324.1
+    },
+    {
+      "id": "infrastructure-11",
+      "src": "/assets/drive_photos/infrastructure/infra_11.jpg",
+      "orig_file": "infra_sensory_learning_hub.jpg",
+      "size_kb": 365.5
+    },
+    {
+      "id": "infrastructure-12",
+      "src": "/assets/drive_photos/infrastructure/infra_12.jpg",
+      "orig_file": "infra_smart_board_tech.jpg",
+      "size_kb": 355.1
+    }
+  ],
+  "annual_day": [
+    {
+      "id": "annual_day-1",
+      "src": "/assets/drive_photos/annual_day/annual_01.jpg",
+      "orig_file": "TOM_2549.JPG",
+      "size_kb": 462.0
+    },
+    {
+      "id": "annual_day-2",
+      "src": "/assets/drive_photos/annual_day/annual_02.jpg",
+      "orig_file": "TOM_2550.JPG",
+      "size_kb": 370.4
+    },
+    {
+      "id": "annual_day-3",
+      "src": "/assets/drive_photos/annual_day/annual_03.jpg",
+      "orig_file": "TOM_2551.JPG",
+      "size_kb": 430.7
+    },
+    {
+      "id": "annual_day-4",
+      "src": "/assets/drive_photos/annual_day/annual_04.jpg",
+      "orig_file": "TOM_2552.JPG",
+      "size_kb": 437.4
+    },
+    {
+      "id": "annual_day-5",
+      "src": "/assets/drive_photos/annual_day/annual_05.jpg",
+      "orig_file": "TOM_2590.JPG",
+      "size_kb": 405.5
+    },
+    {
+      "id": "annual_day-6",
+      "src": "/assets/drive_photos/annual_day/annual_06.jpg",
+      "orig_file": "TOM_2591.JPG",
+      "size_kb": 299.1
+    },
+    {
+      "id": "annual_day-7",
+      "src": "/assets/drive_photos/annual_day/annual_07.jpg",
+      "orig_file": "TOM_2593.JPG",
+      "size_kb": 368.3
+    },
+    {
+      "id": "annual_day-8",
+      "src": "/assets/drive_photos/annual_day/annual_08.jpg",
+      "orig_file": "TOM_2595.JPG",
+      "size_kb": 363.7
+    },
+    {
+      "id": "annual_day-9",
+      "src": "/assets/drive_photos/annual_day/annual_09.jpg",
+      "orig_file": "TOM_2598.JPG",
+      "size_kb": 317.3
+    },
+    {
+      "id": "annual_day-10",
+      "src": "/assets/drive_photos/annual_day/annual_10.jpg",
+      "orig_file": "TOM_2601.JPG",
+      "size_kb": 385.2
+    },
+    {
+      "id": "annual_day-11",
+      "src": "/assets/drive_photos/annual_day/annual_11.jpg",
+      "orig_file": "TOM_2602.JPG",
+      "size_kb": 360.0
+    },
+    {
+      "id": "annual_day-12",
+      "src": "/assets/drive_photos/annual_day/annual_12.jpg",
+      "orig_file": "TOM_2604.JPG",
+      "size_kb": 442.6
+    },
+    {
+      "id": "annual_day-13",
+      "src": "/assets/drive_photos/annual_day/annual_13.jpg",
+      "orig_file": "TOM_2654.JPG",
+      "size_kb": 265.8
+    },
+    {
+      "id": "annual_day-14",
+      "src": "/assets/drive_photos/annual_day/annual_14.jpg",
+      "orig_file": "TOM_2657.JPG",
+      "size_kb": 254.0
+    },
+    {
+      "id": "annual_day-15",
+      "src": "/assets/drive_photos/annual_day/annual_15.jpg",
+      "orig_file": "TOM_2659.JPG",
+      "size_kb": 317.7
+    },
+    {
+      "id": "annual_day-16",
+      "src": "/assets/drive_photos/annual_day/annual_16.jpg",
+      "orig_file": "TOM_2683.JPG",
+      "size_kb": 678.7
+    }
+  ],
+  "sports_day": [
+    {
+      "id": "sports_day-1",
+      "src": "/assets/drive_photos/sports_day/sports_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.28 AM (1).jpeg",
+      "size_kb": 586.3
+    },
+    {
+      "id": "sports_day-2",
+      "src": "/assets/drive_photos/sports_day/sports_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.28 AM (2).jpeg",
+      "size_kb": 658.6
+    },
+    {
+      "id": "sports_day-3",
+      "src": "/assets/drive_photos/sports_day/sports_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.28 AM.jpeg",
+      "size_kb": 657.9
+    },
+    {
+      "id": "sports_day-4",
+      "src": "/assets/drive_photos/sports_day/sports_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.29 AM (1).jpeg",
+      "size_kb": 637.1
+    },
+    {
+      "id": "sports_day-5",
+      "src": "/assets/drive_photos/sports_day/sports_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.29 AM (2).jpeg",
+      "size_kb": 634.4
+    },
+    {
+      "id": "sports_day-6",
+      "src": "/assets/drive_photos/sports_day/sports_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.29 AM.jpeg",
+      "size_kb": 433.3
+    },
+    {
+      "id": "sports_day-7",
+      "src": "/assets/drive_photos/sports_day/sports_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.30 AM (1).jpeg",
+      "size_kb": 586.4
+    },
+    {
+      "id": "sports_day-8",
+      "src": "/assets/drive_photos/sports_day/sports_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.30 AM.jpeg",
+      "size_kb": 572.6
+    },
+    {
+      "id": "sports_day-9",
+      "src": "/assets/drive_photos/sports_day/sports_09.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.31 AM (1).jpeg",
+      "size_kb": 512.0
+    },
+    {
+      "id": "sports_day-10",
+      "src": "/assets/drive_photos/sports_day/sports_10.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.31 AM (2).jpeg",
+      "size_kb": 536.1
+    },
+    {
+      "id": "sports_day-11",
+      "src": "/assets/drive_photos/sports_day/sports_11.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.31 AM.jpeg",
+      "size_kb": 448.3
+    },
+    {
+      "id": "sports_day-12",
+      "src": "/assets/drive_photos/sports_day/sports_12.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.32 AM (1).jpeg",
+      "size_kb": 611.8
+    },
+    {
+      "id": "sports_day-13",
+      "src": "/assets/drive_photos/sports_day/sports_13.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.32 AM (2).jpeg",
+      "size_kb": 612.6
+    },
+    {
+      "id": "sports_day-14",
+      "src": "/assets/drive_photos/sports_day/sports_14.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.32 AM (3).jpeg",
+      "size_kb": 649.0
+    },
+    {
+      "id": "sports_day-15",
+      "src": "/assets/drive_photos/sports_day/sports_15.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.32 AM.jpeg",
+      "size_kb": 500.9
+    },
+    {
+      "id": "sports_day-16",
+      "src": "/assets/drive_photos/sports_day/sports_16.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 10.51.33 AM.jpeg",
+      "size_kb": 688.4
+    }
+  ],
+  "field_trip": [
+    {
+      "id": "field_trip-1",
+      "src": "/assets/drive_photos/field_trip/field_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.13 AM (2).jpeg",
+      "size_kb": 366.2
+    },
+    {
+      "id": "field_trip-2",
+      "src": "/assets/drive_photos/field_trip/field_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.14 AM (1).jpeg",
+      "size_kb": 337.5
+    },
+    {
+      "id": "field_trip-3",
+      "src": "/assets/drive_photos/field_trip/field_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.14 AM (2).jpeg",
+      "size_kb": 245.3
+    },
+    {
+      "id": "field_trip-4",
+      "src": "/assets/drive_photos/field_trip/field_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.14 AM (3).jpeg",
+      "size_kb": 235.4
+    },
+    {
+      "id": "field_trip-5",
+      "src": "/assets/drive_photos/field_trip/field_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.14 AM.jpeg",
+      "size_kb": 332.2
+    },
+    {
+      "id": "field_trip-6",
+      "src": "/assets/drive_photos/field_trip/field_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.15 AM.jpeg",
+      "size_kb": 184.3
+    },
+    {
+      "id": "field_trip-7",
+      "src": "/assets/drive_photos/field_trip/field_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.18 PM (1).jpeg",
+      "size_kb": 204.6
+    },
+    {
+      "id": "field_trip-8",
+      "src": "/assets/drive_photos/field_trip/field_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.18 PM (2).jpeg",
+      "size_kb": 212.1
+    },
+    {
+      "id": "field_trip-9",
+      "src": "/assets/drive_photos/field_trip/field_09.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.18 PM.jpeg",
+      "size_kb": 593.3
+    },
+    {
+      "id": "field_trip-10",
+      "src": "/assets/drive_photos/field_trip/field_10.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.19 PM (1).jpeg",
+      "size_kb": 249.2
+    },
+    {
+      "id": "field_trip-11",
+      "src": "/assets/drive_photos/field_trip/field_11.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.19 PM (2).jpeg",
+      "size_kb": 459.5
+    },
+    {
+      "id": "field_trip-12",
+      "src": "/assets/drive_photos/field_trip/field_12.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.19 PM.jpeg",
+      "size_kb": 196.6
+    },
+    {
+      "id": "field_trip-13",
+      "src": "/assets/drive_photos/field_trip/field_13.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.20 PM (1).jpeg",
+      "size_kb": 518.1
+    },
+    {
+      "id": "field_trip-14",
+      "src": "/assets/drive_photos/field_trip/field_14.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.20 PM (2).jpeg",
+      "size_kb": 499.2
+    },
+    {
+      "id": "field_trip-15",
+      "src": "/assets/drive_photos/field_trip/field_15.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.20 PM.jpeg",
+      "size_kb": 525.6
+    },
+    {
+      "id": "field_trip-16",
+      "src": "/assets/drive_photos/field_trip/field_16.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.29.21 PM (1).jpeg",
+      "size_kb": 252.7
+    }
+  ],
+  "convocation": [
+    {
+      "id": "convocation-1",
+      "src": "/assets/drive_photos/convocation/convocation_01.jpg",
+      "orig_file": "convocation_01.jpg",
+      "size_kb": 475.8
+    },
+    {
+      "id": "convocation-2",
+      "src": "/assets/drive_photos/convocation/convocation_02.jpg",
+      "orig_file": "convocation_02.jpg",
+      "size_kb": 480.5
+    },
+    {
+      "id": "convocation-3",
+      "src": "/assets/drive_photos/convocation/convocation_03.jpg",
+      "orig_file": "convocation_03.jpg",
+      "size_kb": 461.6
+    },
+    {
+      "id": "convocation-4",
+      "src": "/assets/drive_photos/convocation/convocation_04.jpg",
+      "orig_file": "convocation_04.jpg",
+      "size_kb": 443.8
+    },
+    {
+      "id": "convocation-5",
+      "src": "/assets/drive_photos/convocation/convocation_05.jpg",
+      "orig_file": "convocation_05.jpg",
+      "size_kb": 197.6
+    },
+    {
+      "id": "convocation-6",
+      "src": "/assets/drive_photos/convocation/convocation_06.jpg",
+      "orig_file": "convocation_06.jpg",
+      "size_kb": 472.4
+    },
+    {
+      "id": "convocation-7",
+      "src": "/assets/drive_photos/convocation/convocation_07.jpg",
+      "orig_file": "convocation_07.jpg",
+      "size_kb": 353.3
+    },
+    {
+      "id": "convocation-8",
+      "src": "/assets/drive_photos/convocation/convocation_08.jpg",
+      "orig_file": "convocation_08.jpg",
+      "size_kb": 276.6
+    },
+    {
+      "id": "convocation-9",
+      "src": "/assets/drive_photos/convocation/convocation_09.jpg",
+      "orig_file": "convocation_09.jpg",
+      "size_kb": 209.7
+    },
+    {
+      "id": "convocation-10",
+      "src": "/assets/drive_photos/convocation/convocation_10.jpg",
+      "orig_file": "convocation_10.jpg",
+      "size_kb": 333.3
+    },
+    {
+      "id": "convocation-11",
+      "src": "/assets/drive_photos/convocation/convocation_11.jpg",
+      "orig_file": "convocation_11.jpg",
+      "size_kb": 452.3
+    },
+    {
+      "id": "convocation-12",
+      "src": "/assets/drive_photos/convocation/convocation_12.jpg",
+      "orig_file": "convocation_12.jpg",
+      "size_kb": 342.3
+    },
+    {
+      "id": "convocation-13",
+      "src": "/assets/drive_photos/convocation/convocation_13.jpg",
+      "orig_file": "convocation_13.jpg",
+      "size_kb": 331.1
+    },
+    {
+      "id": "convocation-14",
+      "src": "/assets/drive_photos/convocation/convocation_14.jpg",
+      "orig_file": "convocation_14.jpg",
+      "size_kb": 484.5
+    },
+    {
+      "id": "convocation-15",
+      "src": "/assets/drive_photos/convocation/convocation_15.jpg",
+      "orig_file": "convocation_15.jpg",
+      "size_kb": 433.4
+    },
+    {
+      "id": "convocation-16",
+      "src": "/assets/drive_photos/convocation/convocation_16.jpg",
+      "orig_file": "convocation_16.jpg",
+      "size_kb": 414.4
+    }
+  ],
+  "activities": [
+    {
+      "id": "activities-1",
+      "src": "/assets/drive_photos/activities/activity_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.12 AM.jpeg",
+      "size_kb": 302.8
+    },
+    {
+      "id": "activities-2",
+      "src": "/assets/drive_photos/activities/activity_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.13 AM (1).jpeg",
+      "size_kb": 328.0
+    },
+    {
+      "id": "activities-3",
+      "src": "/assets/drive_photos/activities/activity_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.13 AM.jpeg",
+      "size_kb": 318.3
+    },
+    {
+      "id": "activities-4",
+      "src": "/assets/drive_photos/activities/activity_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.15 AM (1).jpeg",
+      "size_kb": 626.1
+    },
+    {
+      "id": "activities-5",
+      "src": "/assets/drive_photos/activities/activity_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.15 AM (2).jpeg",
+      "size_kb": 199.6
+    },
+    {
+      "id": "activities-6",
+      "src": "/assets/drive_photos/activities/activity_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.16 AM (1).jpeg",
+      "size_kb": 179.8
+    },
+    {
+      "id": "activities-7",
+      "src": "/assets/drive_photos/activities/activity_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.16 AM (2).jpeg",
+      "size_kb": 272.7
+    },
+    {
+      "id": "activities-8",
+      "src": "/assets/drive_photos/activities/activity_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.16 AM.jpeg",
+      "size_kb": 204.6
+    },
+    {
+      "id": "activities-9",
+      "src": "/assets/drive_photos/activities/activity_09.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.17 AM (1).jpeg",
+      "size_kb": 262.4
+    },
+    {
+      "id": "activities-10",
+      "src": "/assets/drive_photos/activities/activity_10.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.17 AM (2).jpeg",
+      "size_kb": 275.7
+    },
+    {
+      "id": "activities-11",
+      "src": "/assets/drive_photos/activities/activity_11.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.17 AM.jpeg",
+      "size_kb": 266.6
+    },
+    {
+      "id": "activities-12",
+      "src": "/assets/drive_photos/activities/activity_12.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.18 AM (1).jpeg",
+      "size_kb": 164.3
+    },
+    {
+      "id": "activities-13",
+      "src": "/assets/drive_photos/activities/activity_13.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.18 AM (2).jpeg",
+      "size_kb": 224.7
+    },
+    {
+      "id": "activities-14",
+      "src": "/assets/drive_photos/activities/activity_14.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.18 AM.jpeg",
+      "size_kb": 267.7
+    },
+    {
+      "id": "activities-15",
+      "src": "/assets/drive_photos/activities/activity_15.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.19 AM (1).jpeg",
+      "size_kb": 153.9
+    },
+    {
+      "id": "activities-16",
+      "src": "/assets/drive_photos/activities/activity_16.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.19 AM (2).jpeg",
+      "size_kb": 143.0
+    }
+  ],
+  "colours_day": [
+    {
+      "id": "colours_day-1",
+      "src": "/assets/drive_photos/colours_day/colours_01.jpg",
+      "orig_file": "colours_day_01.jpg",
+      "size_kb": 458.0
+    },
+    {
+      "id": "colours_day-2",
+      "src": "/assets/drive_photos/colours_day/colours_02.jpg",
+      "orig_file": "colours_day_02.jpg",
+      "size_kb": 437.2
+    },
+    {
+      "id": "colours_day-3",
+      "src": "/assets/drive_photos/colours_day/colours_03.jpg",
+      "orig_file": "colours_day_03.jpg",
+      "size_kb": 407.0
+    },
+    {
+      "id": "colours_day-4",
+      "src": "/assets/drive_photos/colours_day/colours_04.jpg",
+      "orig_file": "colours_day_04.jpg",
+      "size_kb": 211.4
+    },
+    {
+      "id": "colours_day-5",
+      "src": "/assets/drive_photos/colours_day/colours_05.jpg",
+      "orig_file": "colours_day_05.jpg",
+      "size_kb": 322.2
+    },
+    {
+      "id": "colours_day-6",
+      "src": "/assets/drive_photos/colours_day/colours_06.jpg",
+      "orig_file": "colours_day_06.jpg",
+      "size_kb": 197.6
+    },
+    {
+      "id": "colours_day-7",
+      "src": "/assets/drive_photos/colours_day/colours_07.jpg",
+      "orig_file": "colours_day_07.jpg",
+      "size_kb": 331.1
+    },
+    {
+      "id": "colours_day-8",
+      "src": "/assets/drive_photos/colours_day/colours_08.jpg",
+      "orig_file": "colours_day_08.jpg",
+      "size_kb": 184.8
+    },
+    {
+      "id": "colours_day-9",
+      "src": "/assets/drive_photos/colours_day/colours_09.jpg",
+      "orig_file": "colours_day_09.jpg",
+      "size_kb": 557.5
+    },
+    {
+      "id": "colours_day-10",
+      "src": "/assets/drive_photos/colours_day/colours_10.jpg",
+      "orig_file": "colours_day_10.jpg",
+      "size_kb": 253.5
+    },
+    {
+      "id": "colours_day-11",
+      "src": "/assets/drive_photos/colours_day/colours_11.jpg",
+      "orig_file": "colours_day_11.jpg",
+      "size_kb": 226.1
+    },
+    {
+      "id": "colours_day-12",
+      "src": "/assets/drive_photos/colours_day/colours_12.jpg",
+      "orig_file": "colours_day_12.jpg",
+      "size_kb": 385.6
+    },
+    {
+      "id": "colours_day-13",
+      "src": "/assets/drive_photos/colours_day/colours_13.jpg",
+      "orig_file": "colours_day_13.jpg",
+      "size_kb": 150.3
+    },
+    {
+      "id": "colours_day-14",
+      "src": "/assets/drive_photos/colours_day/colours_14.jpg",
+      "orig_file": "colours_day_14.jpg",
+      "size_kb": 567.2
+    },
+    {
+      "id": "colours_day-15",
+      "src": "/assets/drive_photos/colours_day/colours_15.jpg",
+      "orig_file": "colours_day_15.jpg",
+      "size_kb": 662.3
+    },
+    {
+      "id": "colours_day-16",
+      "src": "/assets/drive_photos/colours_day/colours_16.jpg",
+      "orig_file": "colours_day_16.jpg",
+      "size_kb": 186.0
+    }
+  ],
+  "competition": [
+    {
+      "id": "competition-1",
+      "src": "/assets/drive_photos/competition/comp_01.jpg",
+      "orig_file": "competition_01.jpg",
+      "size_kb": 393.1
+    },
+    {
+      "id": "competition-2",
+      "src": "/assets/drive_photos/competition/comp_02.jpg",
+      "orig_file": "competition_02.jpg",
+      "size_kb": 412.7
+    },
+    {
+      "id": "competition-3",
+      "src": "/assets/drive_photos/competition/comp_03.jpg",
+      "orig_file": "competition_03.jpg",
+      "size_kb": 409.1
+    },
+    {
+      "id": "competition-4",
+      "src": "/assets/drive_photos/competition/comp_04.jpg",
+      "orig_file": "competition_04.jpg",
+      "size_kb": 279.1
+    },
+    {
+      "id": "competition-5",
+      "src": "/assets/drive_photos/competition/comp_05.jpg",
+      "orig_file": "competition_05.jpg",
+      "size_kb": 329.6
+    },
+    {
+      "id": "competition-6",
+      "src": "/assets/drive_photos/competition/comp_06.jpg",
+      "orig_file": "competition_06.jpg",
+      "size_kb": 437.1
+    },
+    {
+      "id": "competition-7",
+      "src": "/assets/drive_photos/competition/comp_07.jpg",
+      "orig_file": "competition_07.jpg",
+      "size_kb": 379.0
+    },
+    {
+      "id": "competition-8",
+      "src": "/assets/drive_photos/competition/comp_08.jpg",
+      "orig_file": "competition_08.jpg",
+      "size_kb": 412.5
+    },
+    {
+      "id": "competition-9",
+      "src": "/assets/drive_photos/competition/comp_09.jpg",
+      "orig_file": "competition_09.jpg",
+      "size_kb": 302.1
+    },
+    {
+      "id": "competition-10",
+      "src": "/assets/drive_photos/competition/comp_10.jpg",
+      "orig_file": "competition_10.jpg",
+      "size_kb": 367.0
+    },
+    {
+      "id": "competition-11",
+      "src": "/assets/drive_photos/competition/comp_11.jpg",
+      "orig_file": "competition_11.jpg",
+      "size_kb": 462.1
+    },
+    {
+      "id": "competition-12",
+      "src": "/assets/drive_photos/competition/comp_12.jpg",
+      "orig_file": "competition_12.jpg",
+      "size_kb": 312.6
+    },
+    {
+      "id": "competition-13",
+      "src": "/assets/drive_photos/competition/comp_13.jpg",
+      "orig_file": "competition_13.jpg",
+      "size_kb": 437.7
+    },
+    {
+      "id": "competition-14",
+      "src": "/assets/drive_photos/competition/comp_14.jpg",
+      "orig_file": "competition_14.jpg",
+      "size_kb": 318.8
+    },
+    {
+      "id": "competition-15",
+      "src": "/assets/drive_photos/competition/comp_15.jpg",
+      "orig_file": "competition_15.jpg",
+      "size_kb": 318.0
+    },
+    {
+      "id": "competition-16",
+      "src": "/assets/drive_photos/competition/comp_16.jpg",
+      "orig_file": "competition_16.jpg",
+      "size_kb": 336.9
+    }
+  ],
+  "project_day": [
+    {
+      "id": "project_day-1",
+      "src": "/assets/drive_photos/project_day/project_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.56 PM (1).jpeg",
+      "size_kb": 238.9
+    },
+    {
+      "id": "project_day-2",
+      "src": "/assets/drive_photos/project_day/project_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.56 PM.jpeg",
+      "size_kb": 191.2
+    },
+    {
+      "id": "project_day-3",
+      "src": "/assets/drive_photos/project_day/project_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.57 PM (1).jpeg",
+      "size_kb": 189.3
+    },
+    {
+      "id": "project_day-4",
+      "src": "/assets/drive_photos/project_day/project_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.57 PM.jpeg",
+      "size_kb": 210.2
+    },
+    {
+      "id": "project_day-5",
+      "src": "/assets/drive_photos/project_day/project_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.58 PM.jpeg",
+      "size_kb": 133.3
+    },
+    {
+      "id": "project_day-6",
+      "src": "/assets/drive_photos/project_day/project_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.59 PM (1).jpeg",
+      "size_kb": 231.6
+    },
+    {
+      "id": "project_day-7",
+      "src": "/assets/drive_photos/project_day/project_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.49.59 PM.jpeg",
+      "size_kb": 341.6
+    },
+    {
+      "id": "project_day-8",
+      "src": "/assets/drive_photos/project_day/project_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.00 PM (1).jpeg",
+      "size_kb": 207.3
+    },
+    {
+      "id": "project_day-9",
+      "src": "/assets/drive_photos/project_day/project_09.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.00 PM.jpeg",
+      "size_kb": 212.4
+    },
+    {
+      "id": "project_day-10",
+      "src": "/assets/drive_photos/project_day/project_10.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.01 PM (1).jpeg",
+      "size_kb": 247.4
+    },
+    {
+      "id": "project_day-11",
+      "src": "/assets/drive_photos/project_day/project_11.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.01 PM.jpeg",
+      "size_kb": 223.5
+    },
+    {
+      "id": "project_day-12",
+      "src": "/assets/drive_photos/project_day/project_12.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.02 PM (1).jpeg",
+      "size_kb": 264.9
+    },
+    {
+      "id": "project_day-13",
+      "src": "/assets/drive_photos/project_day/project_13.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.02 PM.jpeg",
+      "size_kb": 207.0
+    },
+    {
+      "id": "project_day-14",
+      "src": "/assets/drive_photos/project_day/project_14.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.03 PM.jpeg",
+      "size_kb": 270.6
+    },
+    {
+      "id": "project_day-15",
+      "src": "/assets/drive_photos/project_day/project_15.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.05 PM (1).jpeg",
+      "size_kb": 135.3
+    },
+    {
+      "id": "project_day-16",
+      "src": "/assets/drive_photos/project_day/project_16.jpg",
+      "orig_file": "WhatsApp Image 2026-10-11 at 9.50.05 PM.jpeg",
+      "size_kb": 312.7
+    }
+  ],
+  "ptm": [
+    {
+      "id": "ptm-1",
+      "src": "/assets/drive_photos/ptm/ptm_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.40 PM (1).jpeg",
+      "size_kb": 250.6
+    },
+    {
+      "id": "ptm-2",
+      "src": "/assets/drive_photos/ptm/ptm_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.40 PM.jpeg",
+      "size_kb": 225.8
+    },
+    {
+      "id": "ptm-3",
+      "src": "/assets/drive_photos/ptm/ptm_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.41 PM.jpeg",
+      "size_kb": 250.3
+    },
+    {
+      "id": "ptm-4",
+      "src": "/assets/drive_photos/ptm/ptm_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.42 PM (1).jpeg",
+      "size_kb": 223.6
+    },
+    {
+      "id": "ptm-5",
+      "src": "/assets/drive_photos/ptm/ptm_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.42 PM (2).jpeg",
+      "size_kb": 186.4
+    },
+    {
+      "id": "ptm-6",
+      "src": "/assets/drive_photos/ptm/ptm_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.42 PM (3).jpeg",
+      "size_kb": 218.4
+    },
+    {
+      "id": "ptm-7",
+      "src": "/assets/drive_photos/ptm/ptm_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.42 PM.jpeg",
+      "size_kb": 224.6
+    },
+    {
+      "id": "ptm-8",
+      "src": "/assets/drive_photos/ptm/ptm_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.43 PM (1).jpeg",
+      "size_kb": 250.0
+    },
+    {
+      "id": "ptm-9",
+      "src": "/assets/drive_photos/ptm/ptm_09.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.43 PM (2).jpeg",
+      "size_kb": 201.6
+    },
+    {
+      "id": "ptm-10",
+      "src": "/assets/drive_photos/ptm/ptm_10.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.43 PM.jpeg",
+      "size_kb": 245.1
+    },
+    {
+      "id": "ptm-11",
+      "src": "/assets/drive_photos/ptm/ptm_11.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.44 PM (1).jpeg",
+      "size_kb": 208.6
+    },
+    {
+      "id": "ptm-12",
+      "src": "/assets/drive_photos/ptm/ptm_12.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.44 PM (2).jpeg",
+      "size_kb": 178.9
+    },
+    {
+      "id": "ptm-13",
+      "src": "/assets/drive_photos/ptm/ptm_13.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.44 PM.jpeg",
+      "size_kb": 182.5
+    },
+    {
+      "id": "ptm-14",
+      "src": "/assets/drive_photos/ptm/ptm_14.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.45 PM (1).jpeg",
+      "size_kb": 234.8
+    },
+    {
+      "id": "ptm-15",
+      "src": "/assets/drive_photos/ptm/ptm_15.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.18.45 PM.jpeg",
+      "size_kb": 193.6
+    },
+    {
+      "id": "ptm-16",
+      "src": "/assets/drive_photos/ptm/ptm_16.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 11.37.20 AM (2).jpeg",
+      "size_kb": 250.6
+    }
+  ],
+  "tamil_new_year": [
+    {
+      "id": "tamil_new_year-1",
+      "src": "/assets/drive_photos/tamil_new_year/fest_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.07 PM (1).jpeg",
+      "size_kb": 152.1
+    },
+    {
+      "id": "tamil_new_year-2",
+      "src": "/assets/drive_photos/tamil_new_year/fest_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.07 PM.jpeg",
+      "size_kb": 419.9
+    },
+    {
+      "id": "tamil_new_year-3",
+      "src": "/assets/drive_photos/tamil_new_year/fest_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.08 PM (1).jpeg",
+      "size_kb": 168.5
+    },
+    {
+      "id": "tamil_new_year-4",
+      "src": "/assets/drive_photos/tamil_new_year/fest_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.08 PM (2).jpeg",
+      "size_kb": 323.7
+    },
+    {
+      "id": "tamil_new_year-5",
+      "src": "/assets/drive_photos/tamil_new_year/fest_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.08 PM.jpeg",
+      "size_kb": 880.0
+    },
+    {
+      "id": "tamil_new_year-6",
+      "src": "/assets/drive_photos/tamil_new_year/fest_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.09 PM (1).jpeg",
+      "size_kb": 120.0
+    },
+    {
+      "id": "tamil_new_year-7",
+      "src": "/assets/drive_photos/tamil_new_year/fest_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.09 PM (2).jpeg",
+      "size_kb": 193.1
+    },
+    {
+      "id": "tamil_new_year-8",
+      "src": "/assets/drive_photos/tamil_new_year/fest_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.09 PM (3).jpeg",
+      "size_kb": 253.8
+    },
+    {
+      "id": "tamil_new_year-9",
+      "src": "/assets/drive_photos/tamil_new_year/fest_09.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.09 PM.jpeg",
+      "size_kb": 247.0
+    },
+    {
+      "id": "tamil_new_year-10",
+      "src": "/assets/drive_photos/tamil_new_year/fest_10.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.10 PM (1).jpeg",
+      "size_kb": 391.3
+    },
+    {
+      "id": "tamil_new_year-11",
+      "src": "/assets/drive_photos/tamil_new_year/fest_11.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.10 PM.jpeg",
+      "size_kb": 189.2
+    },
+    {
+      "id": "tamil_new_year-12",
+      "src": "/assets/drive_photos/tamil_new_year/fest_12.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.11 PM (1).jpeg",
+      "size_kb": 455.1
+    },
+    {
+      "id": "tamil_new_year-13",
+      "src": "/assets/drive_photos/tamil_new_year/fest_13.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.11 PM (2).jpeg",
+      "size_kb": 459.7
+    },
+    {
+      "id": "tamil_new_year-14",
+      "src": "/assets/drive_photos/tamil_new_year/fest_14.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.11 PM (3).jpeg",
+      "size_kb": 753.7
+    },
+    {
+      "id": "tamil_new_year-15",
+      "src": "/assets/drive_photos/tamil_new_year/fest_15.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.11 PM.jpeg",
+      "size_kb": 449.3
+    },
+    {
+      "id": "tamil_new_year-16",
+      "src": "/assets/drive_photos/tamil_new_year/fest_16.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.21.12 PM (1).jpeg",
+      "size_kb": 779.1
+    }
+  ],
+  "excellence_award": [
+    {
+      "id": "excellence_award-1",
+      "src": "/assets/drive_photos/excellence_award/award_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.19 PM (1).jpeg",
+      "size_kb": 122.5
+    },
+    {
+      "id": "excellence_award-2",
+      "src": "/assets/drive_photos/excellence_award/award_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.19 PM.jpeg",
+      "size_kb": 151.6
+    },
+    {
+      "id": "excellence_award-3",
+      "src": "/assets/drive_photos/excellence_award/award_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.21 PM (1).jpeg",
+      "size_kb": 122.5
+    },
+    {
+      "id": "excellence_award-4",
+      "src": "/assets/drive_photos/excellence_award/award_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.21 PM.jpeg",
+      "size_kb": 164.9
+    },
+    {
+      "id": "excellence_award-5",
+      "src": "/assets/drive_photos/excellence_award/award_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.23 PM.jpeg",
+      "size_kb": 151.6
+    },
+    {
+      "id": "excellence_award-6",
+      "src": "/assets/drive_photos/excellence_award/award_06.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.26 PM.jpeg",
+      "size_kb": 223.4
+    },
+    {
+      "id": "excellence_award-7",
+      "src": "/assets/drive_photos/excellence_award/award_07.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.27 PM (1).jpeg",
+      "size_kb": 231.7
+    },
+    {
+      "id": "excellence_award-8",
+      "src": "/assets/drive_photos/excellence_award/award_08.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 1.28.27 PM.jpeg",
+      "size_kb": 225.3
+    }
+  ],
+  "dental_camp": [
+    {
+      "id": "dental_camp-1",
+      "src": "/assets/drive_photos/dental_camp/dental_01.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.56.35 PM (1).jpeg",
+      "size_kb": 149.5
+    },
+    {
+      "id": "dental_camp-2",
+      "src": "/assets/drive_photos/dental_camp/dental_02.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.56.36 PM (1).jpeg",
+      "size_kb": 261.7
+    },
+    {
+      "id": "dental_camp-3",
+      "src": "/assets/drive_photos/dental_camp/dental_03.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.56.36 PM (2).jpeg",
+      "size_kb": 185.0
+    },
+    {
+      "id": "dental_camp-4",
+      "src": "/assets/drive_photos/dental_camp/dental_04.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.56.36 PM (3).jpeg",
+      "size_kb": 166.4
+    },
+    {
+      "id": "dental_camp-5",
+      "src": "/assets/drive_photos/dental_camp/dental_05.jpg",
+      "orig_file": "WhatsApp Image 2026-10-14 at 12.56.36 PM.jpeg",
+      "size_kb": 144.5
+    }
+  ]
+}

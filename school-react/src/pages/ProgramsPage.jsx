@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useModal } from '../context/ModalContext';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -15,7 +15,7 @@ export default function ProgramsPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -24,17 +24,17 @@ export default function ProgramsPage() {
   return (
     <div className="programspage-page">
       {/* Banner */}
-    <section className="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white relative overflow-hidden">
+    <section className="reveal-on-scroll py-14 anim-aurora-bg text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
             <div>
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 mb-2">
                     <img src="/assets/book1.gif" alt="Animated Book" className="w-4 h-4 object-contain" />
                     <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">Structured Learning Pathways</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">Our Academic Programs</h1>
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-white mt-1">Our Academic <span className="text-shimmer-gold font-serif italic">Programs</span></h1>
                 <p className="text-purple-200 text-sm mt-2">Comprehensive curriculum from Play Group to Graders CBSE.</p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200">
+            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
                 <Link to="/" className="hover:text-white transition">Home</Link>
                 <span>/</span>
                 <span className="text-[#D4A72C]">Programs</span>
@@ -122,8 +122,8 @@ export default function ProgramsPage() {
                     </div>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
-                    <div className="program-photo-frame program-float-1 h-[360px] sm:h-[400px]">
-                        <img src="/assets/playgroup.jpg" alt="Play Group at Ryans Academy" />
+                    <div className="program-photo-frame program-float-1 card-shine-effect group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] h-[360px] sm:h-[400px]">
+                        <img src="/assets/playgroup.jpg" alt="Play Group at Ryans Academy" className="group-hover:scale-105 transition-transform duration-700" />
                         <div className="program-floating-tag">
                             <i className="fa-solid fa-shapes text-[#F3D98B]"></i>
                             <span>Sensory & Motor Discovery</span>
@@ -139,8 +139,8 @@ export default function ProgramsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div className="lg:col-span-6">
-                    <div className="program-photo-frame program-float-2 h-[360px] sm:h-[400px]">
-                        <img src="/assets/nursery.jpg" alt="Pre-KG at Ryans Academy" />
+                    <div className="program-photo-frame program-float-2 card-shine-effect group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] h-[360px] sm:h-[400px]">
+                        <img src="/assets/nursery.jpg" alt="Pre-KG at Ryans Academy" className="group-hover:scale-105 transition-transform duration-700" />
                         <div className="program-floating-tag">
                             <i className="fa-solid fa-palette text-[#F3D98B]"></i>
                             <span>Montessori Pre-Literacy</span>
@@ -232,8 +232,8 @@ export default function ProgramsPage() {
                     </div>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
-                    <div className="program-photo-frame program-float-1 h-[360px] sm:h-[400px]">
-                        <img src="/assets/juniorkg.jpg" alt="LKG at Ryans Academy" />
+                    <div className="program-photo-frame program-float-1 card-shine-effect group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] h-[360px] sm:h-[400px]">
+                        <img src="/assets/juniorkg.jpg" alt="LKG at Ryans Academy" className="group-hover:scale-105 transition-transform duration-700" />
                         <div className="program-floating-tag">
                             <i className="fa-solid fa-spell-check text-[#F3D98B]"></i>
                             <span>Jolly Phonics & Numbers</span>
@@ -249,8 +249,8 @@ export default function ProgramsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div className="lg:col-span-6">
-                    <div className="program-photo-frame program-float-2 h-[360px] sm:h-[400px]">
-                        <img src="/assets/seniorkg.jpg" alt="UKG at Ryans Academy" />
+                    <div className="program-photo-frame program-float-2 card-shine-effect group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] h-[360px] sm:h-[400px]">
+                        <img src="/assets/seniorkg.jpg" alt="UKG at Ryans Academy" className="group-hover:scale-105 transition-transform duration-700" />
                         <div className="program-floating-tag">
                             <i className="fa-solid fa-book-open-reader text-[#F3D98B]"></i>
                             <span>Primary CBSE Readiness</span>
@@ -342,8 +342,8 @@ export default function ProgramsPage() {
                     </div>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
-                    <div className="program-photo-frame program-float-1 h-[360px] sm:h-[400px]">
-                        <img src="/assets/DSC_0001.jpg" alt="Graders at Ryans Academy" />
+                    <div className="program-photo-frame program-float-1 card-shine-effect group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] h-[360px] sm:h-[400px]">
+                        <img src="/assets/DSC_0001.jpg" alt="Graders at Ryans Academy" className="group-hover:scale-105 transition-transform duration-700" />
                         <div className="program-floating-tag">
                             <i className="fa-solid fa-graduation-cap text-[#F3D98B]"></i>
                             <span>CBSE Academic Excellence</span>

@@ -43,12 +43,18 @@ html {
   background-color: var(--color-warm-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
   background-color: var(--color-warm-white);
   color: var(--color-dark-charcoal);
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
   line-height: 1.6;
 }
 
@@ -474,19 +480,37 @@ nav a, .nav-link-item {
   transform: translateY(0);
 }
 
+/* Mobile device guarantee: content and photos must never get stuck hidden at opacity 0 */
+@media (max-width: 768px) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity 0.3s ease !important;
+    will-change: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 .stagger-1 { transition-delay: 0.1s; }
 .stagger-2 { transition-delay: 0.2s; }
 .stagger-3 { transition-delay: 0.3s; }
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
 
-/* 2. Gentle Floating Accents */
+/* 2. Gentle Floating Accents - Straight Vertical Translation */
 @keyframes floatGentle {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-8px) rotate(1deg);
+    transform: translateY(-8px);
   }
 }
 
@@ -602,13 +626,13 @@ nav a, .nav-link-item {
   box-shadow: 0 16px 32px rgba(75, 31, 111, 0.08);
 }
 
-/* 10. Subtle Float Inverse */
+/* 10. Subtle Float Inverse - Straight Vertical Translation */
 @keyframes floatInverse {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(8px) rotate(-1deg);
+    transform: translateY(8px);
   }
 }
 
@@ -688,6 +712,8 @@ nav a, .nav-link-item {
   user-select: none;
   display: flex;
   gap: 1.25rem;
+  max-width: 100%;
+  width: 100%;
 }
 
 .marquee-track {
@@ -723,6 +749,15 @@ nav a, .nav-link-item {
   cursor: pointer;
 }
 
+@media (max-width: 640px) {
+  .marquee-item {
+    width: 180px;
+    height: 125px;
+    border-radius: 1rem;
+    border-width: 2px;
+  }
+}
+
 .marquee-item:hover {
   transform: scale(1.06) translateY(-4px);
   box-shadow: 0 14px 28px rgba(75, 31, 111, 0.18);
@@ -733,6 +768,70 @@ nav a, .nav-link-item {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Reverse Marquee for Dynamic Dual Stream */
+.marquee-track-reverse {
+  display: flex;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  min-width: 100%;
+  animation: marqueeScrollReverse 48s linear infinite;
+}
+
+.marquee-container:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScrollReverse {
+  from {
+    transform: translateX(calc(-100% - 1.25rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Event Chronicle Interactive Cards */
+.event-chronicle-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(75, 31, 111, 0.08);
+  border: 3px solid #ffffff;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  background-color: #FAF8F4;
+}
+
+.event-chronicle-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--color-elegant-gold);
+  box-shadow: 0 20px 40px rgba(75, 31, 111, 0.22);
+}
+
+.event-chronicle-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.event-chronicle-card:hover img {
+  transform: scale(1.08);
+}
+
+.floating-stat-chip {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 0.65rem 1.1rem;
+  border-radius: 1.125rem;
+  border: 1px solid rgba(212, 167, 44, 0.35);
+  box-shadow: 0 12px 30px rgba(75, 31, 111, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 20;
 }
 
 /* 13. Six Core Pillars Section */
@@ -1340,8 +1439,8 @@ header nav {
   background: rgba(248, 245, 252, 0.85) !important;
   border: 1px solid rgba(228, 213, 238, 0.9) !important;
   border-radius: 9999px !important;
-  padding: 3px 5px !important;
-  gap: 0.15rem !important;
+  padding: 2.5px 5px !important;
+  gap: 0.12rem !important;
   box-shadow: inset 0 1px 2px rgba(75, 31, 111, 0.03), 0 2px 8px rgba(75, 31, 111, 0.03) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
@@ -1350,15 +1449,15 @@ header nav {
 
 @media (min-width: 1280px) {
   header nav {
-    gap: 0.3rem !important;
-    padding: 3px 8px !important;
+    gap: 0.25rem !important;
+    padding: 3px 7px !important;
   }
 }
 
 @media (min-width: 1440px) {
   header nav {
-    gap: 0.45rem !important;
-    padding: 4px 10px !important;
+    gap: 0.4rem !important;
+    padding: 4px 9px !important;
   }
 }
 
@@ -1366,7 +1465,7 @@ header nav {
 header nav a {
   position: relative;
   border-radius: 9999px !important;
-  padding: 0.22rem 0.38rem !important;
+  padding: 0.2rem 0.36rem !important;
   font-size: 11px !important;
   font-weight: 600 !important;
   color: #3b2d47 !important;
@@ -1381,15 +1480,15 @@ header nav a {
 
 @media (min-width: 1280px) {
   header nav a {
-    padding: 0.28rem 0.55rem !important;
+    padding: 0.25rem 0.52rem !important;
     font-size: 11.5px !important;
   }
 }
 
 @media (min-width: 1440px) {
   header nav a {
-    padding: 0.35rem 0.75rem !important;
-    font-size: 12.5px !important;
+    padding: 0.32rem 0.68rem !important;
+    font-size: 12px !important;
   }
 }
 
@@ -1767,10 +1866,10 @@ header nav a[class*="border-b-2"]:hover {
   color: #F3D98B !important;
 }
 
-/* Custom Nursery & Junior KG animations */
+/* Custom Nursery & Junior KG animations - Straight Vertical Only */
 @keyframes float-bubble {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(5deg); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 .animate-float-bubble { animation: float-bubble 3s ease-in-out infinite; }
 
@@ -1788,8 +1887,8 @@ header nav a[class*="border-b-2"]:hover {
 .animate-shake-bubble { animation: shake-bubble 0.4s ease-in-out; }
 
 @keyframes float-shape {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(5deg); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 .animate-float-shape { animation: float-shape 3s ease-in-out infinite; }
 
@@ -1802,3 +1901,383 @@ header nav a[class*="border-b-2"]:hover {
 
 .hide-scroll::-webkit-scrollbar { display: none; }
 .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Dynamic Hero Reel 2.0s Progress Bar Animation */
+@keyframes heroProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-hero-progress {
+  animation: heroProgress 2000ms linear infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Distinct Hero Animation Styles for Dynamic Cycling */
+@keyframes heroZoomGlow {
+  0% {
+    opacity: 0;
+    transform: scale(1.12);
+    filter: brightness(1.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+    filter: brightness(1);
+  }
+}
+
+@keyframes heroSlidePan {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) scale(1.04);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1.0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroRotate3D {
+  0% {
+    opacity: 0;
+    transform: perspective(900px) rotateY(-7deg) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(900px) rotateY(0deg) scale(1.0);
+  }
+}
+
+@keyframes heroClipWipe {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1.0);
+  }
+}
+
+@keyframes heroDepthFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1.0);
+  }
+}
+
+.hero-anim-zoom-glow {
+  animation: heroZoomGlow 850ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-anim-slide-pan {
+  animation: heroSlidePan 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-anim-rotate-3d {
+  animation: heroRotate3D 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-anim-clip-wipe {
+  animation: heroClipWipe 850ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.hero-anim-depth-float {
+  animation: heroDepthFloat 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Mobile GPU safe animation: Simple crossfade with subtle scale to prevent layer drop or clipping on iOS/Android */
+@media (max-width: 768px) {
+  .hero-anim-zoom-glow,
+  .hero-anim-slide-pan,
+  .hero-anim-rotate-3d,
+  .hero-anim-clip-wipe,
+  .hero-anim-depth-float {
+    animation: heroFadeScaleMobile 450ms ease-out forwards !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes heroFadeScaleMobile {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal Staggered Card Entrance Animation */
+@keyframes modalCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.93);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modal-card {
+  animation: modalCardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Card Luxury Shimmer Sweep on Hover */
+.card-shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 25%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: all 0.75s ease;
+  opacity: 0;
+}
+
+.card-shine-effect:hover::after {
+  left: 140%;
+  opacity: 1;
+}
+
+/* Multi-Page Dynamic Section Animation Styles */
+@keyframes pulseGlowGold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 167, 44, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(212, 167, 44, 0);
+  }
+}
+
+.animate-glow-gold {
+  animation: pulseGlowGold 2.5s infinite;
+}
+
+@keyframes floatBobVertical {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+.animate-float-bob {
+  animation: floatBobVertical 3.2s ease-in-out infinite;
+}
+
+@keyframes floatBobTilt {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1.5deg); }
+}
+
+.animate-float-tilt {
+  animation: floatBobTilt 3.8s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   MULTI-PAGE DIVERSE ANIMATION STYLES
+   ========================================================================== */
+
+/* 1. Shimmering Gold Text for Luxury Headlines */
+@keyframes goldTextShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    #D4A72C 0%,
+    #FFF2A3 25%,
+    #D4A72C 50%,
+    #8A650C 75%,
+    #D4A72C 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: goldTextShimmer 4s linear infinite;
+}
+
+/* 2. Interactive 3D Perspective Tilt Card */
+.anim-tilt-card {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+
+.anim-tilt-card:hover {
+  transform: translateY(-8px) perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+  box-shadow: 0 25px 40px -15px rgba(75, 31, 111, 0.25), 0 0 20px rgba(212, 167, 44, 0.2);
+}
+
+/* 3. Subtle Aurora Animated Gradient Banner */
+@keyframes auroraGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.anim-aurora-bg {
+  background: linear-gradient(-45deg, #4B1F6F, #6B3A8D, #341250, #5c207a, #D4A72C);
+  background-size: 400% 400%;
+  animation: auroraGradient 12s ease infinite;
+}
+
+/* 4. Directional Slide In Left & Right */
+@keyframes slideInFromLeft {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.anim-slide-left {
+  animation: slideInFromLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-right {
+  animation: slideInFromRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 5. Wave Lift for Academic Pillars & Badges */
+@keyframes waveLift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.anim-wave-lift {
+  animation: waveLift 3s ease-in-out infinite;
+}
+
+/* 6. Soft Playful Bounce for Early Learning Elements */
+@keyframes softPlayBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+}
+
+.anim-play-bounce {
+  animation: softPlayBounce 3.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* 7. Luxury Frosted Hero Glass Frame */
+.hero-glass-frame {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 50px -10px rgba(75, 31, 111, 0.28), 0 0 0 1px rgba(212, 167, 44, 0.25);
+}
+
+/* 8. Pulsing Gold Accent Ring */
+@keyframes pulseRingGold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 167, 44, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(212, 167, 44, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 167, 44, 0);
+  }
+}
+
+.anim-ring-gold {
+  animation: pulseRingGold 2s infinite;
+}
+
+/* 9. Parent Peace of Mind Card Styling */
+.parent-peace-card {
+  background: #ffffff;
+  border: 1px solid rgba(75, 31, 111, 0.12);
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.parent-peace-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 167, 44, 0.6);
+  box-shadow: 0 20px 35px -10px rgba(75, 31, 111, 0.18), 0 0 15px rgba(212, 167, 44, 0.15);
+}
+
+/* 10. Milestone Active Tab Glow */
+.milestone-tab-btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.milestone-tab-btn.active {
+  background: linear-gradient(135deg, #4B1F6F, #6B3A8D);
+  color: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(75, 31, 111, 0.35), 0 0 12px rgba(212, 167, 44, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 11. Day in Life Rhythm Step */
+.day-rhythm-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.day-rhythm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px -8px rgba(75, 31, 111, 0.15);
+  border-color: #D4A72C;
+}
+
+/* 12. Security Beacon Animation */
+@keyframes beaconPulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.security-beacon {
+  animation: beaconPulse 2s infinite ease-in-out;
+}
+
+
+

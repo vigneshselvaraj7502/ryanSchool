@@ -16,6 +16,17 @@ school.zip
 # Nested redundant directory
 school/school/
 
+# Raw camera footage and temporary uncompressed Google Drive import archives
+*.MTS
+*.mts
+DSC_*.JPG
+DSC_*.jpg
+asssssetss/
+asssssetss_opt/
+**/asssssetss/
+**/asssssetss_opt/
+school-react/public/Ryans_Academy_Showcase_1m15s.mp4
+
 # Symlink / Junction assets in react (assets are preserved in school/assets)
 school-react/public/assets
 

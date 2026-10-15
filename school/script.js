@@ -344,5 +344,134 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ==========================================
+    // 9. Ryans Spotlight: Event Chronicles Tabs & Lightbox
+    // ==========================================
+    const eventTabs = document.querySelectorAll('.event-tab-btn');
+    const eventPanels = document.querySelectorAll('.event-chronicle-panel');
+
+    eventTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetId = tab.getAttribute('data-event-target');
+
+            // Reset all tab button styles to inactive
+            eventTabs.forEach(t => {
+                t.className = 'event-tab-btn px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2.5 bg-white text-gray-700 border border-purple-200/80 hover:border-[#4B1F6F] hover:bg-purple-50/40 shadow-sm';
+            });
+            // Set clicked tab to active gradient & gold ring
+            tab.className = 'event-tab-btn px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2.5 bg-gradient-to-r from-[#4B1F6F] to-[#6B3A8D] text-white shadow-xl ring-2 ring-[#D4A72C] scale-105';
+
+            // Show selected panel with fadeIn animation
+            eventPanels.forEach(panel => {
+                if (panel.id === targetId) {
+                    panel.classList.remove('hidden');
+                    panel.classList.add('animate-fadeIn');
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('animate-fadeIn');
+                }
+            });
+        });
+    });
+
+    // Event chronicle card & marquee items lightbox
+    const interactiveCards = document.querySelectorAll('.event-chronicle-card, .marquee-item');
+    interactiveCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const img = card.querySelector('img');
+            const title = card.getAttribute('data-title') || img?.alt || 'Ryans Academy Event';
+            if (lightbox && lightboxImg && img) {
+                lightboxImg.src = img.src;
+                if (lightboxCaption) lightboxCaption.textContent = title;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // ==========================================
+    // 10. Welcome Section Video Player Controls
+    // ==========================================
+    const welcomeVideo = document.getElementById('welcome-school-video');
+    const videoOverlay = document.getElementById('video-play-overlay');
+    const videoMuteBtn = document.getElementById('video-mute-btn');
+    const videoStatusBadge = document.getElementById('video-status-badge');
+
+    if (welcomeVideo) {
+        const togglePlay = () => {
+            if (welcomeVideo.paused) {
+                welcomeVideo.play();
+                if (videoOverlay) videoOverlay.classList.add('hidden');
+                if (videoStatusBadge) {
+                    videoStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span><span>Playing: Campus Tour</span>`;
+                }
+            } else {
+                welcomeVideo.pause();
+                if (videoOverlay) videoOverlay.classList.remove('hidden');
+                if (videoStatusBadge) {
+                    videoStatusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#D4A72C]"></span><span>Campus Life in Motion</span>`;
+                }
+            }
+        };
+
+        if (videoOverlay) videoOverlay.addEventListener('click', togglePlay);
+        welcomeVideo.addEventListener('click', togglePlay);
+
+        if (videoMuteBtn) {
+            videoMuteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                welcomeVideo.muted = !welcomeVideo.muted;
+                const icon = videoMuteBtn.querySelector('i');
+                if (icon) {
+                    if (welcomeVideo.muted) {
+                        icon.className = 'fa-solid fa-volume-xmark text-amber-300 text-xs';
+                        videoMuteBtn.title = 'Unmute Sound';
+                    } else {
+                        icon.className = 'fa-solid fa-volume-high text-white text-xs';
+                        videoMuteBtn.title = 'Mute Sound';
+                    }
+                }
+            });
+        }
+    }
+
+    // ==========================================
+    // 11. Hero Dynamic 1.5-Second Photo Reel
+    // ==========================================
+    const heroImg = document.querySelector('.hero-img-glow img');
+    const heroTitle = document.querySelector('.hero-img-glow p.font-bold');
+    const heroSub = document.querySelector('.hero-img-glow p.text-gray-500');
+    const heroShowcasePhotos = [
+        { src: 'asssssetss_opt/annual_day/annual_day_05.jpg', badge: 'PREMIUM LEARNING', sub: 'Joyful Childhood Environment' },
+        { src: 'asssssetss_opt/convocation/convocation_01.jpg', badge: 'ACADEMIC MILESTONE', sub: '100% Graduation Success' },
+        { src: 'asssssetss_opt/competition/competition_02.jpg', badge: 'CHAMPIONSHIP PRIDE', sub: 'State-Level Recognition' },
+        { src: 'asssssetss_opt/colours_day/colours_day_05.jpg', badge: 'CREATIVE ARTS', sub: 'Sensory Art & Play' },
+        { src: 'asssssetss_opt/annual_day/annual_day_12.jpg', badge: 'PERFORMING ARTS', sub: 'Rhythmic Stage Ensemble' },
+        { src: 'asssssetss_opt/convocation/convocation_10.jpg', badge: 'KINDERGARTEN DISTINCTION', sub: 'Confidence & Character' },
+        { src: 'asssssetss_opt/competition/competition_11.jpg', badge: 'SPORTS & VITALITY', sub: 'Fitness & Teamwork' },
+        { src: 'asssssetss_opt/colours_day/colours_day_12.jpg', badge: 'MONTESSORI SENSORY', sub: 'Joyful Childhood Memories' }
+    ];
+
+    if (heroImg) {
+        let heroIdx = 0;
+        // 2-second interval with dynamic styling
+        setInterval(() => {
+            heroIdx = (heroIdx + 1) % heroShowcasePhotos.length;
+            const cur = heroShowcasePhotos[heroIdx];
+            heroImg.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            heroImg.style.opacity = '0.2';
+            heroImg.style.transform = 'scale(1.04)';
+            setTimeout(() => {
+                heroImg.src = cur.src;
+                if (heroTitle) heroTitle.textContent = cur.badge;
+                if (heroSub) heroSub.textContent = cur.sub;
+                heroImg.style.opacity = '1';
+                heroImg.style.transform = 'scale(1)';
+            }, 300);
+        }, 2000);
+    }
 });
+
 

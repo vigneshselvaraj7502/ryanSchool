@@ -15,7 +15,7 @@ export default function FacilitiesPage() {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     reveals.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -24,14 +24,14 @@ export default function FacilitiesPage() {
   return (
     <div className="facilitiespage-page">
       {/* Banner */}
-    <section className="reveal-on-scroll py-12 bg-gradient-to-r from-[#4B1F6F] via-[#6B3A8D] to-[#4B1F6F] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <section className="reveal-on-scroll py-14 anim-aurora-bg text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
             <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B]">World-Class Infrastructure</span>
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">Campus & Facilities</h1>
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F3D98B] bg-white/10 px-3 py-1 rounded-full border border-white/20 inline-block mb-2">World-Class Infrastructure</span>
+                <h1 className="text-3xl sm:text-5xl font-extrabold text-white mt-1">Campus & <span className="text-shimmer-gold font-serif italic">Facilities</span></h1>
                 <p className="text-purple-200 text-sm mt-2">A safe, child-friendly campus engineered for curiosity and comfort.</p>
             </div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200">
+            <div className="flex items-center gap-2 text-xs font-semibold text-purple-200 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
                 <Link to="/" className="hover:text-white transition">Home</Link>
                 <span>/</span>
                 <span className="text-[#D4A72C]">Facilities</span>
@@ -79,7 +79,7 @@ export default function FacilitiesPage() {
                     </div>
                     <div className="lg:col-span-6">
                         <div className="facility-photo-frame h-80 sm:h-96">
-                            <img src="/assets/DSC_0534.jpg" alt="Ryans Academy Classrooms" />
+                            <img src="/asssssetss_opt/1. School Infrastructure/infra_activity_classroom.jpg" alt="Ryans Academy Classrooms" className="w-full h-full object-cover" />
                             <div className="facility-tag-floating">
                                 <i className="fa-solid fa-camera text-[#F3D98B]"></i>
                                 <span>Spacious CBSE & Montessori Suites</span>
@@ -95,7 +95,7 @@ export default function FacilitiesPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                     <div className="lg:col-span-6 order-2 lg:order-1">
                         <div className="facility-photo-frame h-80 sm:h-96">
-                            <img src="/assets/screen.jpg" alt="Smart Computer Lab" />
+                            <img src="/asssssetss_opt/1. School Infrastructure/infra_smart_board_tech.jpg" alt="Smart Computer Lab" className="w-full h-full object-cover" />
                             <div className="facility-tag-floating">
                                 <i className="fa-solid fa-desktop text-[#60A5FA]"></i>
                                 <span>1:1 High-Tech Computing Lab</span>
@@ -171,7 +171,7 @@ export default function FacilitiesPage() {
                     </div>
                     <div className="lg:col-span-6">
                         <div className="facility-photo-frame h-80 sm:h-96">
-                            <img src="/assets/book1.jpg" alt="Ryans Academy Library" />
+                            <img src="/asssssetss_opt/1. School Infrastructure/infra_library_reading_corner.jpg" alt="Ryans Academy Library" className="w-full h-full object-cover" />
                             <div className="facility-tag-floating">
                                 <i className="fa-solid fa-bookmark text-[#F3D98B]"></i>
                                 <span>3,000+ Illustrated Storybooks & Lore</span>
@@ -187,7 +187,7 @@ export default function FacilitiesPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                     <div className="lg:col-span-6 order-2 lg:order-1">
                         <div className="facility-photo-frame h-80 sm:h-96">
-                            <img src="/assets/kids_park_play.jpg" alt="Outdoor Playground & Soft Gym" />
+                            <img src="/asssssetss_opt/1. School Infrastructure/infra_outdoor_play_turf.jpg" alt="Outdoor Playground & Athletic Running Tracks" className="w-full h-full object-cover" />
                             <div className="facility-tag-floating">
                                 <i className="fa-solid fa-shield-heart text-emerald-400"></i>
                                 <span>Shock-Absorbing Safe Play Turf</span>
